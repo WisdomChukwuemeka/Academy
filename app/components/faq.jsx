@@ -3,24 +3,24 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "Will I get a Certificate from ErikodxIT?",
+    question: "Will I get a Certificate from Scippra?",
     answer:
-      "Yes. Upon successful completion of any course at ErikodxIT, you will receive a professionally recognized certificate that validates your skills and boosts your credibility. Our certificates can be added to your CV, LinkedIn profile, and job applications to improve your employability in today’s competitive tech market.",
+      "Yes. Upon successful completion of any course at Scippra, you will receive a professionally recognized certificate that validates your skills and boosts your credibility. Our certificates can be added to your CV, LinkedIn profile, and job applications to improve your employability in today’s competitive tech market.",
   },
   {
-    question: "How long do ErikodxIT courses last?",
+    question: "How long do Scippra courses last?",
     answer:
-      "Course duration varies depending on the program, but all ErikodxIT courses are self-paced. This allows you to learn at your convenience while completing hands-on projects and real-world tasks designed to help you master practical, job-ready skills efficiently.",
+      "Course duration varies depending on the program, but all Scippra courses are self-paced. This allows you to learn at your convenience while completing hands-on projects and real-world tasks designed to help you master practical, job-ready skills efficiently.",
   },
   {
-    question: "Do I need prior experience to enroll at ErikodxIT?",
+    question: "Do I need prior experience to enroll at Scippra?",
     answer:
-      "No prior experience is required. ErikodxIT is beginner-friendly and designed for learners starting from zero. At the same time, our courses are structured to help professionals upskill, reskill, and advance their careers in data, AI, and IT fields.",
+      "No prior experience is required. Scippra is beginner-friendly and designed for learners starting from zero. At the same time, our courses are structured to help professionals upskill, reskill, and advance their careers in web development, data, and IT fields.",
   },
   {
-    question: "What platform is used for ErikodxIT classes?",
+    question: "What platform is used for Scippra classes?",
     answer:
-      "All ErikodxIT classes are delivered 100% online through interactive learning platforms. You get 24/7 access to video lessons, hands-on projects, expert mentorship, and a supportive learning community—so you can learn anytime, anywhere.",
+      "All Scippra classes are delivered 100% online through interactive learning platforms and on-site. You get 24/7 access to video lessons, hands-on projects, expert mentorship, and a supportive learning community—so you can learn anytime, anywhere.",
   },
 ];
 
@@ -69,7 +69,7 @@ export default function FAQSection() {
                       : "max-h-0 opacity-0 px-4"
                   }`}
                 >
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-white bg-red-600 p-1.5 rounded-md text-sm leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

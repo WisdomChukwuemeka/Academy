@@ -75,7 +75,7 @@ export default function Header() {
     { href: "/", label: "Home" },
     { href: "/#courses", label: "Courses" },
     { href: "/about", label: "About" },
-    {href: "#", label: "Jobs"},
+    {href: "/jobs", label: "Jobs"},
     { href: "/contact", label: "Contact Us" },
   ];
 
@@ -91,7 +91,7 @@ export default function Header() {
                   Scip<span className="text-gray-700">pra</span>
                 </h1>
                 <span className="text-[10px] text-gray-500 italic">
-                  ...learn, create, build
+                  learn, create, build
                 </span>
               </div>
             </Link>

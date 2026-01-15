@@ -174,11 +174,11 @@ export default function HomePage() {
           {/* TEXT ON IMAGE */}
           <div className="absolute inset-0 z-20 flex items-center text-center md:text-left justify-center md:justify-start">
             <div className="px-6 md:px-16 max-w-3xl">
-              <span className="inline-block text-sm text-red-700 font-medium bg-red-200 px-3 md:px-5 py-2 md:py-3 rounded-xl">
+              <span className="inline-block text-sm text-white font-medium bg-black/70 px-3 md:px-5 py-2 md:py-3 rounded-xl">
                 ⭐ Trusted by 1000+ learners worldwide
               </span>
 
-              <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mt-8 text-white leading-tight max-w-30px">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mt-4 text-white leading-tight max-w-30px">
                 <motion.span
   initial={{ opacity: 0, x: -20 }}
   animate={{
@@ -199,12 +199,12 @@ export default function HomePage() {
       repeatType: "loop",
     },
   }}
-  className="text-white-300 text-[2.5rem] inline-block"
+  className="text-white-300 text-[2rem] md:text-[2.5rem] xl:text-[3rem] inline-block"
 >
   Start Your Learning Journey 
 </motion.span>
- <br /> <span className='text-[2.4rem]'>&</span>{" "}
-                <span className="text-red-300 text-[2.4rem]">Master New Skills</span>
+ <br /> <span className='text-[2rem] md:text-[2.5rem] xl:text-[3rem]'>&</span>{" "}
+                <span className="text-red-300 text-[2rem] md:text-[2.5rem] xl:text-[3rem]">Master New Skills</span>
               </h1>
 
               <p className="text-gray-200 mt-4 max-w-lg">
@@ -231,7 +231,7 @@ export default function HomePage() {
     </section>
 
         {/* ABOUT SECTION */}
-        <section id="about" className="px-8 py-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+        <section id="about" className="px-8 py-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center text-center md:text-start">
           <div>
             <h2 className="text-2xl font-bold mb-4 text-black">About Scippra</h2>
             <p className="text-gray-600 mb-4">
@@ -242,8 +242,8 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="bg-gray-200 rounded-lg h-56 overflow-hidden">
-            <img src="/home/two.png" alt="Person at computer" className="object-cover w-full h-full" />
+          <div className="bg-gray-200 rounded-lg h-70 md:h-78.5 xl:h-100 overflow-hidden">
+            <img src="/home/four.png" alt="Person at computer" className="object-cover w-fit h-fill" />
           </div>
         </section>
 
@@ -255,6 +255,11 @@ export default function HomePage() {
 
             <div className="grid md:grid-cols-3 gap-6">
               {[
+                {
+                  icon: "bi-lightbulb",
+                  title: "Beginner Friendly",
+                  desc: "Start from zero with courses designed for all skill levels.",
+                },
                 {
                   icon: "bi-person-workspace",
                   title: "Expert Instructors",
@@ -271,11 +276,6 @@ export default function HomePage() {
                   desc: "Earn industry-recognized certificates upon course completion.",
                 },
                 {
-                  icon: "bi-lightbulb",
-                  title: "Beginner Friendly",
-                  desc: "Start from zero with courses designed for all skill levels.",
-                },
-                {
                   icon: "bi-briefcase",
                   title: "Career Support",
                   desc: "Get job placement assistance and expert career guidance.",
@@ -287,12 +287,12 @@ export default function HomePage() {
                 },
               ].map((item, i) => (
                 <div key={i} className="bg-white p-6 rounded-lg shadow text-center">
-                  <div className="flex mb-3">
-                    <i className={`bi ${item.icon} text-3xl text-emerald-500`}></i>
+                  <div className="flex mb-3 justify-center md:justify-start">
+                    <i className={`bi ${item.icon} text-3xl text-red-500`}></i>
                   </div>
 
-                  <h3 className="font-semibold text-left text-black">{item.title}</h3>
-                  <p className="text-sm text-gray-600 mt-2 text-left">{item.desc}</p>
+                  <h3 className="font-semibold md:text-left text-black">{item.title}</h3>
+                  <p className="text-sm text-gray-600 mt-2 md:text-left">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -320,7 +320,7 @@ export default function HomePage() {
                   <div className="p-4">
                     <h3 className="font-semibold mb-2 text-black">{course.title}</h3>
                     <p className="text-sm text-gray-600 mb-4 line-clamp-3">{course.desc}</p>
-                    <button className="w-full bg-emerald-500 text-white py-2 rounded">
+                    <button className="w-full bg-red-500 text-white py-2 rounded">
                       Start Learning
                     </button>
                   </div>
@@ -363,7 +363,7 @@ export default function HomePage() {
                 },
               ].map((step, i) => (
                 <div key={i} className="text-center">
-                  <div className="bg-emerald-500 w-16 h-16 rounded-full mx-auto flex items-center justify-center text-2xl mb-4">
+                  <div className="bg-red-500 w-16 h-16 rounded-full mx-auto flex items-center justify-center text-2xl mb-4">
                     <i className={`bi ${step.icon} text-white`}></i>
                   </div>
 
@@ -384,15 +384,15 @@ export default function HomePage() {
             <div>
               {[
                 {
-                  name: "Sarah Johnson",
+                  name: "Mary Vivian",
                   role: "Business Analyst",
                   quote:
                     "Scippra completely transformed my career. The Python projects gave me real-world experience. Within 3 months of completing the course, I landed my dream job as a Data Analyst!",
                   stars: "⭐⭐⭐⭐⭐",
-                  avatar: "/academy/one.png",
+                  avatar: "/academy/four.png",
                 },
               ].map((testimonial, i) => (
-                <div key={i} className="bg-emerald-300 shadow-md p-6 rounded-lg">
+                <div key={i} className="bg-red-300 shadow-md p-6 rounded-lg">
                   <div className="flex items-center mb-4">
                     <Image
                       src={testimonial.avatar}
@@ -415,16 +415,16 @@ export default function HomePage() {
             <div className="flex flex-col gap-6">
               {[
                 {
-                  name: "Michael Owen",
+                  name: "Thompson Mike",
                   role: "Web Developer",
                   quote: "The Web Development Bootcamp exceeded my expectations. Great instructors and excellent support!",
                   stars: "⭐⭐⭐⭐⭐",
                   avatar: "/academy/two.png",
                 },
                 {
-                  name: "Precious Uche",
+                  name: "Abigail Johnson",
                   role: "Business Analyst",
-                  quote: "The Power BI course helped me create amazing dashboards. My manager was impressed with my new skills!",
+                  quote: "The Excel course helped me create amazing dashboards. My manager was impressed with my new skills!",
                   stars: "⭐⭐⭐⭐⭐",
                   avatar: "/academy/three.png",
                 },

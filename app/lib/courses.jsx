@@ -149,7 +149,7 @@ export const courses = [
     ],
     duration: "3 months",
     enrolled: 200,
-    tutor: "Dr. Lisa Adaku",
+    tutor: "Dr. Lisa Chisom",
     weeks: 10,
     ratings: 4.7,
     ratingsCount: 1100,
@@ -162,7 +162,7 @@ export const courses = [
       "Curiosity about AI"
     ],
     profilepic: "/teachers/teacherfive.png",
-    instructorBio: "Dr. Lisa Adaku is an AI researcher with a PhD in computer science and several patents in AI technologies."
+    instructorBio: "Dr. Lisa Chisom is an AI researcher with a PhD in computer science and several patents in AI technologies."
   },
   {
     id: 6,

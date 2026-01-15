@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-indigo-900 text-white px-8 py-10">
+    <footer className="bg-red-900 text-white px-8 py-10">
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Scippra</h3>
@@ -17,7 +17,7 @@ export default function Footer() {
             { icon: "bi-linkedin", url:"https://www.linkedin.com/company/erikodx-technologies"  }
           ].map((item, i) => {
             return (
-              <div key={i} className="text-white text-xl hover:text-emerald-500">
+              <div key={i} className="text-white text-xl hover:text-red-300">
                 <Link href={item.url || "#"}>
                 <i className={`bi ${item.icon} text-xl`}></i>
                 </Link>
@@ -46,10 +46,10 @@ export default function Footer() {
 
   <div className="flex flex-col gap-4 mt-2">
     {[
-      { icon: "bi-envelope", info: "scippra@gmail.com", link: "mailto:erikodxit@gmail.com" },
+      { icon: "bi-envelope", info: "scippra@gmail.com", link: "mailto:scippra@gmail.com" },
       { 
         icon: "bi-telephone", 
-        info: "+234 810 003 32571",
+        info: "+234 810 003 2571",
         link: "https://wa.me/2348100032571" // WhatsApp link (remove spaces + add country code)
       },
     ].map((item, i) => {
@@ -59,7 +59,7 @@ export default function Footer() {
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white text-xl hover:text-emerald-500 flex items-center"
+          className="text-white text-xl hover:text-red-300 flex items-center"
         >
           <i className={`bi ${item.icon} text-xl`}></i>
           <span className="ml-2 text-sm">{item.info}</span>
@@ -69,8 +69,9 @@ export default function Footer() {
   </div>
   <div>
     <Link href="/maptrack">
-    <div className="mt-4">
-      <h1>Our Location</h1>
+    <div className="mt-4 flex gap-3 hover:text-red-300">
+      <i className="bi bi-map" ></i>
+      <h1>Location</h1>
     </div>
     </Link>
   </div>
@@ -78,11 +79,11 @@ export default function Footer() {
 
           <div>
             <h4 className="font-semibold mb-4">Subscribe to Newsletter</h4>
-            <input type="email" placeholder="Your email" className="w-full bg-indigo-800 p-2 rounded-md mb-2 text-white placeholder-gray-400" />
-            <button className="w-full bg-emerald-500 py-2 rounded-md">Subscribe</button>
+            <input type="email" placeholder="Your email" className="w-full bg-orange-800 p-2 rounded-md mb-2 text-white placeholder-gray-400" />
+            <button className="w-full bg-blue-500 py-2 rounded-md">Subscribe</button>
           </div>
         </div>
-        <div className="max-w-6xl mx-auto mt-8 flex justify-center items-center text-sm border-t pt-4 border-indigo-800">
+        <div className="max-w-6xl mx-auto mt-8 flex justify-center items-center text-sm border-t pt-4 border-black/70">
           <p>© 2026 Scippra All rights reserved.</p>
         </div>
       </footer>

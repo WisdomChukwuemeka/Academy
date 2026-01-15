@@ -66,7 +66,7 @@ export default function CourseDetails() {
               <ul className="grid md:grid-cols-2 gap-4 text-gray-600">
                 {course.syllabus.map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="mr-2 text-emerald-500">✔</span>
+                    <span className="mr-2 text-red-500">✔</span>
                     {item}
                   </li>
                 ))}
@@ -104,19 +104,20 @@ export default function CourseDetails() {
             </section>
 
             <section className="mb-12">
-              <div className="flex flex-col md:flex-row gap-5 items-center">
+              <div className="flex flex-col md:flex-row gap-2 items-center">
+                <div className="flex flex-col items-center">
                 <div className="bg-gray-300 rounded-full flex items-center justify-center mr-3">
                     <Image 
                     src={course.profilepic || "/teachers/default.png"}
                     alt="Instructor Avatar"
                     width={254}
                     height={254}
-                    className="w-50 h-50 md: rounded-full object-cover"
+                    className="w-50 h-50 rounded-full object-cover"
                     />   
                 </div> {/* Placeholder avatar */}
+                <h2 className="text-2xl font-bold text-black mb-3 md:mb-4 text-center md:text-start">Instructor</h2>
+                </div>
                 <div className="text-center md:text-start">
-                    <h2 className="text-2xl font-bold text-black mb-0 md:mb-4
-              text-center md:text-start">Instructor</h2>
                   <h3 className="text-xl font-semibold text-black">{course.tutor}</h3>
                   <p className="text-gray-600">{course.instructorBio}</p>
                 </div>
@@ -141,7 +142,7 @@ export default function CourseDetails() {
 
       <ul className="space-y-4 text-gray-600 text-sm">
         <li className="flex items-center gap-3">
-          <i className="bi bi-clock text-emerald-500 text-lg"></i>
+          <i className="bi bi-clock text-red-500 text-lg"></i>
           <div>
             <p className="font-medium">Duration</p>
             <p className="text-gray-500">{course.duration}</p>
@@ -149,7 +150,7 @@ export default function CourseDetails() {
         </li>
 
         <li className="flex items-center gap-3">
-          <i className="bi bi-book text-emerald-500 text-lg"></i>
+          <i className="bi bi-book text-red-500 text-lg"></i>
           <div>
             <p className="font-medium">Subject</p>
             <p className="text-gray-500">{course.title}</p>
@@ -157,7 +158,7 @@ export default function CourseDetails() {
         </li>
 
         <li className="flex  items-center gap-3">
-          <i className="bi bi-award text-emerald-500 text-lg"></i>
+          <i className="bi bi-award text-red-500 text-lg"></i>
           <div>
             <p className="font-medium">Certificate</p>
             <p className="text-gray-500">Yes</p>
@@ -165,7 +166,7 @@ export default function CourseDetails() {
         </li>
 
         <li className="flex items-center gap-3">
-          <i className="bi bi-globe text-emerald-500 text-lg"></i>
+          <i className="bi bi-globe text-red-500 text-lg"></i>
           <div>
             <p className="font-medium">Language</p>
             <p className="text-gray-500">English</p>
@@ -173,7 +174,7 @@ export default function CourseDetails() {
         </li>
 
         <li className="flex items-center gap-3">
-          <i className="bi bi-easel text-emerald-500 text-lg"></i>
+          <i className="bi bi-easel text-red-500 text-lg"></i>
           <div>
             <p className="font-medium">Mode of Learning</p>
             <p className="text-gray-500">Online/On-site</p>
@@ -183,7 +184,7 @@ export default function CourseDetails() {
 
     <Link href="https://wa.me/2347046455166">
       <button
-        className="w-full bg-emerald-500 text-white py-3 px-6 rounded-md hover:bg-emerald-600 transition mt-6"
+        className="w-full bg-red-500 text-white py-3 px-6 rounded-md hover:bg-emerald-600 transition mt-6"
       >
         Enroll Now
       </button>

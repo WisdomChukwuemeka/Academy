@@ -29,7 +29,7 @@ export default function Map() {
       />
       <Marker position={position}>
         <Popup>
-          #2 Salvation close off wamadi asonye elder benjamin street
+          #2 Salvation Close off Wamadi Asonye Elder Benjamin Street, Rumpokwu, Eneka Road, Port Harcourt, Rivers State. 
         </Popup>
       </Marker>
     </MapContainer>
