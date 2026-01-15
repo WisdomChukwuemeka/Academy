@@ -169,7 +169,7 @@ export default function HomePage() {
           ))}
 
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/70 z-10"></div>
+          <div className="absolute inset-0 bg-black/60 z-10"></div>
 
           {/* TEXT ON IMAGE */}
           <div className="absolute inset-0 z-20 flex items-center text-center md:text-left justify-center md:justify-start">
