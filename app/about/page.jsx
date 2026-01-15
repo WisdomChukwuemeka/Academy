@@ -40,10 +40,10 @@ export default function About() {
       </h2>
       <div className="text-sm text-center text-gray-700 leading-relaxed flex flex-col gap-4">
         <p> Scippra is a digital learning hub dedicated to teaching digital skills.</p>
-        <p className="flex flex-col gap-2"> <h2 className="text-xl font-semibold text-black">Our mission</h2> is to empower early- and mid-level professionals with practical, industry-relevant skills required to succeed in today’s data-focused world.</p>
-        <p>
+        <div className="flex flex-col gap-2"> <h2 className="text-xl font-semibold text-black">Our mission</h2> is to empower early- and mid-level professionals with practical, industry-relevant skills required to succeed in today’s data-focused world.</div>
+        <div>
           <h2 className="text-xl font-semibold text-black">Our vision</h2> is to grow into a global platform where individuals can acquire meaningful digital and practical skill and connect those skills to real-world opportunities.
-        </p>
+        </div>
       </div>
 
         </div>
@@ -107,19 +107,20 @@ export default function About() {
 
         <div className="grid md:grid-cols-2 gap-10 items-center text-xl">
           <div className="bg-teal-50 p-6 rounded-lg">
-            <h3 className="text-xl text-center font-semibold text-emerald-600">
-              Erik Odinaka
-            </h3>
-            <p className="text-xs text-center text-gray-500 mb-3">
-              Certified AI Specialist & Data Analyst
-            </p>
-            <p className="text-md text-left text-gray-700 leading-relaxed">
-              Erik has 5+ years of teaching and industry experience,
-              specializing in Data Analysis and Artificial Intelligence.
-              Passionate about simplifying complex ideas into practical,
-              real-world lessons.
-            </p>
-          </div>
+          <h3 className="text-xl text-center font-semibold text-emerald-600">
+            Mike Johnson
+          </h3>
+          <p className="text-xs text-center text-gray-500 mb-3">
+            Certified Web Developer & Software Engineer
+          </p>
+          <p className="text-md text-left text-gray-700 leading-relaxed">
+            Mike brings over 5 years of hands-on industry and teaching experience,
+            with a strong focus on modern web development. He is passionate about
+            breaking down complex concepts into practical, real-world solutions
+            that help learners build scalable and user-friendly applications.
+          </p>
+        </div>
+
 
 <div className="relative w-full h-150 md:h-110">
   <Image

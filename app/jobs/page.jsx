@@ -68,7 +68,7 @@ export default function JobsPage() {
         {/* RIGHT – POPULAR JOBS */}
         <aside className="md:col-span-3">
           <div className="bg-white rounded-xl shadow">
-            <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white px-4 py-3 rounded-t-xl font-semibold">
+            <div className="bg-linear-to-r from-blue-900 to-blue-700 text-white px-4 py-3 rounded-t-xl font-semibold">
               Popular Jobs
             </div>
 
