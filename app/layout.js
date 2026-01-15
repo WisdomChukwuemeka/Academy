@@ -15,71 +15,91 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://www.erikodxit.com"),
+  metadataBase: new URL("https://www.Scippra.com"),
 
   title: {
-    default: "ErikodxIT | Learn IT Skills, Data & AI Courses Online",
-    template: "%s | ErikodxIT",
+    default: "Scippra | Online IT, Data & AI Skill Development",
+    template: "%s | Scippra",
   },
 
   description:
-    "ErikodxIT is a leading online learning platform offering expert-led IT courses in data analysis, machine learning, AI, Power BI, and software development. Learn in-demand tech skills and advance your career.",
+    "Scippra is a modern e-learning platform delivering industry-focused IT training in data analytics, machine learning, artificial intelligence, Power BI, and software engineering. Gain practical, career-ready tech expertise.",
 
   keywords: [
-    "ErikodxIT",
-    "Online IT Courses",
-    "Tech Skills Training",
-    "Data Analysis Courses",
-    "Machine Learning Training",
-    "Artificial Intelligence Courses",
-    "Power BI Training",
-    "Python Courses",
-    "Career Growth",
-    "Learn Tech Online",
-  ],
+  // Brand-focused
+  "Scippra",
+  "Scippra online courses",
+  "Scippra IT training",
+  "Scippra tech academy",
+  "Scippra learning platform",
 
-  authors: [{ name: "ErikodxIT" }],
-  creator: "ErikodxIT",
-  publisher: "ErikodxIT",
+  // Core search intent
+  "online IT courses",
+  "learn IT skills online",
+  "technology training platform",
+  "professional tech courses",
+
+  // Data & AI
+  "data analysis courses online",
+  "data analytics training",
+  "machine learning courses",
+  "artificial intelligence courses",
+  "AI training online",
+
+  // Software & tools
+  "software development courses",
+  "web development training",
+  "Python programming courses",
+  "Power BI training online",
+
+  // Career-focused
+  "tech skills for jobs",
+  "career-focused IT training",
+  "digital skills learning platform",
+  "learn tech skills online",
+],
+
+
+  authors: [{ name: "Scippra" }],
+  creator: "Scippra",
+  publisher: "Scippra",
 
   alternates: {
-    canonical: "https://www.erikodxit.com",
+    canonical: "https://www.Scippra.com",
   },
 
   icons: {
-  icon: [
-    { url: "/favicon.ico", sizes: "any" },
-    { url: "/logo.png", type: "image/png" },
-  ],
-  apple: "/logo.png",
-},
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo.png", type: "image/png" },
+    ],
+    apple: "/logo.png",
+  },
 
-
-openGraph: {
-    title: "ErikodxIT | Master In-Demand Tech Skills Online",
+  openGraph: {
+    title: "Scippra | Build High-Demand Technology Skills",
     description:
-      "Unlock your potential with expert-led IT courses in data, AI, and software development.",
-    url: "https://www.erikodxit.com",
-    siteName: "ErikodxIT",
+      "Advance your tech career through professionally curated courses in data science, AI, and software development.",
+    url: "https://www.Scippra.com",
+    siteName: "Scippra",
     type: "website",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "ErikodxIT Online Learning Platform",
+        alt: "Scippra Digital Learning Platform",
       },
     ],
   },
 
- twitter: {
-  card: "summary_large_image",
-  title: "ErikodxIT | Master In-Demand Tech Skills Online",
-  description:
-    "Expert-led IT courses designed to help beginners and professionals build real-world tech skills.",
-  images: ["/og-image.png"],
-},
-
+  twitter: {
+    card: "summary_large_image",
+    title: "Scippra | Build High-Demand Technology Skills",
+    description:
+      "Professionally guided IT training crafted to equip learners with practical, real-world technology skills.",
+    images: ["/og-image.png"],
+  },
 
   robots: {
     index: true,

@@ -11,7 +11,7 @@ export default function JobsPage() {
         {/* LEFT – JOB CATEGORIES */}
         <aside className="md:col-span-3">
           <div className="bg-white rounded-xl shadow">
-            <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white px-4 py-3 rounded-t-xl font-semibold flex items-center gap-2">
+            <div className="bg-linear-to-r from-blue-900 to-blue-700 text-white px-4 py-3 rounded-t-xl font-semibold flex items-center gap-2">
               <Layers size={18} /> Job Categories
             </div>
             <ul className="divide-y text-sm">
