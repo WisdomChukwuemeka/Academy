@@ -11,10 +11,10 @@ export default function Footer() {
           <div className="flex gap-4 mt-2">
             {
           [
-            { icon: "bi-facebook", url:"https://www.facebook.com/erikodxit" },
-            { icon: "bi-instagram", url:"https://www.instagram.com/erikodxit/" },
+            { icon: "bi-facebook", url:"https://www.facebook.com/scippra" },
+            { icon: "bi-instagram", url:"https://www.instagram.com/scippra/" },
             { icon: "bi-twitter-x" },
-            { icon: "bi-linkedin", url:"https://www.linkedin.com/company/erikodx-technologies"  }
+            { icon: "bi-linkedin", url:"https://www.linkedin.com/company/scippra"  }
           ].map((item, i) => {
             return (
               <div key={i} className="text-white text-xl hover:text-red-300">
