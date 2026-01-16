@@ -49,25 +49,26 @@ const courses = [
     tutor: "Dr. Emily Chen",
     weeks: 8
   },
-  {
-    id: 2,
-    title: "Machine Learning",
-    desc: "Build predictive models using supervised and unsupervised learning techniques to solve practical problems with real data.",
-    img: "/courses/two.png",
-    content: "Dive into machine learning algorithms and their applications. From regression to neural networks, you'll implement models using scikit-learn and TensorFlow, focusing on model evaluation, feature engineering, and deployment.",
-    syllabus: [
-      "Machine Learning Fundamentals",
-      "Supervised Learning: Regression and Classification",
-      "Unsupervised Learning: Clustering and Dimensionality Reduction",
-      "Model Evaluation and Hyperparameter Tuning",
-      "Introduction to Deep Learning",
-      "Ensemble Methods",
-      "Final Project: ML Application Development"
-    ],
-    enrolled: 180,
-    tutor: "Prof. Michael Rodriguez",
-    weeks: 10
-  },
+ {
+  id: 2,
+  title: "Full-Stack Web Development",
+  desc: "At the end of this course, you will be able to design, build, and deploy secure, scalable full-stack web applications using React for the frontend and Django for the backend, preparing you for employment or freelance opportunities as a professional web developer.",
+  img: "/courses/two.png",
+  content: "This course provides a hands-on approach to full-stack web development. You will learn how to build responsive user interfaces with React, create robust REST APIs with Django, manage databases, implement authentication, and deploy real-world web applications.",
+  syllabus: [
+    "Web Development Fundamentals (HTML, CSS, JavaScript)",
+    "Modern Frontend Development with React",
+    "State Management and API Integration",
+    "Backend Development with Django & Django REST Framework",
+    "Database Design and Management (PostgreSQL)",
+    "User Authentication & Authorization",
+    "Deployment and Hosting (Vercel, Render, or DigitalOcean)",
+    "Final Project: Full-Stack Web Application"
+  ],
+  enrolled: 180,
+  tutor: "Prof. Michael Rodriguez",
+  weeks: 10
+},
   {
     id: 3,
     title: "Data Engineering",

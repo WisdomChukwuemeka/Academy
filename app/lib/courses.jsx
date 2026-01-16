@@ -32,39 +32,41 @@ export const courses = [
     profilepic: "/teachers/teacherone.png",
     instructorBio: "Dr. Emily Bere is a data scientist with 10 years of experience in industry and academia."
   },
-  {
-    id: 2,
-    title: "Machine Learning",
-    desc: "The Machine Learning Certification Course is an extensive program designed to guide learners from beginner to advanced levels in the exciting field of machine learning. This course combines both theoretical concepts and practical applications, focusing on using Python and various libraries to build and implement machine learning models. By the end of the course, you’ll be equipped as a proficient Machine Learning Engineer ready to address real-world problems through machine learning techniques and contribute to data-driven decision-making in any organization. Join us to transform your enthusiasm for technology into a successful career in machine learning.",
-    img: "/courses/two.png",
-    content:
-      "Learn machine learning algorithms, model evaluation, feature engineering, and deployment using real datasets.",
-    syllabus: [
-      "ML Fundamentals",
-      "Regression & Classification",
-      "Clustering",
-      "Dimensionality Reduction",
-      "Model Evaluation",
-      "Ensemble Methods",
-      "Final Project",
-    ],
-    duration: "3 months",
-    enrolled: 180,
-    tutor: "Prof. Michael Peterson",
-    weeks: 10,
-    ratings: 4.7,
-    ratingsCount: 950,
-    lastUpdated: "11/2025",
-    totalLectures: 55,
-    totalDuration: "12h",
-    requirements: [
-      "Basic Python knowledge",
-      "Understanding of statistics",
-      "Access to a computer"
-    ],
-    profilepic: "/teachers/teachertwo.png",
-    instructorBio: "Prof. Michael Peterson is a machine learning expert with numerous publications and industry projects."
-  },
+{
+  id: 2,
+  title: "Full-Stack Web Development",
+  desc: "The Full-Stack Web Development Certification Course is a comprehensive program designed to take learners from beginner to advanced levels in modern web development. This course blends strong theoretical foundations with hands-on practical experience, focusing on building real-world applications using modern frontend and backend technologies. By the end of the course, you’ll be equipped as a professional Full-Stack Web Developer, capable of building, deploying, and maintaining scalable web applications and contributing effectively to any development team or freelance project.",
+  img: "/courses/two.png",
+  content:
+    "Learn how to build responsive user interfaces, develop secure backend systems, integrate databases, implement authentication, and deploy full-stack web applications using modern tools and best practices.",
+  syllabus: [
+    "Web Development Fundamentals (HTML, CSS, JavaScript)",
+    "Frontend Development with React / Next.js",
+    "Backend Development with Django & Django REST Framework",
+    "REST APIs and Frontend–Backend Integration",
+    "Database Design and Management",
+    "Authentication, Authorization & Security",
+    "Deployment and Hosting",
+    "Final Project: Full-Stack Web Application"
+  ],
+  duration: "3 months",
+  enrolled: 180,
+  tutor: "Prof. Michael Peterson",
+  weeks: 10,
+  ratings: 4.7,
+  ratingsCount: 950,
+  lastUpdated: "11/2025",
+  totalLectures: 55,
+  totalDuration: "12h",
+  requirements: [
+    "Basic computer knowledge",
+    "Familiarity with JavaScript is an advantage",
+    "Access to a computer and internet"
+  ],
+  profilepic: "/teachers/teachertwo.png",
+  instructorBio:
+    "Prof. Michael Peterson is a senior full-stack web developer with extensive experience building scalable web applications and mentoring developers for real-world industry roles."
+},
   {
     id: 3,
     title: "Data Engineering",
