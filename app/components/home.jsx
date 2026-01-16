@@ -18,6 +18,17 @@ const images = [
     '/change/studenttwo.png',  
   ];
 
+  const learningmode = [
+    { mode: "Classroom Learning", 
+      img: "/home/classroom.png",
+      desc: "Immerse yourself in our expert-led, interactive classes for a hands-on learning experience that goes beyond traditional methods."
+    },
+    { mode: "Online Learning", 
+      img: "/home/online.png",
+      desc: "Discover the convenience of online learning with our courses, featuring interactive sessions and instant access to valuable resources."
+    }
+  ]
+
 const courses = [
   {
     id: 1,
@@ -329,49 +340,30 @@ export default function HomePage() {
       <h2 className="text-2xl font-bold text-center pt-5 text-black">Mode of Learning</h2>
 
         <div className="flex justify-center">
-          <div className='flex flex-col md:flex-row w-full justify-center items-center gap-8 mt-1 p-8 max-w-3xl'>
+          {
+            learningmode.map((mode, index) => (
+          <div key={index} className="flex flex-col md:flex-row w-full justify-center items-center gap-8 mt-8 p-8 max-w-3xl">
             <div className="bg-white rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer">
                   <Image
-                    src="/home/classroom.png"
-                    alt="classroom image"
+                    src={mode.img}
+                    alt={`${mode.mode} image`}  
                     width={400}
                     height={240}
                     className="w-full object-cover"
-                    placeholder="blur"
+                    placeholder="blur"    
                     blurDataURL="/placeholder.png"
                   />
                   <div className="p-4">
-                    <h3 className="font-semibold mb-2 text-black">Classroom Learning</h3>
-                    <p className="text-sm text-gray-600 mb-4 line-clamp-3">Immerse yourself in our expert-led, interactive classes for a hands-on
-                      learning experience that goes beyound tranditional methods.
-                    </p>
-                      <button className="w-full bg-red-700 text-white py-2.5 rounded">
-                      Explore our courses <i className='bi bi-arrow-right ml-4 bg-white rounded-full p-1.5 text-indigo-950 font-bold'></i>
-                    </button>
-
-                  </div>
-                </div>
-                <div className="bg-white rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer">
-                  <Image
-                    src="/home/online.png"
-                    alt="online image"
-                    width={400}
-                    height={240}
-                    className="w-full object-cover"
-                    placeholder="blur"
-                    blurDataURL="/placeholder.png"
-                  />
-                  <div className="p-4">
-                    <h3 className="font-semibold mb-2 text-black">Online Learning</h3>
-                    <p className="text-sm text-gray-600 mb-4 line-clamp-3">Discover the convenience of online learnning with our 
-                      courses, featuring interactive sessions and instant access to valuable resources.
-                    </p>
-                    <button className="w-full bg-indigo-950 text-white py-2.5 rounded">
+                    <h3 className="font-semibold mb-2 text-black">{mode.mode}</h3>
+                    <p className="text-sm text-gray-600 mb-4 line-clamp-3">{mode.desc}</p>
+                      <button className={`w-full ${mode.mode === "Classroom Learning" ? "bg-red-700" : "bg-indigo-950"} text-white py-2.5 rounded`}>
                       Explore our courses <i className='bi bi-arrow-right ml-4 bg-white rounded-full p-1.5 text-indigo-950 font-bold'></i>
                     </button>
                   </div>
                 </div>
                 </div>
+            ))
+          }
         </div>
 </section>
 
