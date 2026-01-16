@@ -13,8 +13,8 @@ export default function About() {
       </Head>
 
       {/* HERO SECTION */}
-      <header className="text-center pt-12 pb-6 px-6 bg-teal-50">
-        <h1 className="text-3xl font-semibold text-emerald-600">
+      <header className="text-center pt-12 pb-6 px-6 bg-indigo-50">
+        <h1 className="text-3xl font-semibold text-red-600">
           About Scippra
         </h1>
         <p className="text-gray-600 text-sm mt-1">
@@ -68,7 +68,7 @@ export default function About() {
             { icon: "bi-diagram-3", label: "Flask, FastAPI, Streamlit" },
           ].map((tool, i) => (
             <div key={i} className="flex items-center gap-3 justify-center text-start md:justify-start">
-              <i className={`bi ${tool.icon} text-emerald-500 text-lg`}></i>
+              <i className={`bi ${tool.icon} text-red-500 text-lg`}></i>
               {tool.label}
             </div>
           ))}
@@ -90,7 +90,7 @@ export default function About() {
                    transform transition-all duration-300 ease-in-out
                    hover:scale-105 hover:shadow-lg"
       >
-        <h3 className="text-3xl font-semibold text-emerald-600 mb-1">
+        <h3 className="text-3xl font-semibold text-red-600 mb-1">
           {stat.value}
         </h3>
         <p className="text-gray-700">{stat.label}</p>
@@ -107,7 +107,7 @@ export default function About() {
 
         <div className="grid md:grid-cols-2 gap-10 items-center text-xl">
           <div className="bg-teal-50 p-6 rounded-lg">
-          <h3 className="text-xl text-center font-semibold text-emerald-600">
+          <h3 className="text-xl text-center font-semibold text-red-600">
             Mike Johnson
           </h3>
           <p className="text-xs text-center text-gray-500 mb-3">

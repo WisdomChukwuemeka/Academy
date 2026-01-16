@@ -13,17 +13,17 @@ export default function Login() {
         <div className="flex flex-col w-full max-w-4xl md:mx-8 bg-white rounded-lg shadow-lg overflow-hidden xl:flex-row">
 
           {/* LEFT SIDE */}
-          <div className="flex flex-grow md:w-full bg-emerald-600 text-white p-10 flex-col justify-center">
+          <div className="flex grow md:w-full bg-indigo-950 text-white p-10 flex-col justify-center">
             <h1 className="text-xl md:text-3xl text-center font-semibold mb-4">
               Welcome Back
             </h1>
             <p className="text-sm md:text-2xl text-center leading-relaxed text-emerald-100">
-              Login to access your dashboard, continue learning with ErikodxIT.
+              Login to access your dashboard, continue learning with Scippra.
             </p>
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="flex-grow md:w-full p-8 md:p-10 flex flex-col justify-between min-h-full">
+          <div className="grow md:w-full p-8 md:p-10 flex flex-col justify-between min-h-full">
             <h2 className="text-2xl text-center font-semibold text-gray-800 mb-6">
               Login to your account
             </h2>
@@ -64,8 +64,8 @@ export default function Login() {
               {/* Login Button */}
               <button
                 type="submit"
-                className="w-full text-xl md:text-2xl bg-emerald-500 text-white py-3 rounded-md font-medium 
-                hover:bg-emerald-600 transition"
+                className="w-full text-xl md:text-2xl bg-indigo-950 text-white py-3 rounded-md font-medium 
+                hover:bg-indigo-800 transition"
               >
                 Login
               </button>
@@ -74,7 +74,7 @@ export default function Login() {
             {/* Footer */}
             <div className="mt-6 text-sm md:text-xl text-center text-gray-600">
               Don’t have an account?{" "}
-              <Link href="/register" className="text-emerald-600 font-medium hover:underline">
+              <Link href="/register" className="text-red-600 font-medium hover:underline">
                 Sign up
               </Link>
             </div>

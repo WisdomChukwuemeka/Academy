@@ -88,7 +88,7 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-2">
               <div className="flex flex-col leading-tight">
                 <h1 className="text-xl font-bold text-red-600">
-                  Scip<span className="text-gray-700">pra</span>
+                  Scip<span className="text-indigo-950">pra</span>
                 </h1>
                 <span className="text-[10px] text-gray-500 italic">
                   learn, create, build
@@ -127,12 +127,6 @@ export default function Header() {
                       className="px-4 py-2 border border-red-500 text-red-500 rounded hover:bg-red-50 transition"
                     >
                       Log In
-                    </Link>
-                    <Link
-                      href="/register"
-                      className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition"
-                    >
-                      Sign up
                     </Link>
                   </>
                 )}

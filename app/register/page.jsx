@@ -98,11 +98,11 @@ const handleSubmit = (e) => {
             setSubmitted(false);
           }, 3000);
 
-          setLoading(false); // ⬅️ stop spinner
+          setLoading(false); 
         },
         (error) => {
           console.log("Failed to send email:", error.text);
-          setLoading(false); // ⬅️ stop spinner even if failed
+          setLoading(false); 
         }
       );
   }
@@ -111,7 +111,8 @@ const handleSubmit = (e) => {
   return (
     <>
    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4 py-5">
-      <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl mx-auto bg-white rounded-lg shadow-xl p-8">        <div className="text-center mb-8">
+      <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl mx-auto bg-white rounded-lg shadow-xl p-8"> 
+        <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-gray-900">Create Account</h2>
           <p className="mt-2 text-gray-600">Join us today!</p>
         </div>
@@ -282,7 +283,7 @@ const handleSubmit = (e) => {
             />
             <label htmlFor="agreeToTerms" className="ml-2 block text-sm text-gray-700">
               I agree to the{" "}
-              <a href="#" className="text-emerald-600 hover:text-emerald-500">
+              <a href="#" className="text-indigo-600 hover:text-indigo-500">
                 Terms and Conditions
               </a>
             </label>
@@ -293,8 +294,8 @@ const handleSubmit = (e) => {
           <button
   type="submit"
   disabled={loading}
-  className={`w-full bg-emerald-600 text-white py-2 px-4 rounded-md 
-    hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500
+  className={`w-full bg-red-600 text-white py-2 px-4 rounded-md 
+    hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-emerald-500
     focus:ring-offset-2 transition duration-200 flex items-center justify-center
     ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
 >
@@ -306,9 +307,9 @@ const handleSubmit = (e) => {
 </button>
 
         </form>
-        <p className="mt-6 text-center text-sm text-gray-600">
+        <p className="mt-6 text-center text-md text-gray-600">
           Already have an account?{" "}
-          <Link href="/login" className="text-emerald-600 hover:text-emerald-500 font-medium">
+          <Link href="/login" className="text-indigo-950 hover:text-indigo-500 font-medium">
             Sign in
           </Link>
         </p>

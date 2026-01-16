@@ -12,6 +12,12 @@ const images = [
     '/change/three.png', 
   ];
 
+  const studentimages = [
+    '/change/studentone.png', 
+    '/change/studentthree.png', 
+    '/change/studenttwo.png',  
+  ];
+
 const courses = [
   {
     id: 1,
@@ -72,7 +78,7 @@ const courses = [
   },
   {
     id: 4,
-    title: "Visualization & Dashboarding",
+    title: "Visualization",
     desc: "Create compelling visual reports and interactive dashboards using modern tools to communicate insights clearly and drive decisions.",
     img: "/courses/four.png",
     content: "Master data storytelling through visualizations. You'll use Tableau, Power BI, and Python libraries to create interactive dashboards that transform complex data into understandable narratives for stakeholders.",
@@ -110,7 +116,7 @@ const courses = [
   },
   {
     id: 6,
-    title: "Excel & Power BI Mastery",
+    title: "Excel Mastery",
     desc: "Transform raw data into insights through advanced Excel techniques and Power BI dashboards that reveal trends for business impact.",
     img: "/courses/six.png",
     content: "Elevate your data skills with advanced Excel functions and Power BI. Learn to automate workflows, create dynamic reports, and perform complex analyses for business intelligence.",
@@ -201,10 +207,10 @@ export default function HomePage() {
   }}
   className="text-white-300 text-[2rem] md:text-[2.5rem] xl:text-[3rem] inline-block"
 >
-  Start Your Learning Journey 
+  Start Your Tech Journey
 </motion.span>
- <br /> <span className='text-[2rem] md:text-[2.5rem] xl:text-[3rem]'>&</span>{" "}
-                <span className="text-red-300 text-[2rem] md:text-[2.5rem] xl:text-[3rem]">Master New Skills</span>
+ <br /> <span className='text-[2rem] md:text-[2.5rem] xl:text-[3rem]'>and</span>{" "}
+                <span className="text-red-300 text-[2rem] md:text-[2.5rem] xl:text-[3rem]">Shape Your Future</span>
               </h1>
 
               <p className="text-gray-200 mt-4 max-w-lg">
@@ -212,9 +218,9 @@ export default function HomePage() {
               </p>
 
               <div className="flex gap-4 mt-6 items-center justify-center md:justify-start">
-                <Link href="https://wa.me/2348100032571">
+                <Link href="/register">
                   <button className="border border-white text-white p-2 rounded-md hover:bg-white hover:text-red-600 transition">
-                    Start Learning
+                    Get Started
                   </button>
                 </Link>
 
@@ -224,6 +230,26 @@ export default function HomePage() {
                   </div>
                 </Link>
               </div>
+              
+              <div className='hidden md:flex items-center gap-3'>
+              <div className='flex mt-4'>
+                {studentimages.map((studentimage) => (
+                  <div key={studentimage.id}>
+                  <Image 
+                  src={studentimage}
+                  alt='student image'
+                  width={400}
+                  height={200}
+                  className='h-16 w-16 object-cover rounded-full'
+                />
+                </div>
+                ))}
+                </div>
+                 <p className="text-gray-200 mt-4 max-w-sm">
+                  Become one of our 1000+ students from around the world
+              </p>
+              </div>
+
             </div>
           </div>
         </div>
@@ -298,6 +324,57 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+<section>
+      <h2 className="text-2xl font-bold text-center pt-5 text-black">Mode of Learning</h2>
+
+        <div className="flex justify-center">
+          <div className='flex flex-col md:flex-row w-full justify-center items-center gap-8 mt-1 p-8 max-w-5xl'>
+            <div className="bg-white rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer">
+                  <Image
+                    src="/home/classroom.png"
+                    alt="classroom image"
+                    width={400}
+                    height={240}
+                    className="w-full object-cover"
+                    placeholder="blur"
+                    blurDataURL="/placeholder.png"
+                  />
+                  <div className="p-4">
+                    <h3 className="font-semibold mb-2 text-black">Classroom Learning</h3>
+                    <p className="text-sm text-gray-600 mb-4 line-clamp-3">Immerse yourself in our expert-led, interactive classes for a hands-on
+                      learning experience that goes beyound tranditional methods.
+                    </p>
+                      <button className="w-full bg-red-700 text-white py-2.5 rounded">
+                      Explore our courses <i className='bi bi-arrow-right ml-4 bg-white rounded-full p-1.5 text-indigo-950 font-bold'></i>
+                    </button>
+
+                  </div>
+                </div>
+                <div className="bg-white rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer">
+                  <Image
+                    src="/home/online.png"
+                    alt="online image"
+                    width={400}
+                    height={240}
+                    className="w-full object-cover"
+                    placeholder="blur"
+                    blurDataURL="/placeholder.png"
+                  />
+                  <div className="p-4">
+                    <h3 className="font-semibold mb-2 text-black">Online Learning</h3>
+                    <p className="text-sm text-gray-600 mb-4 line-clamp-3">Discover the convenience of online learnning with our 
+                      courses, featuring interactive sessions and instant access to valuable resources.
+                    </p>
+                    <button className="w-full bg-indigo-950 text-white py-2.5 rounded">
+                      Explore our courses <i className='bi bi-arrow-right ml-4 bg-white rounded-full p-1.5 text-indigo-950 font-bold'></i>
+                    </button>
+                  </div>
+                </div>
+                </div>
+        </div>
+</section>
+
 
         {/* FEATURED COURSES */}
         <section id="courses" className="px-8 py-10 max-w-6xl mx-auto">
@@ -380,7 +457,7 @@ export default function HomePage() {
           <h2 className="text-2xl font-bold text-center mb-4 text-black">What Our Students Say</h2>
           <p className="text-center text-gray-600 mb-12">Real success stories from our learning community</p>
 
-          <div className="flex flex-col md:flex-row justify-center items-center gap-15">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10">
             <div>
               {[
                 {
@@ -392,7 +469,7 @@ export default function HomePage() {
                   avatar: "/academy/four.png",
                 },
               ].map((testimonial, i) => (
-                <div key={i} className="bg-red-300 shadow-md p-6 rounded-lg">
+                <div key={i} className="bg-indigo-950 shadow-md p-6 rounded-lg">
                   <div className="flex items-center mb-4">
                     <Image
                       src={testimonial.avatar}
@@ -403,10 +480,10 @@ export default function HomePage() {
                     />
                     <div>
                       <h4 className="font-semibold text-white">{testimonial.name}</h4>
-                      <p className="text-sm text-gray-600">{testimonial.role}</p>
+                      <p className="text-sm text-white/70">{testimonial.role}</p>
                     </div>
                   </div>
-                  <p className="text-gray-800 mb-4 md:max-w-4xl">"{testimonial.quote}"</p>
+                  <p className="text-white mb-4 md:max-w-4xl">"{testimonial.quote}"</p>
                   <p className="text-yellow-500">{testimonial.stars}</p>
                 </div>
               ))}
