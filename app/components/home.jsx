@@ -329,7 +329,7 @@ export default function HomePage() {
       <h2 className="text-2xl font-bold text-center pt-5 text-black">Mode of Learning</h2>
 
         <div className="flex justify-center">
-          <div className='flex flex-col md:flex-row w-full justify-center items-center gap-8 mt-1 p-8 max-w-5xl'>
+          <div className='flex flex-col md:flex-row w-full justify-center items-center gap-8 mt-1 p-8 max-w-3xl'>
             <div className="bg-white rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer">
                   <Image
                     src="/home/classroom.png"
