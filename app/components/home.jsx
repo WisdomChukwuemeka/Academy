@@ -45,6 +45,7 @@ const courses = [
       "Statistical Analysis",
       "Capstone Project: Real-World Data Analysis"
     ],
+    price: 200000,
     enrolled: 250,
     tutor: "Dr. Emily Chen",
     weeks: 8
@@ -65,6 +66,7 @@ const courses = [
     "Deployment and Hosting (Vercel, Render, or DigitalOcean)",
     "Final Project: Full-Stack Web Application"
   ],
+  price: 250000,
   enrolled: 180,
   tutor: "Prof. Michael Rodriguez",
   weeks: 10
@@ -84,6 +86,7 @@ const courses = [
       "Cloud Data Engineering (AWS/GCP/Azure)",
       "Project: Building a Complete Data Pipeline"
     ],
+    price: 350000,
     enrolled: 120,
     tutor: "Sarah Thompson",
     weeks: 12
@@ -103,6 +106,7 @@ const courses = [
       "Python for Visualization: Plotly and Dash",
       "Capstone: Executive Dashboard Creation"
     ],
+    price: 150000,
     enrolled: 300,
     tutor: "Alex Patel",
     weeks: 6
@@ -122,6 +126,7 @@ const courses = [
       "Building AI Applications",
       "Project: AI-Powered Solution"
     ],
+    price: 400000,
     enrolled: 200,
     tutor: "Dr. Lisa Wong",
     weeks: 10
@@ -141,6 +146,7 @@ const courses = [
       "Creating Interactive Reports",
       "Final Project: Business Intelligence Dashboard"
     ],
+    price: 100000,
     enrolled: 350,
     tutor: "Robert Klein",
     weeks: 7
@@ -257,7 +263,7 @@ export default function HomePage() {
                 </div>
                 ))}
                 </div>
-                 <p className="text-gray-200 mt-4 max-w-sm">
+                 <p className="text-gray-200 mt-4 max-w-80">
                   Become one of our 1000+ students from around the world
               </p>
               </div>
@@ -340,7 +346,7 @@ export default function HomePage() {
 <section>
       <h2 className="text-2xl font-bold text-center pt-5 text-black">Mode of Learning</h2>
 
-        <div className="flex justify-center">
+        <div className="flex flex-col md:flex-row justify-center">
           {
             learningmode.map((mode, index) => (
           <div key={index} className="flex flex-col md:flex-row w-full justify-center items-center gap-8 mt-8 p-8 max-w-3xl">
@@ -370,36 +376,70 @@ export default function HomePage() {
 
 
         {/* FEATURED COURSES */}
-        <section id="courses" className="px-8 py-10 max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-4 text-black">Featured Courses</h2>
-          <p className="text-center text-gray-600 mb-10">Start your learning journey with our most popular courses</p>
+        <section id="courses" className="px-6 py-12 max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-2 text-black">
+            Featured Courses
+          </h2>
+          <p className="text-center text-gray-600 mb-10">
+            Start your learning journey with our most popular courses
+          </p>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid gap-6 sm:grid-cols-3">
             {courses.map((course) => (
               <Link key={course.id} href={`/courses/${course.id}`}>
-                <div className="bg-white rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer">
-                  <Image
-                    src={course.img}
-                    alt={course.title}
-                    width={400}
-                    height={240}
-                    className="w-full h-40 object-cover"
-                    placeholder="blur"
-                    blurDataURL="/placeholder.png"
-                  />
-                  <div className="p-4">
-                    <h3 className="font-semibold mb-2 text-black">{course.title}</h3>
-                    <p className="text-sm text-gray-600 mb-4 line-clamp-3">{course.desc}</p>
-                    <button className="w-full bg-red-500 text-white py-2 rounded">
-                      Start Learning
-                    </button>
+                <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden">
+                  
+                  {/* Image Section */}
+                  <div className="relative">
+                    <Image
+                      src={course.img}
+                      alt={course.title}
+                      width={400}
+                      height={240}
+                      className="w-full h-44 object-cover"
+                    />
+
+                    {/* Classroom badge */}
+                    <span className="absolute top-3 left-3 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
+                      Classroom
+                    </span>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-5">
+                    {/* Category */}
+                    <p className="text-sm text-red-500 font-medium mb-1">
+                      {course.category}
+                    </p>
+
+                    {/* Title */}
+                    <h3 className="font-semibold text-gray-900 leading-snug mb-2">
+                      {course.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-sm text-gray-600 line-clamp-3 mb-4">
+                      {course.desc}
+                    </p>
+
+                    {/* Footer */}
+                    <div className="flex justify-between items-center text-sm">
+                        <span className="flex items-center gap-1 bg-gray-100 p-1.5 rounded-lg text-black">
+                          ⏱ {course.weeks}weeks
+                        </span>
+                        <span className="font-semibold text-black bg-gray-100 p-1.5 rounded-lg">
+                        ₦{course.price.toLocaleString("en-NG")}
+                      </span>
+
+
+                      <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-1.5 rounded-full text-xs">
+                        View →
+                      </button>
+                    </div>
                   </div>
                 </div>
               </Link>
             ))}
-          </div>
-          <div className="text-center mt-8">
-            {/* <button className="text-emerald-500 border border-emerald-400 p-1.5 rounded-[5px]">See More</button> */}
           </div>
         </section>
 
