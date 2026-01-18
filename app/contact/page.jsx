@@ -5,7 +5,7 @@ export default function Contact() {
     <>
 <div className=" bg-gray-50">
       <section className="text-center mt-10 px-6  ">
-        <h2 className="text-2xl md:text-3xl font-semibold text-emerald-600">
+        <h2 className="text-2xl md:text-3xl font-semibold text-indigo-950">
           Feel Free To Get In Touch
         </h2>
       </section>
@@ -82,7 +82,7 @@ export default function Contact() {
   {/* Submit */}
   <button
     type="submit"
-    className="w-full bg-emerald-500 text-white px-4 py-2 rounded-md hover:bg-emerald-600 transition text-md md:text-md xl:text-xl"
+    className="w-full bg-indigo-950 text-white px-4 py-2 rounded-md hover:bg-indigo-800 transition text-md md:text-md xl:text-xl"
   >
     Send Message
   </button>
