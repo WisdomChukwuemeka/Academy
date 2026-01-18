@@ -29,129 +29,134 @@ const images = [
     }
   ]
 
-const courses = [
+export const courses = [
   {
     id: 1,
-    title: "DA with Python & SQL",
-    desc: "Learn data analysis using Python, pandas, and SQL to explore data, uncover insights, and support better business decisions.",
-    img: "/courses/one.png",
-    content: "This comprehensive course covers data analysis fundamentals, including data cleaning, visualization, and querying. You'll work on real-world projects to analyze datasets from various industries, learning how to derive actionable insights that drive business strategies.",
+    title: "Professional Video Editing",
+    desc: "Learn professional video editing techniques using industry-standard tools to create high-quality videos.",
+    img: "/courses/videoediting.png",
+    content: "This course teaches video editing from beginner to advanced level using tools like Adobe Premiere Pro and After Effects. You will learn cutting, transitions, color grading, sound design, and motion graphics.",
     syllabus: [
-      "Introduction to Data Analysis",
-      "Python Basics for Data Analysis",
-      "Working with Pandas and NumPy",
-      "SQL Fundamentals and Advanced Queries",
-      "Data Visualization with Matplotlib and Seaborn",
-      "Statistical Analysis",
-      "Capstone Project: Real-World Data Analysis"
+      "Introduction to Video Editing",
+      "Adobe Premiere Pro Basics",
+      "Cutting & Transitions",
+      "Color Correction & Grading",
+      "Audio Editing & Sound Design",
+      "Motion Graphics with After Effects",
+      "Final Project: Professional Video Edit"
     ],
     price: 200000,
-    enrolled: 250,
-    tutor: "Dr. Emily Chen",
+    enrolled: 220,
+    tutor: "James Carter",
     weeks: 8
   },
- {
-  id: 2,
-  title: "Full-Stack Web Development",
-  desc: "At the end of this course, you will be able to design, build, and deploy secure, scalable full-stack web applications using React for the frontend and Django for the backend, preparing you for employment or freelance opportunities as a professional web developer.",
-  img: "/courses/two.png",
-  content: "This course provides a hands-on approach to full-stack web development. You will learn how to build responsive user interfaces with React, create robust REST APIs with Django, manage databases, implement authentication, and deploy real-world web applications.",
-  syllabus: [
-    "Web Development Fundamentals (HTML, CSS, JavaScript)",
-    "Modern Frontend Development with React",
-    "State Management and API Integration",
-    "Backend Development with Django & Django REST Framework",
-    "Database Design and Management (PostgreSQL)",
-    "User Authentication & Authorization",
-    "Deployment and Hosting (Vercel, Render, or DigitalOcean)",
-    "Final Project: Full-Stack Web Application"
-  ],
-  price: 250000,
-  enrolled: 180,
-  tutor: "Prof. Michael Rodriguez",
-  weeks: 10
-},
+
+  {
+    id: 2,
+    title: "Full-Stack Web Development",
+    desc: "Design, build, and deploy modern websites and web applications using frontend and backend technologies.",
+    img: "/courses/coding.png",
+    content: "This hands-on course covers frontend development with HTML, CSS, JavaScript, React, and backend development with Django. You’ll build real-world projects and deploy them online.",
+    syllabus: [
+      "HTML, CSS & JavaScript Fundamentals",
+      "Responsive Web Design",
+      "React & Component-Based UI",
+      "Backend Development with Django",
+      "APIs & Database Integration",
+      "Authentication & Security",
+      "Final Project: Full-Stack Web App"
+    ],
+    price: 250000,
+    enrolled: 300,
+    tutor: "Michael Rodriguez",
+    weeks: 8
+  },
+
   {
     id: 3,
-    title: "Data Engineering",
-    desc: "Design and manage data pipelines, databases, and ETL workflows to prepare reliable data for analytics and AI systems.",
-    img: "/courses/three.png",
-    content: "Learn to build scalable data infrastructure. This course covers data ingestion, transformation, and storage using tools like Apache Spark, Kafka, and cloud services, emphasizing best practices for data quality and efficiency.",
+    title: "Data Analysis with Excel",
+    desc: "Master Excel from basic formulas to advanced data analysis, automation, and business reporting.",
+    img: "/courses/one.png",
+    content: "Learn how to analyze data, automate tasks, and create dashboards using Excel. This course is ideal for business professionals and data beginners.",
     syllabus: [
-      "Data Engineering Overview",
-      "Database Systems: SQL and NoSQL",
-      "ETL Processes and Tools",
-      "Big Data Technologies: Hadoop and Spark",
-      "Data Pipelines with Airflow",
-      "Cloud Data Engineering (AWS/GCP/Azure)",
-      "Project: Building a Complete Data Pipeline"
-    ],
-    price: 350000,
-    enrolled: 120,
-    tutor: "Sarah Thompson",
-    weeks: 12
-  },
-  {
-    id: 4,
-    title: "Visualization",
-    desc: "Create compelling visual reports and interactive dashboards using modern tools to communicate insights clearly and drive decisions.",
-    img: "/courses/four.png",
-    content: "Master data storytelling through visualizations. You'll use Tableau, Power BI, and Python libraries to create interactive dashboards that transform complex data into understandable narratives for stakeholders.",
-    syllabus: [
-      "Principles of Data Visualization",
-      "Tools Overview: Tableau and Power BI",
-      "Chart Types and Best Practices",
-      "Interactive Dashboard Design",
-      "Advanced Visualization Techniques",
-      "Python for Visualization: Plotly and Dash",
-      "Capstone: Executive Dashboard Creation"
-    ],
-    price: 150000,
-    enrolled: 300,
-    tutor: "Alex Patel",
-    weeks: 6
-  },
-  {
-    id: 5,
-    title: "Artificial Intelligence",
-    desc: "Explore AI foundations and learn to build intelligent applications using Python, automation techniques, and real-world datasets.",
-    img: "/courses/five.png",
-    content: "From AI basics to advanced applications, this course covers natural language processing, computer vision, and ethical AI. You'll build AI-powered apps using frameworks like Hugging Face and OpenCV.",
-    syllabus: [
-      "AI Fundamentals and History",
-      "Python for AI Development",
-      "Natural Language Processing",
-      "Computer Vision Basics",
-      "AI Ethics and Bias",
-      "Building AI Applications",
-      "Project: AI-Powered Solution"
-    ],
-    price: 400000,
-    enrolled: 200,
-    tutor: "Dr. Lisa Wong",
-    weeks: 10
-  },
-  {
-    id: 6,
-    title: "Excel Mastery",
-    desc: "Transform raw data into insights through advanced Excel techniques and Power BI dashboards that reveal trends for business impact.",
-    img: "/courses/six.png",
-    content: "Elevate your data skills with advanced Excel functions and Power BI. Learn to automate workflows, create dynamic reports, and perform complex analyses for business intelligence.",
-    syllabus: [
-      "Advanced Excel Functions and Formulas",
-      "Data Modeling in Excel",
-      "Power Query for Data Transformation",
-      "Power BI Fundamentals",
-      "DAX Language Mastery",
-      "Creating Interactive Reports",
-      "Final Project: Business Intelligence Dashboard"
+      "Excel Interface & Basics",
+      "Formulas & Functions",
+      "Data Cleaning & Analysis",
+      "Pivot Tables & Charts",
+      "Excel Automation",
+      "Business Reporting",
+      "Final Project: Excel Dashboard"
     ],
     price: 100000,
-    enrolled: 350,
+    enrolled: 400,
     tutor: "Robert Klein",
-    weeks: 7
+    weeks: 6
+  },
+
+  {
+    id: 4,
+    title: "Graphic Design",
+    desc: "Create stunning visual designs using professional graphic design tools for marketing, and digital media.",
+    img: "/courses/graphic.png",
+    content: "This course covers design principles and practical skills using Adobe Photoshop, Illustrator, and Canva to produce professional graphics.",
+    syllabus: [
+      "Design Principles & Color Theory",
+      "Adobe Photoshop Essentials",
+      "Logo & Brand Design",
+      "Adobe Illustrator Basics",
+      "Social Media & Print Designs",
+      "Design Portfolio Creation",
+      "Final Project: Brand Design Kit"
+    ],
+    price: 180000,
+    enrolled: 260,
+    tutor: "Sophia Martinez",
+    weeks: 8
+  },
+
+  {
+    id: 5,
+    title: "UI/UX Design",
+    desc: "Design intuitive and user-friendly digital products through research, wireframing, prototyping, and testing.",
+    img: "/courses/ui.png",
+    content: "Learn the complete UI/UX design workflow using Figma. You’ll conduct user research, create wireframes, prototypes, and design modern interfaces.",
+    syllabus: [
+      "Introduction to UI/UX",
+      "User Research & Personas",
+      "Wireframing",
+      "Prototyping with Figma",
+      "Usability Testing",
+      "Design Systems",
+      "Final Project: App UI/UX Design"
+    ],
+    price: 220000,
+    enrolled: 280,
+    tutor: "Daniel Lee",
+    weeks: 9
+  },
+
+  {
+    id: 6,
+    title: "3D Modeling & Animation",
+    desc: "Learn 3D modeling, texturing, and animation to create realistic 3D for games, films and product visualization.",
+    img: "/courses/3d.png",
+    content: "This course introduces 3D modeling using Blender. You’ll learn modeling, texturing, lighting, rendering, and basic animation techniques.",
+    syllabus: [
+      "Introduction to 3D Design",
+      "Blender Interface & Tools",
+      "3D Modeling Techniques",
+      "Texturing & Materials",
+      "Lighting & Rendering",
+      "Basic Animation",
+      "Final Project: 3D Model Showcase"
+    ],
+    price: 300000,
+    enrolled: 150,
+    tutor: "Ethan Brooks",
+    weeks: 12
   }
 ];
+
 
 export default function HomePage() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -251,8 +256,8 @@ export default function HomePage() {
               
               <div className='hidden md:flex items-center gap-3'>
               <div className='flex mt-4'>
-                {studentimages.map((studentimage) => (
-                  <div key={studentimage.id}>
+                {studentimages.map((studentimage, index) => (
+                  <div key={index}>
                   <Image 
                   src={studentimage}
                   alt='student image'
@@ -384,7 +389,7 @@ export default function HomePage() {
             Start your learning journey with our most popular courses
           </p>
 
-          <div className="grid gap-6 sm:grid-cols-3">
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-3 xl:grid-cols-3">
             {courses.map((course) => (
               <Link key={course.id} href={`/courses/${course.id}`}>
                 <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden">
@@ -422,7 +427,7 @@ export default function HomePage() {
                       {course.desc}
                     </p>
 
-                    {/* Footer */}
+                    {/* Prices */}
                     <div className="flex justify-between items-center text-sm">
                         <span className="flex items-center gap-1 bg-gray-100 p-1.5 rounded-lg text-black">
                           ⏱ {course.weeks}weeks

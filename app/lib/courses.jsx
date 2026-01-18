@@ -1,202 +1,211 @@
 export const courses = [
   {
     id: 1,
-    title: "DA with Python & SQL",
-    desc: "Introducing the Data Analysis with Python and SQL Certification Course, a comprehensive beginner to expert program designed to help aspiring data analysts to learn the essential skills in the rapidly growing field of data analysis. This course offers a unique blend of practical and theoretical knowledge, combining the powerful programming language Python and the versatile database management system SQL to help you analyze, visualize, and interpret data efficiently. By the end of the course, you will have the confidence to tackle real-world data challenges and make data-driven decisions that can significantly impact your organization. Join us to transform your passion for data into a rewarding career.",
-    img: "/courses/one.png",
+    title: "Professional Video Editing",
+    desc: "This Video Editing Certification Course is designed to take you from beginner to professional level in video editing. You will learn how to edit high-quality videos for social media, YouTube, film, and marketing using industry-standard tools. By the end of this course, you will confidently create engaging video content that meets professional standards.",
+    img: "/courses/coding.png",
     content:
-      "This comprehensive course covers data cleaning, analysis, visualization, and querying. You will work on real-world datasets and gain hands-on experience using Python and SQL.",
+      "Learn video editing workflows including cutting, transitions, color grading, sound design, and motion graphics using professional editing software.",
     syllabus: [
-      "Introduction to Data Analysis",
-      "Python Basics",
-      "Pandas & NumPy",
-      "SQL Fundamentals",
-      "Data Visualization",
-      "Statistics for Data Analysis",
-      "Capstone Project",
+      "Introduction to Video Editing",
+      "Editing Workflow & Timeline",
+      "Transitions & Effects",
+      "Color Correction & Grading",
+      "Audio Editing & Sound Design",
+      "Motion Graphics Basics",
+      "Final Project: Professional Video Edit",
     ],
-    duration: "4 months",
-    enrolled: 250,
-    tutor: "Dr. Emily Bere",
+    duration: "2 months",
+    enrolled: 220,
+    tutor: "James Carter",
     weeks: 8,
-    ratings: 4.6,
-    ratingsCount: 1200,
-    lastUpdated: "12/2025",
-    totalLectures: 45,
-    totalDuration: "10h 30m",
-    requirements: [
-      "No programming experience needed",
-      "A computer with Python installed",
-      "Basic math knowledge"
-    ],
-    profilepic: "/teachers/teacherone.png",
-    instructorBio: "Dr. Emily Bere is a data scientist with 10 years of experience in industry and academia."
-  },
-{
-  id: 2,
-  title: "Full-Stack Web Development",
-  desc: "The Full-Stack Web Development Certification Course is a comprehensive program designed to take learners from beginner to advanced levels in modern web development. This course blends strong theoretical foundations with hands-on practical experience, focusing on building real-world applications using modern frontend and backend technologies. By the end of the course, you’ll be equipped as a professional Full-Stack Web Developer, capable of building, deploying, and maintaining scalable web applications and contributing effectively to any development team or freelance project.",
-  img: "/courses/two.png",
-  content:
-    "Learn how to build responsive user interfaces, develop secure backend systems, integrate databases, implement authentication, and deploy full-stack web applications using modern tools and best practices.",
-  syllabus: [
-    "Web Development Fundamentals (HTML, CSS, JavaScript)",
-    "Frontend Development with React / Next.js",
-    "Backend Development with Django & Django REST Framework",
-    "REST APIs and Frontend–Backend Integration",
-    "Database Design and Management",
-    "Authentication, Authorization & Security",
-    "Deployment and Hosting",
-    "Final Project: Full-Stack Web Application"
-  ],
-  duration: "3 months",
-  enrolled: 180,
-  tutor: "Prof. Michael Peterson",
-  weeks: 10,
-  ratings: 4.7,
-  ratingsCount: 950,
-  lastUpdated: "11/2025",
-  totalLectures: 55,
-  totalDuration: "12h",
-  requirements: [
-    "Basic computer knowledge",
-    "Familiarity with JavaScript is an advantage",
-    "Access to a computer and internet"
-  ],
-  profilepic: "/teachers/teachertwo.png",
-  instructorBio:
-    "Prof. Michael Peterson is a senior full-stack web developer with extensive experience building scalable web applications and mentoring developers for real-world industry roles."
-},
-  {
-    id: 3,
-    title: "Data Engineering",
-    desc: "The Data Engineering Course is a robust, hands-on program designed to equip learners with the skills required to design, build, and manage scalable data infrastructure. This course focuses on transforming raw data into reliable, structured datasets that power analytics, machine learning, and business intelligence systems. You will learn how to build efficient ETL pipelines, work with both SQL and NoSQL databases, and process large-scale data using modern big data frameworks such as Apache Spark and Airflow. By the end of the course, you will be confident in developing production-ready data pipelines and supporting data-driven organizations as a professional data engineer.",
-    img: "/courses/three.png",
-    content:
-      "This course teaches modern data engineering tools including Spark, Airflow, and cloud-based data platforms.",
-    syllabus: [
-      "Data Engineering Overview",
-      "SQL & NoSQL Databases",
-      "ETL Pipelines",
-      "Big Data with Spark",
-      "Airflow",
-      "Cloud Data Platforms",
-      "Pipeline Project",
-    ],
-    duration: "5 months",
-    enrolled: 120,
-    tutor: "Sarah Thompson",
-    weeks: 12,
-    ratings: 4.5,
-    ratingsCount: 600,
-    lastUpdated: "10/2025",
-    totalLectures: 60,
-    totalDuration: "15h",
-    requirements: [
-      "Basic programming skills",
-      "Familiarity with databases",
-      "Cloud computing basics"
-    ],
-    profilepic: "/teachers/teacherthree.png",
-    instructorBio: "Sarah Thompson is a senior data engineer at a leading tech company with expertise in big data technologies."
-  },
-  {
-    id: 4,
-    title: "Visualization & Dashboarding",
-    desc: "The Visualization & Dashboarding Course is designed to help learners transform complex datasets into clear, interactive, and impactful visual stories. This course emphasizes data storytelling, visual best practices, and dashboard design using industry-leading tools such as Tableau, Power BI, and Python visualization libraries. You will learn how to create insightful dashboards that drive business decisions and communicate findings effectively to both technical and non-technical audiences. By the end of this course, you will have a strong portfolio of professional dashboards and the skills needed to excel as a data visualization specialist or business intelligence analyst.",
-    img: "/courses/four.png",
-    content:
-      "Learn Tableau, Power BI, and Python visualization tools to build interactive dashboards.",
-    syllabus: [
-      "Data Visualization Principles",
-      "Tableau Basics",
-      "Power BI Fundamentals",
-      "Dashboard Design",
-      "Advanced Charts",
-      "Python Visualization",
-      "Dashboard Project",
-    ],
-    duration: "1 month",
-    enrolled: 300,
-    tutor: "Wisdom China",
-    weeks: 6,
-    ratings: 4.8,
-    ratingsCount: 1500,
-    lastUpdated: "1/2026",
-    totalLectures: 35,
-    totalDuration: "7h 45m",
+    ratings: 4.7,
+    ratingsCount: 980,
+    lastUpdated: "01/2026",
+    totalLectures: 38,
+    totalDuration: "8h 20m",
     requirements: [
       "No prior experience required",
-      "Access to visualization tools",
-      "Interest in data storytelling"
+      "A computer capable of running editing software",
+      "Creativity and willingness to learn"
     ],
     profilepic: "/teachers/teacherfour.png",
-    instructorBio: "Wisdom China is a visualization specialist who has designed dashboards for Fortune 500 companies."
+    instructorBio:
+      "James Carter is a professional video editor with over 10 years of experience in film, media, and digital content production."
   },
+
   {
-    id: 5,
-    title: "Artificial Intelligence",
-    desc: "The Artificial Intelligence Course is a comprehensive program designed to introduce learners to the core concepts and real-world applications of AI. This course covers key areas such as machine learning foundations, natural language processing, computer vision, and ethical considerations in AI systems. Through hands-on projects and practical implementations using Python, you will learn how to build intelligent systems capable of solving complex problems. By the end of the course, you will be equipped with the knowledge and confidence to develop AI-powered applications and pursue advanced roles in artificial intelligence and emerging technologies.",
-    img: "/courses/five.png",
+    id: 2,
+    title: "Full-Stack Web Development",
+    desc: "This Full-Stack Web Development course is a complete guide to building modern websites and web applications. You will learn how to design responsive interfaces, develop secure backends, and deploy real-world applications. By the end of the course, you will be job-ready as a professional web developer.",
+    img: "/courses/coding.png",
     content:
-      "Explore NLP, computer vision, and ethical AI while building real AI-powered solutions.",
+      "Build responsive websites and scalable web applications using HTML, CSS, JavaScript, React, and Django.",
     syllabus: [
-      "AI Fundamentals",
-      "Python for AI",
-      "Natural Language Processing",
-      "Computer Vision",
-      "AI Ethics",
-      "AI Applications",
-      "AI Project",
+      "HTML, CSS & JavaScript Fundamentals",
+      "Responsive Web Design",
+      "React & Modern Frontend Development",
+      "Backend Development with Django",
+      "APIs & Database Integration",
+      "Authentication & Security",
+      "Final Project: Full-Stack Web App"
     ],
-    duration: "3 months",
-    enrolled: 200,
-    tutor: "Dr. Lisa Chisom",
+    duration: "2 months",
+    enrolled: 310,
+    tutor: "Michael Peterson",
     weeks: 10,
-    ratings: 4.7,
-    ratingsCount: 1100,
-    lastUpdated: "11/2025",
-    totalLectures: 50,
-    totalDuration: "11h",
-    requirements: [
-      "Python programming experience",
-      "Basic math and statistics",
-      "Curiosity about AI"
-    ],
-    profilepic: "/teachers/teacherfive.png",
-    instructorBio: "Dr. Lisa Chisom is an AI researcher with a PhD in computer science and several patents in AI technologies."
-  },
-  {
-    id: 6,
-    title: "Excel & Power BI Mastery",
-    desc: "Our data analysis with Excel training course is designed to provide you with a comprehensive understanding of how to analyze and manipulate data using Microsoft Excel. Whether you're new to Excel or looking to enhance your skills, our course will equip you with the knowledge and tools you need to effectively analyze data and make informed decisions. Our experienced instructors will guide you through real-world examples and case studies to help you apply your new skills to practical scenarios. You will have the opportunity to work on hands-on exercises and projects to solidify your understanding of the concepts covered in the course. By the end of the course, you will have the ability to perform data analysis tasks using Excel with confidence. You will be able to understand and analyze complex data sets and present your findings in a clear and concise manner. You will also have a solid foundation to build upon should you choose to pursue more advanced data analysis techniques.",
-    img: "/courses/six.png",
-    content:
-      "Master advanced Excel functions, Power Query, DAX, and Power BI dashboards.",
-    syllabus: [
-      "Advanced Excel",
-      "Data Modeling",
-      "Power Query",
-      "Power BI Basics",
-      "DAX Mastery",
-      "Interactive Reports",
-      "BI Dashboard Project",
-    ],
-    duration: "3 months",
-    enrolled: 350,
-    tutor: "Robert King",
-    weeks: 7,
-    ratings: 4.5,
-    ratingsCount: 1800,
+    ratings: 4.8,
+    ratingsCount: 1200,
     lastUpdated: "12/2025",
-    totalLectures: 40,
-    totalDuration: "9h",
+    totalLectures: 55,
+    totalDuration: "12h",
     requirements: [
-      "Basic Excel knowledge",
-      "Access to Microsoft tools",
-      "Interest in business intelligence"
+      "Basic computer knowledge",
+      "Internet access",
+      "Willingness to practice"
     ],
     profilepic: "/teachers/teachersix.png",
-    instructorBio: "Robert King is a certified Power BI expert with over 15 years in business analytics."
+    instructorBio:
+      "Michael Peterson is a senior full-stack developer with years of experience building production-grade web applications."
   },
+
+  {
+    id: 3,
+    title: "Microsoft Excel Mastery",
+    desc: "This Excel Mastery course teaches you how to analyze data, automate tasks, and create professional reports using Microsoft Excel. Whether for business, finance, or administration, this course equips you with essential Excel skills.",
+    img: "/courses/one.png",
+    content:
+      "Learn Excel formulas, data analysis, pivot tables, and automation techniques for real-world business use.",
+    syllabus: [
+      "Excel Basics",
+      "Formulas & Functions",
+      "Data Cleaning",
+      "Pivot Tables & Charts",
+      "Excel Automation",
+      "Business Reporting",
+      "Final Project: Excel Dashboard"
+    ],
+    duration: "1.5 months",
+    enrolled: 420,
+    tutor: "Robert King",
+    weeks: 6,
+    ratings: 4.6,
+    ratingsCount: 1600,
+    lastUpdated: "01/2026",
+    totalLectures: 30,
+    totalDuration: "6h 45m",
+    requirements: [
+      "Basic computer knowledge",
+      "Microsoft Excel installed",
+      "Interest in data handling"
+    ],
+    profilepic: "/teachers/teachertwo.png",
+    instructorBio:
+      "Robert King is a certified Excel and Power BI expert with over 15 years of experience in business analytics."
+  },
+
+  {
+    id: 4,
+    title: "Graphic Design",
+    desc: "This Graphic Design course teaches you how to create professional visual designs for branding, marketing, and digital media. You will learn design principles and hands-on skills using industry-standard tools.",
+    img: "/courses/graphic.png",
+    content:
+      "Design logos, flyers, banners, and social media graphics using Photoshop, Illustrator, and Canva.",
+    syllabus: [
+      "Design Principles & Color Theory",
+      "Adobe Photoshop Basics",
+      "Logo & Brand Design",
+      "Adobe Illustrator Essentials",
+      "Social Media & Print Designs",
+      "Portfolio Development",
+      "Final Project: Brand Design Kit"
+    ],
+    duration: "2 months",
+    enrolled: 280,
+    tutor: "Sophia Martinez",
+    weeks: 8,
+    ratings: 4.7,
+    ratingsCount: 1100,
+    lastUpdated: "12/2025",
+    totalLectures: 36,
+    totalDuration: "8h",
+    requirements: [
+      "No prior experience required",
+      "Creative mindset",
+      "Access to design software"
+    ],
+    profilepic: "/teachers/teacherthree.png",
+    instructorBio:
+      "Sophia Martinez is a professional graphic designer who has worked with global brands and startups."
+  },
+
+  {
+    id: 5,
+    title: "UI/UX Design",
+    desc: "This UI/UX Design course teaches you how to design intuitive and user-friendly digital products. You will learn the complete design process from research to prototyping and usability testing.",
+    img: "/courses/ui.png",
+    content:
+      "Learn user research, wireframing, prototyping, and design systems using Figma.",
+    syllabus: [
+      "Introduction to UI/UX",
+      "User Research & Personas",
+      "Wireframing",
+      "Prototyping with Figma",
+      "Usability Testing",
+      "Design Systems",
+      "Final Project: App UI Design"
+    ],
+    duration: "2.5 months",
+    enrolled: 300,
+    tutor: "Sarah Lee",
+    weeks: 9,
+    ratings: 4.8,
+    ratingsCount: 1300,
+    lastUpdated: "01/2026",
+    totalLectures: 42,
+    totalDuration: "9h 30m",
+    requirements: [
+      "No prior design experience required",
+      "Basic computer skills",
+      "Interest in user-centered design"
+    ],
+    profilepic: "/teachers/teacherfive.png",
+    instructorBio:
+      "Sarah Lee is a UI/UX designer with experience designing products used by thousands of users worldwide."
+  },
+
+  {
+    id: 6,
+    title: "3D Modeling & Animation",
+    desc: "This 3D Modeling course introduces you to creating realistic 3D models and animations for games, movies, and product visualization using modern 3D tools.",
+    img: "/courses/3d.png",
+    content:
+      "Learn 3D modeling, texturing, lighting, rendering, and basic animation using Blender.",
+    syllabus: [
+      "Introduction to 3D Design",
+      "Blender Interface & Tools",
+      "3D Modeling Techniques",
+      "Texturing & Materials",
+      "Lighting & Rendering",
+      "Basic Animation",
+      "Final Project: 3D Model Showcase"
+    ],
+    duration: "3 months",
+    enrolled: 160,
+    tutor: "Ethan Brooks",
+    weeks: 12,
+    ratings: 4.6,
+    ratingsCount: 720,
+    lastUpdated: "12/2025",
+    totalLectures: 48,
+    totalDuration: "11h",
+    requirements: [
+      "A computer with good graphics performance",
+      "No prior 3D experience required",
+      "Passion for 3D design"
+    ],
+    profilepic: "/teachers/teacherone.png",
+    instructorBio:
+      "Ethan Brooks is a 3D artist and animator with experience in games, film, and product visualization."
+  }
 ];
