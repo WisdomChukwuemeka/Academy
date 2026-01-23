@@ -388,7 +388,7 @@ export default function CodePlayground() {
             <span className="text-red-600 ml-2">Doing</span>
             .
         </h2>
-        <p className=" text-gray-600 w-100 md:w-150 text-lg">
+        <p className=" text-gray-600 w-90 md:w-150 text-md md:text-lg">
             Experience a real-world development environment. Write code, see results instantly.
         </p>
 
