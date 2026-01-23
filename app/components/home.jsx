@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FAQSection from "./faq";
 import { motion } from "framer-motion";
+import CodePlayground from '../editor/page';
 
 
 
@@ -447,6 +448,11 @@ export default function HomePage() {
             ))}
           </div>
         </section>
+
+         <section className="max-w-6xl mx-auto pt-6 pb-16 px-6">
+              <CodePlayground />
+            </section>
+
 
         {/* HOW IT WORKS */}
         <section className="bg-gray-50 px-8 py-10">
