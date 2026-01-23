@@ -385,7 +385,7 @@ export default function CodePlayground() {
             </div>
         <h2 className="text-3xl md:text-5xl font-bold text-gray-900 font-cal-sans">
             Learn by
-            <span className="text-red-600">Doing</span>
+            <span className="text-red-600 ml-2">Doing</span>
             .
         </h2>
         <p className=" text-gray-600 w-100 md:w-150 text-lg">
