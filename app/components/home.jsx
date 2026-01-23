@@ -208,7 +208,7 @@ export default function HomePage() {
                 ⭐ Trusted by 1000+ learners worldwide
               </span>
 
-              <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mt-4 text-white leading-tight max-w-30px">
+              <h1 className="text-2xl sm:text-2xl md:text-5xl font-bold mt-4 text-white leading-tight max-w-30px">
                 <motion.span
   initial={{ opacity: 0, x: -20 }}
   animate={{
@@ -229,12 +229,11 @@ export default function HomePage() {
       repeatType: "loop",
     },
   }}
-  className="text-white-300 text-[2rem] md:text-[2.5rem] xl:text-[3rem] inline-block"
->
-  Start Your Tech Journey
-</motion.span>
- <br /> <span className='text-[2rem] md:text-[2.5rem] xl:text-[3rem]'>and</span>{" "}
-                <span className="text-red-300 text-[2rem] md:text-[2.5rem] xl:text-[3rem]">Shape Your Future</span>
+        className="text-white-300 text-[2rem] md:text-[2.5rem] xl:text-[3rem]"
+      >
+        Start Your Tech Journey {" "}
+               <br/> <span className="text-red-300 text-[2rem] md:text-[2.5rem] xl:text-[3rem]"> and Shape Your Future</span>
+      </motion.span>
               </h1>
 
               <p className="text-gray-200 mt-4 max-w-lg">
@@ -449,7 +448,7 @@ export default function HomePage() {
           </div>
         </section>
 
-         <section className="max-w-6xl mx-auto pt-6 pb-16 px-6">
+         <section className="max-w-6xl mx-auto pt-6 pb-16 px-8">
               <CodePlayground />
             </section>
 
