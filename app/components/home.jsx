@@ -232,7 +232,7 @@ export default function HomePage() {
         className="text-white-300 text-[2rem] md:text-[2.5rem] xl:text-[3rem]"
       >
         Start Your Tech Journey {" "}
-               <br/> <span className="text-red-300 text-[2rem] md:text-[2.5rem] xl:text-[3rem]"> and Shape Your Future</span>
+              <br/> <span className="text-red-300 text-[2rem] md:text-[2.5rem] xl:text-[3rem]"> and Shape Your Future</span>
       </motion.span>
               </h1>
 
