@@ -148,7 +148,7 @@ export const instructor = [
     },
     {
         id: 8,
-        name: "Danto emmanuel",
+        name: "Danto Emmanuel",
         role: "3d modeling Instructor",
         company: "Scippra Academy",
         image: "/instructors/danto.png",
