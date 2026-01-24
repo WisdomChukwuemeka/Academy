@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import { instructor } from '../api/page';
+import { instructor } from '../localAPI/api';
 
 export default function Instructorpage() {
   const [instructors, setInstructors] = useState([]);
