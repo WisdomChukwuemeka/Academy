@@ -5,6 +5,7 @@ import Link from "next/link";
 import FAQSection from "./faq";
 import { motion } from "framer-motion";
 import CodePlayground from '../editor/page';
+import Instructorpage from './instructors';
 
 
 
@@ -494,6 +495,10 @@ export default function HomePage() {
               ))}
             </div>
           </div>
+        </section>
+
+         <section>
+          <Instructorpage />  
         </section>
 
         {/* TESTIMONIALS */}
