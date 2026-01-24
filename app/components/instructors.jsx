@@ -35,7 +35,7 @@ const scrollRight = () => {
               <div className="flex justify-center md:justify-start">
             <span className="text-gray-600 text-sm uppercase font-semibold tracking-wide flex justify-center md:justify-start items-center bg-red-100 w-fit h-fit rounded-md p-1.5">
                 <span className="w-2 h-2 bg-red-600 rounded-full mr-2"></span>
-                Distinguished Industry Instructors
+                Distinguished Instructors
             </span>
             </div>
 
