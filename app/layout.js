@@ -114,7 +114,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        <PageLoaderWrapper>
+        {/* <PageLoaderWrapper> */}
         <Header />
             <main className="grow w-full bg-zinc-50">
             <div className="max-w-7xl mx-auto">
@@ -122,7 +122,7 @@ export default function RootLayout({ children }) {
             </div>
           </main>
         <Footer />
-        </PageLoaderWrapper>
+        {/* </PageLoaderWrapper> */}
       </body>
     </html>
   );
