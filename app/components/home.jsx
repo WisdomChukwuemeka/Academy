@@ -22,7 +22,7 @@ const images = [
 
   const learningmode = [
     { mode: "Classroom Learning", 
-      img: "/home/classroom.png",
+      img: "/home/classroom.png/",
       desc: "Immerse yourself in our expert-led, interactive classes for a hands-on learning experience that goes beyond traditional methods."
     },
     { mode: "Online Learning", 
