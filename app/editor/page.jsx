@@ -14,7 +14,7 @@ const FULL_CODE = `
       <div>
         <h1>
           Learn Real Skills.
-          <span>Build Real Projects.</span>
+          <span class="text-indigo-900">Build Real Projects.</span>
           Get Job-Ready.
         </h1>
 
@@ -79,7 +79,7 @@ body {
 .container {
     max-width: 1100px;
     margin: auto;
-    padding: 80px 24px;
+    padding: 0 24px;
 }
 
 .hero h1 {
@@ -89,7 +89,7 @@ body {
 
 .hero h1 span {
     display: block;
-    color: #4f46e5;
+    color: #312c85;
 }
 
 .actions {
@@ -99,7 +99,7 @@ body {
 }
 
 .primary {
-    background: #4f46e5;
+    background: #312c85;
     color: white;
     padding: 14px 28px;
     border-radius: 10px;

@@ -23,7 +23,7 @@ const images = [
   const learningmode = [
     { mode: "Classroom Learning", 
       img: "/home/classroomone.png",
-      desc: "Immerse yourself in our expert-led, interactive classes for a hands-on learning experience that goes beyond traditional methods."
+      desc: "Immerse yourself in our expert led, interactive classes for a hands-on learning experience that goes beyond traditional methods."
     },
     { mode: "Online Learning", 
       img: "/home/online.png",
@@ -58,7 +58,7 @@ export const courses = [
     title: "Full-Stack Web Development",
     desc: "Design, build, and deploy modern websites and web applications using frontend and backend technologies.",
     img: "/courses/coding.png",
-    content: "This hands-on course covers frontend development with HTML, CSS, JavaScript, React, and backend development with Django. You’ll build real-world projects and deploy them online.",
+    content: "This hands-on course covers frontend development with HTML, CSS, JavaScript, React, and backend development with Django. You’ll build   projects and deploy them online.",
     syllabus: [
       "HTML, CSS & JavaScript Fundamentals",
       "Responsive Web Design",
@@ -239,7 +239,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-gray-200 mt-4 max-w-lg">
-                Industry-led IT courses crafted to help both beginners and professionals develop in-demand technology skills.
+                Industry led IT courses crafted to help both beginners and professionals develop in demand technology skills.
               </p>
 
               <div className="flex gap-4 mt-6 items-center justify-center md:justify-start">
@@ -286,7 +286,7 @@ export default function HomePage() {
           <div>
             <h2 className="text-2xl font-bold mb-4 text-black">About Scippra</h2>
             <p className="text-gray-600 mb-4">
-              At Scippra, we make tech skills accessible to everyone. Our hands-on online courses and expert mentorship prepare learners for real-world success.
+              At Scippra, we make tech skills accessible to everyone. Our hands on online courses and expert mentorship prepare learners for real world success.
             </p>
             <p className="text-gray-600">
               Whether you're starting your tech journey or advancing your career, we provide the tools, knowledge, and support you need to thrive in today's digital world.
@@ -314,7 +314,7 @@ export default function HomePage() {
                 {
                   icon: "bi-person-workspace",
                   title: "Expert Instructors",
-                  desc: "Learn from industry professionals with years of real-world experience.",
+                  desc: "Learn from industry professionals with years of real world experience.",
                 },
                 {
                   icon: "bi-clock",
@@ -324,7 +324,7 @@ export default function HomePage() {
                 {
                   icon: "bi-award",
                   title: "Certificates",
-                  desc: "Earn industry-recognized certificates upon course completion.",
+                  desc: "Earn industry recognized certificates upon course completion.",
                 },
                 {
                   icon: "bi-briefcase",
@@ -513,7 +513,7 @@ export default function HomePage() {
                   name: "Mary Vivian",
                   role: "Business Analyst",
                   quote:
-                    "Scippra completely transformed my career. The Python projects gave me real-world experience. Within 3 months of completing the course, I landed my dream job as a Data Analyst!",
+                    "Scippra completely transformed my career. The Python projects gave me   experience. Within 3 months of completing the course, I landed my dream job as a Data Analyst!",
                   stars: "⭐⭐⭐⭐⭐",
                   avatar: "/academy/four.png",
                 },
