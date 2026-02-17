@@ -282,8 +282,20 @@ export default function HomePage() {
     </section>
 
         {/* ABOUT SECTION */}
-        <section id="about" className="px-8 py-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center text-center md:text-start">
-          <div>
+        <motion.section 
+          id="about" 
+          className="px-8 py-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center text-center md:text-start"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="text-2xl font-bold mb-4 text-black">About Scippra</h2>
             <p className="text-gray-600 mb-4">
               At Scippra, we make tech skills accessible to everyone. Our hands on online courses and expert mentorship prepare learners for real world success.
@@ -291,20 +303,41 @@ export default function HomePage() {
             <p className="text-gray-600">
               Whether you're starting your tech journey or advancing your career, we provide the tools, knowledge, and support you need to thrive in today's digital world.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="bg-gray-200 rounded-lg h-70 md:h-78.5 xl:h-100 overflow-hidden">
+          <motion.div 
+            className="bg-gray-200 rounded-lg h-70 md:h-78.5 xl:h-100 overflow-hidden"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <img src="/home/four.png" alt="Person at computer" className="object-cover w-fit h-fill" />
-          </div>
-        </section>
+          </motion.div>
+        </motion.section>
 
         {/* WHY CHOOSE US */}
-        <section className="bg-gray-50 px-8 py-10">
+        <motion.section 
+          className="bg-gray-50 px-8 py-10"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl font-bold text-center mb-4 text-black">Why Choose Scippra?</h2>
             <p className="text-center text-gray-600 mb-12">Discover what makes us the perfect choice for your tech learning journey.</p>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <motion.div 
+              className="grid md:grid-cols-3 gap-6"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               {[
                 {
                   icon: "bi-lightbulb",
@@ -337,27 +370,48 @@ export default function HomePage() {
                   desc: "Connect with fellow learners and grow your professional network.",
                 },
               ].map((item, i) => (
-                <div key={i} className="bg-white p-6 rounded-lg shadow text-center">
+                <motion.div 
+                  key={i} 
+                  className="bg-white p-6 rounded-lg shadow text-center"
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0 }
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <div className="flex mb-3 justify-center md:justify-start">
                     <i className={`bi ${item.icon} text-3xl text-red-500`}></i>
                   </div>
 
                   <h3 className="font-semibold md:text-left text-black">{item.title}</h3>
                   <p className="text-sm text-gray-600 mt-2 md:text-left">{item.desc}</p>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
 
-<section>
+<motion.section 
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
+>
       <h2 className="text-2xl font-bold text-center pt-5 text-black">Mode of Learning</h2>
 
         <div className="flex flex-col md:flex-row justify-center">
           {
             learningmode.map((mode, index) => (
           <div key={index} className="flex flex-col md:flex-row w-full justify-center items-center gap-8 mt-8 p-8 max-w-3xl">
-            <div className="bg-white rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer">
+            <motion.div 
+              className="bg-white rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer"
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              whileHover={{ scale: 1.05 }}
+            >
                   <Image
                     src={mode.img}
                     alt={`${mode.mode} image`}  
@@ -374,16 +428,23 @@ export default function HomePage() {
                       Explore our courses <i className='bi bi-arrow-right ml-4 bg-white rounded-full p-1.5 text-indigo-950 font-bold'></i>
                     </button>
                   </div>
-                </div>
+                </motion.div>
                 </div>
             ))
           }
         </div>
-</section>
+</motion.section>
 
 
         {/* FEATURED COURSES */}
-        <section id="courses" className="px-6 py-12 max-w-7xl mx-auto">
+        <motion.section 
+          id="courses" 
+          className="px-6 py-12 max-w-7xl mx-auto"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="text-3xl font-bold text-center mb-2 text-black">
             Featured Courses
           </h2>
@@ -391,10 +452,27 @@ export default function HomePage() {
             Start your learning journey with our most popular courses
           </p>
 
-          <div className="grid gap-6 grid-cols-1 md:grid-cols-3 xl:grid-cols-3">
+          <motion.div 
+            className="grid gap-6 grid-cols-1 md:grid-cols-3 xl:grid-cols-3"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {courses.map((course) => (
               <Link key={course.id} href={`/courses/${course.id}`}>
-                <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden">
+                <motion.div 
+                  className="bg-white rounded-xl shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden"
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0 }
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
                   
                   {/* Image Section */}
                   <div className="relative">
@@ -444,24 +522,45 @@ export default function HomePage() {
                       </button>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </Link>
             ))}
-          </div>
-        </section>
+          </motion.div>
+        </motion.section>
 
-         <section className="max-w-6xl mx-auto pt-6 pb-16 px-8">
+         <motion.section 
+           className="max-w-6xl mx-auto pt-6 pb-16 px-8"
+           initial={{ opacity: 0, y: 50 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.8 }}
+         >
               <CodePlayground />
-            </section>
+            </motion.section>
 
 
         {/* HOW IT WORKS */}
-        <section className="bg-gray-50 px-8 py-10">
+        <motion.section 
+          className="bg-gray-50 px-8 py-10"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl font-bold text-center mb-4 text-black">How It Works</h2>
             <p className="text-center text-gray-600 mb-12">Your journey to mastering new skills in 4 simple steps</p>
 
-            <div className="grid md:grid-cols-4 gap-6">
+            <motion.div 
+              className="grid md:grid-cols-4 gap-6"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               {[
                 {
                   icon: "bi-search",
@@ -484,30 +583,64 @@ export default function HomePage() {
                   desc: "Advance your career or start new projects.",
                 },
               ].map((step, i) => (
-                <div key={i} className="text-center">
+                <motion.div 
+                  key={i} 
+                  className="text-center"
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.9 },
+                    visible: { opacity: 1, scale: 1 }
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <div className="bg-red-500 w-16 h-16 rounded-full mx-auto flex items-center justify-center text-2xl mb-4">
                     <i className={`bi ${step.icon} text-white`}></i>
                   </div>
 
                   <h3 className="font-semibold mb-2 text-black">{step.title}</h3>
                   <p className="text-sm text-gray-600">{step.desc}</p>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
 
-         <section>
+         <motion.section 
+           initial={{ opacity: 0, y: 50 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.8 }}
+         >
           <Instructorpage />  
-        </section>
+        </motion.section>
 
         {/* TESTIMONIALS */}
-        <section className="px-8 py-10 max-w-6xl mx-auto">
+        <motion.section 
+          className="px-8 py-10 max-w-6xl mx-auto"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="text-2xl font-bold text-center mb-4 text-black">What Our Students Say</h2>
           <p className="text-center text-gray-600 mb-12">Real success stories from our learning community</p>
 
-          <div className="flex flex-col md:flex-row justify-center items-center gap-10">
-            <div>
+          <motion.div 
+            className="flex flex-col md:flex-row justify-center items-center gap-10"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { staggerChildren: 0.3 } }
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div 
+              variants={{
+                hidden: { opacity: 0, x: -50 },
+                visible: { opacity: 1, x: 0 }
+              }}
+            >
               {[
                 {
                   name: "Mary Vivian",
@@ -536,9 +669,15 @@ export default function HomePage() {
                   <p className="text-yellow-500">{testimonial.stars}</p>
                 </div>
               ))}
-            </div>
+            </motion.div>
 
-            <div className="flex flex-col gap-6">
+            <motion.div 
+              className="flex flex-col gap-6"
+              variants={{
+                hidden: { opacity: 0, x: 50 },
+                visible: { opacity: 1, x: 0 }
+              }}
+            >
               {[
                 {
                   name: "Thompson Mike",
@@ -555,7 +694,12 @@ export default function HomePage() {
                   avatar: "/academy/three.png",
                 },
               ].map((testimonial, i) => (
-                <div key={i} className="bg-white shadow-md p-6 rounded-lg">
+                <motion.div 
+                  key={i} 
+                  className="bg-white shadow-md p-6 rounded-lg"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <div className="flex items-center mb-4">
                     <img src={testimonial.avatar} alt={testimonial.name} className="w-10 h-10 rounded-full mr-3" />
                     <div>
@@ -565,11 +709,11 @@ export default function HomePage() {
                   </div>
                   <p className="text-gray-800 mb-4">"{testimonial.quote}"</p>
                   <p className="text-yellow-500">{testimonial.stars}</p>
-                </div>
+                </motion.div>
               ))}
-            </div>
-          </div>
-        </section>
+            </motion.div>
+          </motion.div>
+        </motion.section>
 
         {/* FAQ */}
         <FAQSection />

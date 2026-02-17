@@ -69,7 +69,7 @@ export default function FAQSection() {
                       : "max-h-0 opacity-0 px-4"
                   }`}
                 >
-                  <p className="text-white bg-red-600 p-1.5 rounded-md text-sm leading-relaxed">
+                  <p className="text-black bg-gray-50 p-1.5 rounded-md text-sm leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
