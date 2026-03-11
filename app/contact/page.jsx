@@ -38,12 +38,31 @@ export default function Contact() {
           
           <div className="flex flex-col gap-6 text-sm text-gray-700">
             {/* Info details exactly as you had them... */}
-            <div className="flex items-center gap-4">
-              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-red-50">
-                <i className="bi bi-envelope text-red-500 text-lg"></i>
-              </span>
-              <span>info@scippra.com</span>
-            </div>
+            <div className="flex flex-col gap-6 text-sm text-gray-700">
+    {/* Email */}
+    <div className="flex items-center gap-4">
+      <span className="flex items-center justify-center w-10 h-10 rounded-full bg-red-50">
+        <i className="bi bi-envelope text-red-500 text-lg"></i>
+      </span>
+      <span>info@scippra.com</span>
+    </div>
+
+    {/* Location */}
+    <div className="flex items-center gap-4">
+      <span className="flex items-center justify-center w-10 h-10 rounded-full bg-red-50">
+        <i className="bi bi-geo-alt text-red-500 text-lg"></i>
+      </span>
+      <span>Remote / Global</span>
+    </div>
+
+    {/* Time */}
+    <div className="flex items-center gap-4">
+      <span className="flex items-center justify-center w-10 h-10 rounded-full bg-red-50">
+        <i className="bi bi-clock text-red-500 text-lg"></i>
+      </span>
+      <span>Mon - Fri, 9am - 5pm (WAT)</span>
+    </div>
+  </div>
             {/* ... other info divs ... */}
           </div>
         </div>

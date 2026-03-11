@@ -5,81 +5,109 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Login() {
-  const [showPassword, setShowPassword] = useState(false);
+  const[showPassword, setShowPassword] = useState(false);
 
   return (
     <>
-      <main className="min-h-screen py-15 flex items-center justify-center bg-teal-50 px-4">
-        <div className="flex flex-col w-full max-w-4xl md:mx-8 bg-white rounded-lg shadow-lg overflow-hidden xl:flex-row">
+      <main className="min-h-screen flex items-center justify-center bg-gray-50 p-4 sm:p-6 lg:p-8">
+        
+        {/* Main Card Container */}
+        <div className="flex flex-col lg:flex-row w-full max-w-5xl bg-white rounded-2xl shadow-xl overflow-hidden">
 
-          {/* LEFT SIDE */}
-          <div className="flex grow md:w-full bg-indigo-950 text-white p-10 flex-col justify-center">
-            <h1 className="text-xl md:text-3xl text-center font-semibold mb-4">
-              Welcome Back
-            </h1>
-            <p className="text-sm md:text-2xl text-center leading-relaxed text-emerald-100">
-              Login to access your dashboard, continue learning with Scippra.
-            </p>
-          </div>
-
-          {/* RIGHT SIDE */}
-          <div className="grow md:w-full p-8 md:p-10 flex flex-col justify-between min-h-full">
-            <h2 className="text-2xl text-center font-semibold text-gray-800 mb-6">
-              Login to your account
-            </h2>
-
-            <form className="flex flex-col gap-6 w-full px-4 md:px-8 py-3.5">
-              
-              {/* Email */}
-              <div className="flex flex-col gap-1">
-                <label className="text-xl text-gray-600">Email Address</label>
-                <input
-                  type="email"
-              className="w-full px-3 text-gray-800 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                  placeholder="you@example.com"
-                />
-              </div>
-
-              {/* Password with show/hide */}
-              <div className="flex flex-col gap-1">
-                <label className="text-xl text-gray-600">Password</label>
-
-                <div className="relative">
-                  <input
-                    type={showPassword ? "text" : "password"}
-                    placeholder="••••••••"
-              className="w-full px-3 text-gray-800 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                  />
-
-                  <button
-                    type="button"
-                    onClick={() => setShowPassword(prev => !prev)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
-                  >
-                    <i className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"} text-2xl`}></i>
-                  </button>
-                </div>
-              </div>
-
-              {/* Login Button */}
-              <button
-                type="submit"
-                className="w-full text-xl md:text-2xl bg-indigo-950 text-white py-3 rounded-md font-medium 
-                hover:bg-indigo-800 transition"
-              >
-                Login
-              </button>
-            </form>
-
-            {/* Footer */}
-            <div className="mt-6 text-sm md:text-xl text-center text-gray-600">
-              Don’t have an account?{" "}
-              <Link href="/register" className="text-red-600 font-medium hover:underline">
-                Sign up
-              </Link>
+          {/* LEFT SIDE - Branding & Welcome */}
+          <div className="lg:w-5/12 bg-gradient-to-br from-indigo-950 to-indigo-900 text-white p-10 lg:p-14 flex flex-col justify-center relative">
+            {/* Optional decorative subtle background shapes could go here */}
+            <div className="relative z-10">
+              <h1 className="text-3xl lg:text-4xl font-bold mb-4">
+                Welcome Back!
+              </h1>
+              <p className="text-indigo-200 text-base lg:text-lg leading-relaxed">
+                Log in to access your dashboard and continue your learning journey with Scippra.
+              </p>
             </div>
           </div>
 
+          {/* RIGHT SIDE - Form */}
+          <div className="lg:w-7/12 p-8 sm:p-12 lg:p-16 flex flex-col justify-center bg-white">
+            
+            <div className="w-full max-w-md mx-auto">
+              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
+                Login to your account
+              </h2>
+              <p className="text-gray-500 mb-8">
+                Please enter your credentials to sign in.
+              </p>
+
+              <form className="flex flex-col gap-5 w-full">
+                
+                {/* Email Address */}
+                <div className="flex flex-col gap-1.5">
+                  <label htmlFor="email" className="text-sm font-medium text-gray-700">
+                    Email Address
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    required
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:border-transparent transition-all"
+                    placeholder="you@example.com"
+                  />
+                </div>
+
+                {/* Password with show/hide */}
+                <div className="flex flex-col gap-1.5">
+                  <div className="flex justify-between items-center">
+                    <label htmlFor="password" className="text-sm font-medium text-gray-700">
+                      Password
+                    </label>
+                    {/* Added a standard forgot password layout (Optional but highly recommended) */}
+                    <Link href="#" className="text-sm text-indigo-600 hover:text-indigo-800 font-medium transition-colors">
+                      Forgot password?
+                    </Link>
+                  </div>
+                  
+                  <div className="relative flex items-center">
+                    <input
+                      id="password"
+                      type={showPassword ? "text" : "password"}
+                      required
+                      placeholder="••••••••"
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:border-transparent transition-all pr-12"
+                    />
+
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword((prev) => !prev)}
+                      className="absolute right-3 text-gray-400 hover:text-gray-600 focus:outline-none p-1 transition-colors"
+                      aria-label={showPassword ? "Hide password" : "Show password"}
+                    >
+                      <i className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"} text-lg`}></i>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Login Button */}
+                <button
+                  type="submit"
+                  className="w-full mt-2 bg-indigo-950 text-white py-3 px-4 rounded-lg font-semibold text-lg hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-950/30 transition-all shadow-md hover:shadow-lg flex justify-center items-center"
+                >
+                  Sign In
+                </button>
+              </form>
+
+              {/* Footer */}
+              <div className="mt-8 text-center text-gray-600">
+                Don&apos;t have an account?{" "}
+                <Link 
+                  href="/register" 
+                  className="text-indigo-600 font-semibold hover:text-indigo-800 hover:underline transition-all"
+                >
+                  Sign up for free
+                </Link>
+              </div>
+            </div>
+
+          </div>
         </div>
       </main>
     </>

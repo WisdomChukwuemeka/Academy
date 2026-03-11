@@ -133,7 +133,7 @@ const handleSubmit = (e) => {
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-3 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-950"
               />
               {errors.firstName && (
                 <p className="mt-1 text-sm text-red-600">{errors.firstName}</p>
@@ -149,7 +149,7 @@ const handleSubmit = (e) => {
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                className="w-full px-3 text-gray-800 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-3 text-gray-800 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-950"
               />
               {errors.lastName && (
                 <p className="mt-1 text-sm text-red-600">{errors.lastName}</p>
@@ -166,7 +166,7 @@ const handleSubmit = (e) => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-3 text-gray-800 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full px-3 text-gray-800 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-950"
             />
             {errors.email && (
               <p className="mt-1 text-sm text-red-600">{errors.email}</p>
@@ -182,7 +182,7 @@ const handleSubmit = (e) => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-3 text-gray-800 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full px-3 text-gray-800 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-950"
             />
             {errors.phone && (
               <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
@@ -197,7 +197,7 @@ const handleSubmit = (e) => {
               name="country"
               value={formData.country}
               onChange={handleChange}
-              className="w-full px-3 text-gray-800 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full px-3 text-gray-800 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-950"
             >
               <option value="">Select a country</option>
               <option value="us">United States</option>
@@ -225,7 +225,7 @@ const handleSubmit = (e) => {
       name="password"
       value={formData.password}
       onChange={handleChange}
-      className="w-full px-3 py-2 text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+      className="w-full px-3 py-2 text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-950"
     />
 
     {/* toggle icon */}
@@ -256,7 +256,7 @@ const handleSubmit = (e) => {
       name="confirmPassword"
       value={formData.confirmPassword}
       onChange={handleChange}
-      className="w-full px-3 py-2 text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+      className="w-full px-3 py-2 text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-950"
     />
 
     {/* toggle icon */}
@@ -279,7 +279,7 @@ const handleSubmit = (e) => {
               name="agreeToTerms"
               checked={formData.agreeToTerms}
               onChange={handleChange}
-              className="mt-1 h-4  w-4 text-emerald-600 focus:ring-emerald-500 border-gray-300 rounded"
+              className="mt-1 h-4  w-4 text-indigo-950 focus:ring-indigo-950 border-gray-300 rounded"
             />
             <label htmlFor="agreeToTerms" className="ml-2 block text-sm text-gray-700">
               I agree to the{" "}
@@ -295,7 +295,7 @@ const handleSubmit = (e) => {
   type="submit"
   disabled={loading}
   className={`w-full bg-red-600 text-white py-2 px-4 rounded-md 
-    hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-emerald-500
+    hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-indigo-950
     focus:ring-offset-2 transition duration-200 flex items-center justify-center
     ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
 >
