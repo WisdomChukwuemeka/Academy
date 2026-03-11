@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://www.Scippra.com"),
+  metadataBase: new URL("https://www.scippra.com"),
 
   title: {
     default: "Scippra | Online IT, Data & AI Skill Development",
@@ -27,7 +27,7 @@ export const metadata = {
 
   keywords: [
   // Brand-focused
-  "Scippra",
+  "scippra",
   "Scippra online courses",
   "Scippra IT training",
   "Scippra tech academy",
@@ -60,7 +60,7 @@ export const metadata = {
 ],
 
 
-  authors: [{ name: "Scippra" }],
+  authors: [{ name: "Scippra", url: "https://www.scippra.com" }],
   creator: "Scippra",
   publisher: "Scippra",
 
@@ -80,7 +80,7 @@ export const metadata = {
     title: "Scippra | Build High-Demand Technology Skills",
     description:
       "Advance your tech career through professionally curated courses in data science, AI, and software development.",
-    url: "https://www.Scippra.com",
+    url: "https://www.scippra.com",
     siteName: "Scippra",
     type: "website",
     images: [
@@ -104,6 +104,13 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
@@ -123,6 +130,24 @@ export default function RootLayout({ children }) {
           </main>
         <Footer />
         {/* </PageLoaderWrapper> */}
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Scippra",
+      url: "https://www.scippra.com",
+      logo: "https://www.scippra.com/logo.png",
+      sameAs: [
+        "https://twitter.com/scippra",
+        "https://linkedin.com/company/scippra"
+      ],
+      description:
+        "Scippra is an online technology learning platform teaching data analytics, AI and software engineering."
+    }),
+  }}
+/>
       </body>
     </html>
   );

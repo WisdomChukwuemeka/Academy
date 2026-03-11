@@ -1,5 +1,47 @@
 import Head from "next/head";
 
+export const metadata = {
+  title: "Contact Scippra | Get Support or Ask Questions",
+
+  description:
+    "Contact Scippra for course enquiries, support, or partnerships. Our team is ready to help you start your journey in tech.",
+
+  keywords: [
+    "contact Scippra",
+    "Scippra support",
+    "Scippra tech courses enquiry",
+    "IT training contact",
+  ],
+
+  alternates: {
+    canonical: "https://www.scippra.com/contact",
+  },
+
+  openGraph: {
+    title: "Contact Scippra",
+    description:
+      "Get in touch with Scippra to learn more about our tech training programs.",
+    url: "https://www.scippra.com/contact",
+    siteName: "Scippra",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact Scippra",
+      },
+    ],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Scippra",
+    description: "Reach out to Scippra for enquiries and support.",
+    images: ["/og-image.png"],
+  },
+};
+
 export default function Contact() {
   return (
     <>
@@ -30,7 +72,7 @@ export default function Contact() {
         id="name"
         type="text"
         placeholder="Your Name"
-        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
       />
     </div>
 
@@ -42,7 +84,7 @@ export default function Contact() {
         id="email"
         type="email"
         placeholder="Your Email"
-        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
       />
     </div>
   </div>
@@ -56,7 +98,7 @@ export default function Contact() {
       id="subject"
       type="text"
       placeholder="Subject"
-      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
     />
   </div>
 
@@ -69,13 +111,13 @@ export default function Contact() {
       id="message"
       rows="6"
       placeholder="Your Message"
-      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
     ></textarea>
   </div>
 
   {/* Privacy Policy */}
   <label className="flex items-center gap-2 text-sm text-gray-700">
-    <input type="checkbox" className="accent-emerald-500" />
+    <input type="checkbox" className="accent-red-500" />
     I agree to the privacy policy
   </label>
 
@@ -104,24 +146,24 @@ export default function Contact() {
   <div className="flex flex-col gap-6 text-sm text-gray-700">
     {/* Email */}
     <div className="flex items-center gap-4">
-      <span className="flex items-center justify-center w-10 h-10 rounded-full bg-emerald-50">
-        <i className="bi bi-envelope text-emerald-500 text-lg"></i>
+      <span className="flex items-center justify-center w-10 h-10 rounded-full bg-red-50">
+        <i className="bi bi-envelope text-red-500 text-lg"></i>
       </span>
-      <span>support@erikodxit.com</span>
+      <span>info@scippra.com</span>
     </div>
 
     {/* Location */}
     <div className="flex items-center gap-4">
-      <span className="flex items-center justify-center w-10 h-10 rounded-full bg-emerald-50">
-        <i className="bi bi-geo-alt text-emerald-500 text-lg"></i>
+      <span className="flex items-center justify-center w-10 h-10 rounded-full bg-red-50">
+        <i className="bi bi-geo-alt text-red-500 text-lg"></i>
       </span>
       <span>Remote / Global</span>
     </div>
 
     {/* Time */}
     <div className="flex items-center gap-4">
-      <span className="flex items-center justify-center w-10 h-10 rounded-full bg-emerald-50">
-        <i className="bi bi-clock text-emerald-500 text-lg"></i>
+      <span className="flex items-center justify-center w-10 h-10 rounded-full bg-red-50">
+        <i className="bi bi-clock text-red-500 text-lg"></i>
       </span>
       <span>Mon – Sat, 9am – 6pm (WAT)</span>
     </div>

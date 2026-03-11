@@ -1,6 +1,50 @@
 import Head from "next/head";
 import Image from "next/image";
 
+export const metadata = {
+  title: "About Scippra | Learn Data Analytics, AI & Software Development",
+
+  description:
+    "Discover Scippra’s mission to empower learners with practical skills in data analytics, machine learning, artificial intelligence, and software development.",
+
+  keywords: [
+    "about Scippra",
+    "Scippra tech academy",
+    "learn data analytics",
+    "AI learning platform",
+    "software development training",
+  ],
+
+  alternates: {
+    canonical: "https://www.scippra.com/about",
+  },
+
+  openGraph: {
+    title: "About Scippra | Our Mission & Vision",
+    description:
+      "Learn how Scippra helps professionals build real-world skills in data analytics, AI and software development.",
+    url: "https://www.scippra.com/about",
+    siteName: "Scippra",
+    images: [
+      {
+        url: "/about/one.png",
+        width: 1200,
+        height: 630,
+        alt: "Students learning at Scippra",
+      },
+    ],
+    type: "article",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "About Scippra",
+    description:
+      "Learn about Scippra’s mission to teach modern digital skills and technology.",
+    images: ["/about/one.png"],
+  },
+};
+
 export default function About() {
   return (
     <>

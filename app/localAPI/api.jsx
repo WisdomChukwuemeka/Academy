@@ -89,7 +89,7 @@ export const instructor = [
         role: "Excutive Director",
         company: "Scippra Academy",
         image: "/instructors/ceo.png",
-        experience: "4-5 Exp",
+        experience: "4-5",
         location: "Port Harcourt, Nigeria",
     },
     {
@@ -98,7 +98,7 @@ export const instructor = [
         role: "Word Press Instructor",
         company: "Scippra Academy",
         image: "/instructors/jane.png",
-        experience: "2-3 Exp",
+        experience: "2-3",
         location: "Port Harcourt, Nigeria",
     },
     {
@@ -107,7 +107,7 @@ export const instructor = [
         role: "Frontend Developer",
         company: "Scippra Academy",
         image: "/instructors/john.png",
-        experience: "1-2 Exp",
+        experience: "1-2",
         location: "Port Harcourt, Nigeria",
     },
     {
@@ -116,7 +116,7 @@ export const instructor = [
         role: "Data Science Instructor",
         company: "Scippra Academy",
         image: "/instructors/mary.png",
-        experience: "3-4 Exp",
+        experience: "3-4",
         location: "Port Harcourt, Nigeria",
     },
     {
@@ -125,7 +125,7 @@ export const instructor = [
         role: "Backend Instructor",
         company: "Scippra Academy",
         image: "/instructors/david.png",
-        experience: "2-3 Exp",
+        experience: "2-3",
         location: "Port Harcourt, Nigeria",
     },
     {
@@ -134,7 +134,7 @@ export const instructor = [
         role: "Full Stack Developer",
         company: "Scippra Academy",
         image: "/instructors/susan.png",
-        experience: "2-3 Exp",
+        experience: "2-3",
         location: "Port Harcourt, Nigeria",
     },
     {
@@ -143,7 +143,7 @@ export const instructor = [
         role: "Graphic Design Instructor",
         company: "Scippra Academy",
         image: "/instructors/michael.png",
-        experience: "3-4 Exp",
+        experience: "3-4",
         location: "Port Harcourt, Nigeria",
     },
     {
@@ -152,7 +152,7 @@ export const instructor = [
         role: "3d modeling Instructor",
         company: "Scippra Academy",
         image: "/instructors/danto.png",
-        experience: "3-4 Exp",
+        experience: "3-4",
         location: "Port Harcourt, Nigeria",
     }
 ]

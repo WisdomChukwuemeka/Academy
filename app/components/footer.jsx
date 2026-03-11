@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Scippra</h3>
-            <p className="text-sm">Empowering learners worldwide with expert-led IT courses and hands-on training for real-world success.</p>
+            <p className="text-sm">Empowering learners worldwide with expert led IT courses and hands on training for real world success.</p>
           <div className="flex gap-4 mt-2">
             {
           [
@@ -46,7 +46,7 @@ export default function Footer() {
 
   <div className="flex flex-col gap-4 mt-2">
     {[
-      { icon: "bi-envelope", info: "scippra@gmail.com", link: "mailto:scippra@gmail.com" },
+      { icon: "bi-envelope", info: "info@scrippra.com", link: "mailto:info@scrippra.com" },
       { 
         icon: "bi-telephone", 
         info: "+234 810 003 2571",

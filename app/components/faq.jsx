@@ -28,7 +28,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="bg-gray-50 px-8 py-10">
+    <section className="bg-gray-50 px-8 pt-10 pb-10">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold text-center mb-4 text-black">
           Frequently Asked Questions
@@ -69,7 +69,7 @@ export default function FAQSection() {
                       : "max-h-0 opacity-0 px-4"
                   }`}
                 >
-                  <p className="text-white bg-red-600 p-1.5 rounded-md text-sm leading-relaxed">
+                  <p className="text-gray-800 bg-gray-50 p-1.5 rounded-md text-sm leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
