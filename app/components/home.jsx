@@ -42,6 +42,134 @@ const learningmode = [
   }
 ];
 
+export const courses = [
+  {
+    id: 1,
+    title: "Professional Video Editing",
+    desc: "Learn professional video editing techniques using industry-standard tools to create high-quality videos.",
+    img: "/courses/videoediting.png",
+    content: "This course teaches video editing from beginner to advanced level using tools like Adobe Premiere Pro and After Effects. You will learn cutting, transitions, color grading, sound design, and motion graphics.",
+    syllabus: [
+      "Introduction to Video Editing",
+      "Adobe Premiere Pro Basics",
+      "Cutting & Transitions",
+      "Color Correction & Grading",
+      "Audio Editing & Sound Design",
+      "Motion Graphics with After Effects",
+      "Final Project: Professional Video Edit"
+    ],
+    price: 200000,
+    enrolled: 220,
+    tutor: "James Carter",
+    weeks: 8
+  },
+
+  {
+    id: 2,
+    title: "Full-Stack Web Development",
+    desc: "Design, build, and deploy modern websites and web applications using frontend and backend technologies.",
+    img: "/courses/coding.png",
+    content: "This hands-on course covers frontend development with HTML, CSS, JavaScript, React, and backend development with Django. You’ll build   projects and deploy them online.",
+    syllabus: [
+      "HTML, CSS & JavaScript Fundamentals",
+      "Responsive Web Design",
+      "React & Component-Based UI",
+      "Backend Development with Django",
+      "APIs & Database Integration",
+      "Authentication & Security",
+      "Final Project: Full-Stack Web App"
+    ],
+    price: 300000,
+    enrolled: 300,
+    tutor: "Michael Rodriguez",
+    weeks: 8
+  },
+
+  {
+    id: 3,
+    title: "Data Analysis with Excel",
+    desc: "Master Excel from basic formulas to advanced data analysis, automation, and business reporting.",
+    img: "/courses/one.png",
+    content: "Learn how to analyze data, automate tasks, and create dashboards using Excel. This course is ideal for business professionals and data beginners.",
+    syllabus: [
+      "Excel Interface & Basics",
+      "Formulas & Functions",
+      "Data Cleaning & Analysis",
+      "Pivot Tables & Charts",
+      "Excel Automation",
+      "Business Reporting",
+      "Final Project: Excel Dashboard"
+    ],
+    price: 100000,
+    enrolled: 400,
+    tutor: "Robert Klein",
+    weeks: 6
+  },
+
+  {
+    id: 4,
+    title: "Graphic Design",
+    desc: "Create stunning visual designs using professional graphic design tools for marketing, and digital media.",
+    img: "/courses/graphic.png",
+    content: "This course covers design principles and practical skills using Adobe Photoshop, Illustrator, and Canva to produce professional graphics.",
+    syllabus: [
+      "Design Principles & Color Theory",
+      "Adobe Photoshop Essentials",
+      "Logo & Brand Design",
+      "Adobe Illustrator Basics",
+      "Social Media & Print Designs",
+      "Design Portfolio Creation",
+      "Final Project: Brand Design Kit"
+    ],
+    price: 180000,
+    enrolled: 260,
+    tutor: "Sophia Martinez",
+    weeks: 8
+  },
+
+  {
+    id: 5,
+    title: "UI/UX Design",
+    desc: "Design intuitive and user-friendly digital products through research, wireframing, prototyping, and testing.",
+    img: "/courses/ui.png",
+    content: "Learn the complete UI/UX design workflow using Figma. You’ll conduct user research, create wireframes, prototypes, and design modern interfaces.",
+    syllabus: [
+      "Introduction to UI/UX",
+      "User Research & Personas",
+      "Wireframing",
+      "Prototyping with Figma",
+      "Usability Testing",
+      "Design Systems",
+      "Final Project: App UI/UX Design"
+    ],
+    price: 220000,
+    enrolled: 280,
+    tutor: "Daniel Lee",
+    weeks: 9
+  },
+
+  {
+    id: 6,
+    title: "3D Modeling & Animation",
+    desc: "Learn 3D modeling, texturing, and animation to create realistic 3D for games, films and product visualization.",
+    img: "/courses/3d.png",
+    content: "This course introduces 3D modeling using Blender. You’ll learn modeling, texturing, lighting, rendering, and basic animation techniques.",
+    syllabus: [
+      "Introduction to 3D Design",
+      "Blender Interface & Tools",
+      "3D Modeling Techniques",
+      "Texturing & Materials",
+      "Lighting & Rendering",
+      "Basic Animation",
+      "Final Project: 3D Model Showcase"
+    ],
+    price: 300000,
+    enrolled: 150,
+    tutor: "Ethan Brooks",
+    weeks: 12
+  }
+];
+
 export default function HomePage() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -304,6 +432,98 @@ export default function HomePage() {
 
           </div>
         </section>
+
+         {/* FEATURED COURSES */}
+        <motion.section 
+          id="courses" 
+          className="px-6 py-12 max-w-7xl mx-auto"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-3xl font-bold text-center mb-2 text-black">
+            Featured Courses
+          </h2>
+          <p className="text-center text-gray-600 mb-10">
+            Start your learning journey with our most popular courses
+          </p>
+
+          <motion.div 
+            className="grid gap-6 grid-cols-1 md:grid-cols-3 xl:grid-cols-3"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {courses.map((course) => (
+              <Link key={course.id} href={`/courses/${course.id}`}>
+                <motion.div 
+                  className="bg-white rounded-xl shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden"
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0 }
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  
+                  {/* Image Section */}
+                  <div className="relative">
+                    <Image
+                      src={course.img}
+                      alt={course.title}
+                      width={400}
+                      height={240}
+                      className="w-full h-44 object-cover"
+                    />
+
+                    {/* Classroom badge */}
+                    <span className="absolute top-3 left-3 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
+                      Classroom
+                    </span>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-5">
+                    {/* Category */}
+                    <p className="text-sm text-red-500 font-medium mb-1">
+                      {course.category}
+                    </p>
+
+                    {/* Title */}
+                    <h3 className="font-semibold text-gray-900 leading-snug mb-2">
+                      {course.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-sm text-gray-600 line-clamp-3 mb-4">
+                      {course.desc}
+                    </p>
+
+                    {/* Prices */}
+                    <div className="flex justify-between items-center text-sm">
+                        <span className="flex items-center gap-1 bg-gray-100 p-1.5 rounded-lg text-black">
+                          ⏱ {course.weeks}weeks
+                        </span>
+                        <span className="font-semibold text-black bg-gray-100 p-1.5 rounded-lg">
+                        ₦{course.price.toLocaleString("en-NG")}
+                      </span>
+
+
+                      <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-1.5 rounded-full text-xs">
+                        View →
+                      </button>
+                    </div>
+                  </div>
+                </motion.div>
+              </Link>
+            ))}
+          </motion.div>
+        </motion.section>
 
 
         {/* CODE EDITOR */}
