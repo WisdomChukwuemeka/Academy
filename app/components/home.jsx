@@ -191,15 +191,15 @@ export default function HomePage() {
         {/* ABOUT SECTION */}
          <section id="about" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-sm font-bold text-red-600 uppercase tracking-[0.2em] mb-4">Our Mission</h2>
-              <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">
+              <h3 className="text-4xl md:text-4xl font-bold text-slate-900 mb-8 leading-tight">
                 Empowering the Next Generation of Tech Leaders
               </h3>
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
                 <p>
-                  At Scippra, we make tech skills accessible to everyone. Our hands on 
+                  At Scippra, we make tech skills accessible to everyone. Our hands on on-site, 
                   online courses and expert mentorship prepare learners for real world success 
                   in an ever evolving digital landscape.
                 </p>
@@ -209,7 +209,7 @@ export default function HomePage() {
                   We believe in learning by doing, not just watching.
                 </p>
               </div>
-              <div className="mt-10 grid grid-cols-2 gap-6">
+              {/* <div className="mt-10 grid grid-cols-2 gap-6">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-red-500 shrink-0" />
                   <span className="font-semibold text-slate-800">Expert Mentorship</span>
@@ -226,7 +226,7 @@ export default function HomePage() {
                   <CheckCircle2 className="w-6 h-6 text-red-500 shrink-0" />
                   <span className="font-semibold text-slate-800">Global Community</span>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="relative">
               <div className="absolute -top-6 -left-6 w-24 h-24 bg-emerald-100 rounded-3xl -z-10" />
@@ -238,7 +238,7 @@ export default function HomePage() {
                 referrerPolicy="no-referrer"
                 loading="lazy"
               />
-              <div className="absolute bottom-12 -right-8 bg-white p-6 rounded-3xl shadow-xl border border-slate-100 hidden md:block">
+              <div className="absolute bottom-12 -right-6 bg-white p-6 rounded-3xl shadow-xl border border-slate-100 hidden md:block">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-red-700 rounded-2xl flex items-center justify-center text-white">
                     <Award className="w-6 h-6" />
