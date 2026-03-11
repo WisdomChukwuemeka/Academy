@@ -6,6 +6,7 @@ import { AuthAPI } from "../services/api"; // Adjust path
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import { LogIn, LogOut, UserPlus } from "lucide-react";
 
 
 export default function Header() {
@@ -47,7 +48,35 @@ export default function Header() {
     }
   };
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+function MenuButton({ isOpen, toggle }) {
+  return (
+    <button
+      onClick={toggle}
+      className="relative xl:hidden h-10 w-10 flex items-center justify-center rounded-full bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500/20"
+      aria-label="Toggle menu"
+    >
+      <div className="flex flex-col items-center justify-center w-6 h-6 gap-1.5">
+        <motion.span
+          animate={isOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="w-full h-0.5 bg-gray-800 rounded-full block origin-center"
+        />
+        <motion.span
+          animate={isOpen ? { opacity: 0, x: -10 } : { opacity: 1, x: 0 }}
+          transition={{ duration: 0.2 }}
+          className="w-full h-0.5 bg-gray-800 rounded-full block"
+        />
+        <motion.span
+          animate={isOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="w-full h-0.5 bg-gray-800 rounded-full block origin-center"
+        />
+      </div>
+    </button>
+  );
+}
+
+    const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
   // Close menu when clicking outside
@@ -90,8 +119,8 @@ export default function Header() {
                 <h1 className="text-xl font-bold text-red-600">
                   Scip<span className="text-indigo-950">pra</span>
                 </h1>
-                <span className="text-[10px] text-gray-500 italic">
-                  learn, create, build
+                <span className="text-[10px] uppercase tracking-widest font-bold text-gray-400 hover:text-red-500 transition-colors">
+                  learn • create • build
                 </span>
               </div>
             </Link>
@@ -115,8 +144,9 @@ export default function Header() {
                     {/* Optional: Show user name/email */}
                     <button
                       onClick={handleLogout}
-                      className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition"
+                     className="flex items-center gap-2 px-5 py-2 bg-red-600 text-white text-sm font-bold rounded-full hover:bg-red-700 hover:shadow-lg hover:shadow-red-500/30 transition-all active:scale-95"
                     >
+                      <LogOut size={16} />
                       Logout
                     </button>
                   </>
@@ -124,8 +154,9 @@ export default function Header() {
                   <>
                     <Link
                       href="/login"
-                      className="px-4 py-2 border border-red-500 text-red-500 rounded hover:bg-red-50 transition"
-                    >
+                     className="flex items-center gap-2 px-6 py-2 border-2 border-red-600 text-red-600 text-sm font-bold rounded-full hover:bg-red-600 hover:text-white transition-all active:scale-95"
+                  >
+                    <LogIn size={16} />
                       Log In
                     </Link>
                   </>
@@ -133,78 +164,93 @@ export default function Header() {
               </div>
 
               {/* Mobile Menu Toggle */}
-              <button
-                type="button"
-                onClick={toggleMenu}
-                aria-label="Toggle menu"
-                className="md:hidden text-black relative z-40"
-              >
-                <i className={`bi ${isOpen ? "bi-x-lg" : "bi-list"} text-2xl`} />
-              </button>
+              <MenuButton isOpen={isOpen} toggle={toggleMenu} />
             </div>
           </nav>
         </header>
 
         {/* Mobile Menu */}
+{/* Mobile Menu Overlay */}
         <AnimatePresence>
-  {isOpen && (
-    <motion.div
-      ref={menuRef}
-      initial={{ x: "-100%", opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      exit={{ x: "-100%", opacity: 0 }}
-      transition={{ duration: 0.35, ease: "easeOut" }}
-      className="fixed top-0 left-0 h-screen w-3/4 max-w-sm bg-white shadow-lg flex flex-col py-10 md:hidden z-50"
-    >
+          {isOpen && (
+            <>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={closeMenu}
+                className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
+              />
+              <motion.div
+                ref={menuRef}
+                initial={{ x: 0 }}
+                animate={{ x: 0 }}
+                exit={{ x: 0 }}
+                transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                className="fixed top-0 left-0 h-screen w-4/5 max-w-xs bg-white shadow-2xl flex flex-col p-8 md:hidden z-50"
+              >
+                <div className="flex justify-between items-center mb-12">
+                  <div className="flex flex-col leading-tight">
+                    <h1 className="text-xl font-bold text-red-600">
+                      Scip<span className="text-indigo-950">pra</span>
+                    </h1>
+                  </div>
+                  <MenuButton isOpen={isOpen} toggle={toggleMenu} />
+                </div>
 
-            <ul className="flex flex-col text-center gap-4 text-gray-600 mb-6">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    onClick={closeMenu}
-                    className="hover:text-red-500 block py-2"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                <ul className="flex flex-col gap-6 mb-12">
+                  {navLinks.map((link, i) => (
+                    <motion.li 
+                      key={link.href}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.1 }}
+                    >
+                      <Link
+                        href={link.href}
+                        onClick={closeMenu}
+                        className="text-xl font-bold text-gray-800 hover:text-red-600 transition-colors flex items-center justify-between group"
+                      >
+                        {link.label}
+                        <span className="w-2 h-2 rounded-full bg-red-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </Link>
+                    </motion.li>
+                  ))}
+                </ul>
 
-            {/* Mobile Auth */}
-            <div className="flex flex-col gap-3 w-full px-8">
-              
-              {user ? (
-                <>
-                  
-                  <button
-                    onClick={() => {
-                      handleLogout();
-                      closeMenu();
-                    }}
-                    className="w-full px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
-                  >
-                    Logout
-                  </button>
-                </>
-              ) : (
-                <>
-                  <Link href="/login" onClick={closeMenu}>
-                    <button className="w-full px-4 py-2 border border-red-500 text-red-500 rounded">
-                      Log In
+                <div className="mt-auto space-y-4">
+                  {user ? (
+                    <button
+                      onClick={() => {
+                        handleLogout();
+                        closeMenu();
+                      }}
+                      className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-red-600 text-white font-bold rounded-2xl hover:bg-red-700 transition-colors"
+                    >
+                      <LogOut size={20} />
+                      Logout
                     </button>
-                  </Link>
-                  <Link href="/register" onClick={closeMenu}>
-                    <button className="w-full px-4 py-2 bg-red-500 text-white rounded">
-                      Sign up
-                    </button>
-                  </Link>
-                </>
-              )}
-            </div>
-            </motion.div>
-  )}
-</AnimatePresence>
+                  ) : (
+                    <>
+                      <Link href="/login" onClick={closeMenu} className="block">
+                        <button className="w-full flex items-center justify-center gap-2 px-6 py-4 border-2 border-red-600 text-red-600 font-bold rounded-2xl hover:bg-red-50 transition-colors">
+                          <LogIn size={20} />
+                          Log In
+                        </button>
+                      </Link>
+                      <Link href="/register" onClick={closeMenu} className="block">
+                        <button className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-red-600 text-white font-bold rounded-2xl hover:bg-red-700 transition-colors">
+                          <UserPlus size={20} />
+                          Sign up
+                        </button>
+                      </Link>
+                    </>
+                  )}
+                </div>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
 
       </div>
     </>
