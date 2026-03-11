@@ -155,11 +155,11 @@ export default function HomePage() {
 
                   </div>
 
-                  <div className="hidden md:flex items-center gap-3 mt-6">
+                  <div className="hidden md:flex items-center gap-3 mt-2">
 
-                    <div className="hidden md:flex items-center gap-4 pt-6">
+                    <div className="hidden md:flex items-center gap-4 pt-2">
 
-<div className="flex items-center gap-6 pt-8 border-t border-white/10">
+<div className="flex items-center gap-6 pt-2 border-t border-white/10">
               <div className="flex -space-x-3">
                 {studentimages.map((url, i) => (
                   <img

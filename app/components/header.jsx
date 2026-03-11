@@ -52,7 +52,7 @@ function MenuButton({ isOpen, toggle }) {
   return (
     <button
       onClick={toggle}
-      className="relative xl:hidden h-10 w-10 flex items-center justify-center rounded-full bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500/20"
+      className="relative md:hidden h-10 w-10 flex items-center justify-center rounded-full bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500/20"
       aria-label="Toggle menu"
     >
       <div className="flex flex-col items-center justify-center w-6 h-6 gap-1.5">
