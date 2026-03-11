@@ -49,8 +49,8 @@ export default function Footer() {
       { icon: "bi-envelope", info: "info@scippra.com", link: "mailto:info@scippra.com" },
       { 
         icon: "bi-telephone", 
-        info: "+234 810 003 2571",
-        link: "https://wa.me/2348100032571" // WhatsApp link (remove spaces + add country code)
+        info: "+234 905 998 7650",
+        link: "https://wa.me/2349059987650" // WhatsApp link (remove spaces + add country code)
       },
     ].map((item, i) => {
       return (
