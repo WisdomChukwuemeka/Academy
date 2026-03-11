@@ -1,4 +1,5 @@
 import Head from "next/head";
+import ContactForm from "./ContactForm";
 
 export const metadata = {
   title: "Contact Scippra | Get Support or Ask Questions",
@@ -43,6 +44,30 @@ export const metadata = {
 };
 
 export default function Contact() {
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const formData = {
+    name: e.target.name.value,
+    email: e.target.email.value,
+    subject: e.target.subject.value,
+    message: e.target.message.value,
+  };
+
+  const res = await fetch("/api/contact", {
+    method: "POST",
+    body: JSON.stringify(formData),
+  });
+
+  if (res.ok) {
+    alert("Message sent successfully");
+    e.target.reset();
+  } else {
+    alert("Failed to send message");
+  }
+};
+
   return (
     <>
 <div className=" bg-gray-50">
@@ -61,74 +86,7 @@ export default function Contact() {
 </h2>
 
 
-       <form className="flex flex-col gap-6">
-  {/* Name & Email */}
-  <div className="flex flex-col md:flex-row gap-4">
-    <div className="w-full md:w-1/2 flex flex-col gap-1">
-      <label htmlFor="name" className="text-sm font-medium text-gray-700">
-        Name
-      </label>
-      <input
-        id="name"
-        type="text"
-        placeholder="Your Name"
-        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-      />
-    </div>
-
-    <div className="w-full md:w-1/2 flex flex-col gap-1">
-      <label htmlFor="email" className="text-sm font-medium text-gray-700">
-        Email
-      </label>
-      <input
-        id="email"
-        type="email"
-        placeholder="Your Email"
-        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-      />
-    </div>
-  </div>
-
-  {/* Subject */}
-  <div className="flex flex-col gap-1">
-    <label htmlFor="subject" className="text-sm font-medium text-gray-700">
-      Subject
-    </label>
-    <input
-      id="subject"
-      type="text"
-      placeholder="Subject"
-      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-    />
-  </div>
-
-  {/* Message */}
-  <div className="flex flex-col gap-1">
-    <label htmlFor="message" className="text-sm font-medium text-gray-700">
-      Message
-    </label>
-    <textarea
-      id="message"
-      rows="6"
-      placeholder="Your Message"
-      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-    ></textarea>
-  </div>
-
-  {/* Privacy Policy */}
-  <label className="flex items-center gap-2 text-sm text-gray-700">
-    <input type="checkbox" className="accent-red-500" />
-    I agree to the privacy policy
-  </label>
-
-  {/* Submit */}
-  <button
-    type="submit"
-    className="w-full bg-indigo-950 text-white px-4 py-2 rounded-md hover:bg-indigo-800 transition text-md md:text-md xl:text-xl"
-  >
-    Send Message
-  </button>
-</form>
+<ContactForm />
 
         </div>
 
