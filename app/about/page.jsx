@@ -71,8 +71,8 @@ export default function About() {
       </header>
 
       {/* WHO WE ARE */}
-      <section className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 pt-5 pb-20 px-6 items-center">
-        <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-indigo-900/10 w-full h-full min-h-75 md:min-h-100">
+      <section className="max-w-7xl mx-auto grid md:grid-cols-1 gap-12 lg:gap-20 pt-5 pb-20 px-6 items-center">
+        <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-indigo-900/10 w-full h-full min-h-75">
           <Image
             src="/about/one.png"
             alt="Students learning at Scippra"
@@ -131,7 +131,7 @@ export default function About() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 text-sm text-gray-700">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 text-sm text-gray-700">
           {[
             { icon: "bi-box-seam", label: "Python, Jupyter, Google Colab" },
             { icon: "bi-code-slash", label: "VS Code, Pandas, NumPy" },
@@ -188,7 +188,7 @@ export default function About() {
           </h2>
         </div>
 
-        <div className="bg-white grid lg:grid-cols-2 items-stretch rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+        <div className="bg-white grid md:grid-cols-2 items-stretch rounded-3xl overflow-hidden shadow-xl border border-gray-100">
           
           {/* Text Content */}
           <div className="p-10 lg:p-16 flex flex-col justify-center bg-indigo-950 text-white">

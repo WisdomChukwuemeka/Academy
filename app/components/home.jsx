@@ -6,6 +6,8 @@ import FAQSection from "./faq";
 import { motion } from "framer-motion"; // keep this for the span
 import CodePlayground from "../editor/page";
 import Instructorpage from "./instructors";
+import { courses, learningmode, images, studentimages } from "../localAPI/api"; // Adjust path as needed
+
 import { 
   ArrowRight, 
   Users, 
@@ -18,157 +20,7 @@ import {
   Award
 } from "lucide-react";
 
-const images = [
-  "/change/two.png",
-  "/change/three.png",
-];
 
-const studentimages = [
-  "/change/studentone.png",
-  "/change/studentthree.png",
-  "/change/studenttwo.png",
-];
-
-const learningmode = [
-  {
-    mode: "Classroom Learning",
-    img: "/home/classroomone.png",
-    desc: "Immerse yourself in our expert led, interactive classes for a hands-on learning experience that goes beyond traditional methods."
-  },
-  {
-    mode: "Online Learning",
-    img: "/home/online.png",
-    desc: "Discover the convenience of online learning with our courses, featuring interactive sessions and instant access to valuable resources."
-  }
-];
-
-export const courses = [
-  {
-    id: 1,
-    title: "Professional Video Editing",
-    desc: "Learn professional video editing techniques using industry-standard tools to create high-quality videos.",
-    img: "/courses/videoediting.png",
-    content: "This course teaches video editing from beginner to advanced level using tools like Adobe Premiere Pro and After Effects. You will learn cutting, transitions, color grading, sound design, and motion graphics.",
-    syllabus: [
-      "Introduction to Video Editing",
-      "Adobe Premiere Pro Basics",
-      "Cutting & Transitions",
-      "Color Correction & Grading",
-      "Audio Editing & Sound Design",
-      "Motion Graphics with After Effects",
-      "Final Project: Professional Video Edit"
-    ],
-    price: 200000,
-    enrolled: 220,
-    tutor: "James Carter",
-    weeks: 8
-  },
-
-  {
-    id: 2,
-    title: "Full-Stack Web Development",
-    desc: "Design, build, and deploy modern websites and web applications using frontend and backend technologies.",
-    img: "/courses/coding.png",
-    content: "This hands-on course covers frontend development with HTML, CSS, JavaScript, React, and backend development with Django. You’ll build   projects and deploy them online.",
-    syllabus: [
-      "HTML, CSS & JavaScript Fundamentals",
-      "Responsive Web Design",
-      "React & Component-Based UI",
-      "Backend Development with Django",
-      "APIs & Database Integration",
-      "Authentication & Security",
-      "Final Project: Full-Stack Web App"
-    ],
-    price: 300000,
-    enrolled: 300,
-    tutor: "Michael Rodriguez",
-    weeks: 8
-  },
-
-  {
-    id: 3,
-    title: "Data Analysis with Excel",
-    desc: "Master Excel from basic formulas to advanced data analysis, automation, and business reporting.",
-    img: "/courses/one.png",
-    content: "Learn how to analyze data, automate tasks, and create dashboards using Excel. This course is ideal for business professionals and data beginners.",
-    syllabus: [
-      "Excel Interface & Basics",
-      "Formulas & Functions",
-      "Data Cleaning & Analysis",
-      "Pivot Tables & Charts",
-      "Excel Automation",
-      "Business Reporting",
-      "Final Project: Excel Dashboard"
-    ],
-    price: 100000,
-    enrolled: 400,
-    tutor: "Robert Klein",
-    weeks: 6
-  },
-
-  {
-    id: 4,
-    title: "Graphic Design",
-    desc: "Create stunning visual designs using professional graphic design tools for marketing, and digital media.",
-    img: "/courses/graphic.png",
-    content: "This course covers design principles and practical skills using Adobe Photoshop, Illustrator, and Canva to produce professional graphics.",
-    syllabus: [
-      "Design Principles & Color Theory",
-      "Adobe Photoshop Essentials",
-      "Logo & Brand Design",
-      "Adobe Illustrator Basics",
-      "Social Media & Print Designs",
-      "Design Portfolio Creation",
-      "Final Project: Brand Design Kit"
-    ],
-    price: 180000,
-    enrolled: 260,
-    tutor: "Sophia Martinez",
-    weeks: 8
-  },
-
-  {
-    id: 5,
-    title: "UI/UX Design",
-    desc: "Design intuitive and user-friendly digital products through research, wireframing, prototyping, and testing.",
-    img: "/courses/ui.png",
-    content: "Learn the complete UI/UX design workflow using Figma. You’ll conduct user research, create wireframes, prototypes, and design modern interfaces.",
-    syllabus: [
-      "Introduction to UI/UX",
-      "User Research & Personas",
-      "Wireframing",
-      "Prototyping with Figma",
-      "Usability Testing",
-      "Design Systems",
-      "Final Project: App UI/UX Design"
-    ],
-    price: 220000,
-    enrolled: 280,
-    tutor: "Daniel Lee",
-    weeks: 9
-  },
-
-  {
-    id: 6,
-    title: "3D Modeling & Animation",
-    desc: "Learn 3D modeling, texturing, and animation to create realistic 3D for games, films and product visualization.",
-    img: "/courses/3d.png",
-    content: "This course introduces 3D modeling using Blender. You’ll learn modeling, texturing, lighting, rendering, and basic animation techniques.",
-    syllabus: [
-      "Introduction to 3D Design",
-      "Blender Interface & Tools",
-      "3D Modeling Techniques",
-      "Texturing & Materials",
-      "Lighting & Rendering",
-      "Basic Animation",
-      "Final Project: 3D Model Showcase"
-    ],
-    price: 300000,
-    enrolled: 150,
-    tutor: "Ethan Brooks",
-    weeks: 12
-  }
-];
 
 export default function HomePage() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -197,7 +49,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto relative z-10">
 
             {/* IMAGE SLIDER */}
-            <div className="relative rounded-xs w-full overflow-hidden shadow-2xl h-[600px]">
+            <div className="relative rounded-xs w-full overflow-hidden shadow-2xl h-150">
 
               {images.map((src, index) => (
                 <Image
