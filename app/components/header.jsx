@@ -179,7 +179,7 @@ function MenuButton({ isOpen, toggle }) {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={closeMenu}
-                className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
+                className="fixed inset-0 bg-black/20 backdrop-blur-sm z-50 md:hidden"
               />
               <motion.div
                 ref={menuRef}

@@ -28,6 +28,7 @@ export default function ContactMap() {
   };
 
   return (
+    <div className="z-20">
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
       {/* Contact Info Card - Above the Map */}
       <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 mb-6">
@@ -140,6 +141,7 @@ export default function ContactMap() {
           </Marker>
         </MapContainer>
       </div>
+    </div>
     </div>
   );
 }

@@ -182,7 +182,7 @@ export default function CourseDetails() {
         </li>
       </ul>
 
-    <Link href="https://wa.me/2348100032571?text=I%20am%20interested%20in%20enrolling%20in%20the%20course%20${course.title}">
+    <Link href={`https://wa.me/2349059987650?text=I%20am%20interested%20in%20enrolling%20in%20the%20course%20${course.title}`}>
       <button
         className="w-full bg-red-500 text-white py-3 px-6 rounded-md hover:bg-red-600 transition mt-6"
       >
