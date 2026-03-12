@@ -65,7 +65,7 @@ export const metadata = {
   publisher: "Scippra",
 
   alternates: {
-    canonical: "https://www.Scippra.com",
+    canonical: "https://www.scippra.com",
   },
 
   icons: {
