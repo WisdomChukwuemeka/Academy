@@ -18,12 +18,12 @@ export const metadata = {
   metadataBase: new URL("https://www.scippra.com"),
 
   title: {
-    default: "Scippra | Online IT, Data & AI Skill Development",
+    default: "Scippra | Digital IT Training Academy, Data & AI Skill Development",
     template: "%s | Scippra",
   },
 
   description:
-    "Scippra is a modern e-learning platform delivering industry-focused IT training in data analytics, machine learning, artificial intelligence, Power BI, and software engineering. Gain practical, career-ready tech expertise.",
+    "Scippra is a modern learning platform delivering industry focused IT training in data analytics, graphic design, machine learning, artificial intelligence, Power BI, and software engineering. Gain practical, career ready tech expertise.",
 
   keywords: [
   // Brand-focused
