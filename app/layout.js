@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import  Header  from "./components/header";
 import Footer from "./components/footer";
-import PageLoaderWrapper from "./components/pageloaderwrapper";
+// import PageLoaderWrapper from "./components/pageloaderwrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -121,7 +121,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        <PageLoaderWrapper>
+        {/* <PageLoaderWrapper> */}
         <Header />
             <main className="grow w-full bg-zinc-50">
             <div className="max-w-7xl mx-auto">
@@ -129,7 +129,7 @@ export default function RootLayout({ children }) {
             </div>
           </main>
         <Footer />
-        </PageLoaderWrapper>
+        {/* </PageLoaderWrapper> */}
         <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
