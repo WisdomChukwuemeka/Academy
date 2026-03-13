@@ -130,24 +130,7 @@ export default function RootLayout({ children }) {
           </main>
         <Footer />
         {/* </PageLoaderWrapper> */}
-        <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Scippra",
-      url: "https://www.scippra.com",
-      logo: "https://www.scippra.com/logo.png",
-      sameAs: [
-        "https://twitter.com/scippra",
-        "https://linkedin.com/company/scippra"
-      ],
-      description:
-        "Scippra is an online technology learning platform teaching data analytics, AI and software engineering."
-    }),
-  }}
-/>
+   
       </body>
     </html>
   );

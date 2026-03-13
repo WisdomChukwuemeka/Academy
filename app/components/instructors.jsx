@@ -1,5 +1,7 @@
+"use client";
 import React, { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image'; // 1. IMPORT NEXT.JS IMAGE
 import { ChevronLeft, ChevronRight, Star, MapPin, Briefcase, Award } from 'lucide-react';
 import { instructor } from '../localAPI/api';
 
@@ -10,7 +12,7 @@ export default function InstructorPage() {
   useEffect(() => {
     // In a real app, you'd fetch from your API here
     setInstructors(instructor);
-  }, []);
+  },[]);
 
   const scroll = (direction) => {
     if (scrollRef.current) {
@@ -99,14 +101,20 @@ export default function InstructorPage() {
                 className="w-[320px] shrink-0 snap-start"
               >
                 <div className="group relative bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/40 hover:shadow-2xl transition-all duration-500">
+                  
                   {/* Image Container */}
-                  <div className="relative aspect-4/5 overflow-hidden">
-                    <img
+                  <div className="relative aspect-[4/5] overflow-hidden bg-slate-100">
+                    
+                    {/* 2. THE FIX: Replaced standard <img> with Next.js <Image> */}
+                    <Image
                       src={inst.image}
                       alt={inst.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      referrerPolicy="no-referrer"
+                      fill
+                      sizes="320px"
+                      placeholder="blur" // Gives you the zero-lag blurred placeholder
+                      className="object-cover group-hover:scale-110 transition-transform duration-700"
                     />
+
                     <div className="absolute inset-0 bg-linear-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     
                     {/* Verified Badge */}
@@ -156,4 +164,3 @@ export default function InstructorPage() {
     </section>
   );
 }
-

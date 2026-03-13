@@ -1,4 +1,45 @@
-export const jobs = [
+// localAPI/api.js
+
+// ==========================================
+// 1. IMPORT ALL LOCAL IMAGES HERE
+// This allows Next.js to pre-calculate sizes,
+// compress them, and generate instant blur placeholders.
+// ==========================================
+
+// Instructors
+import ceoImg from "@/./public/instructors/ceo.png";
+import janeImg from "@/./public/instructors/jane.png";
+import johnImg from "@/./public/instructors/john.png";
+import maryImg from "@/./public/instructors/mary.png";
+import davidImg from "@/./public/instructors/david.png";
+import susanImg from "@/./public/instructors/susan.png";
+import michaelImg from "@/./public/instructors/michael.png";
+import dantoImg from "@/./public/instructors/danto.png";
+
+// Hero & Student Images
+import slideThree from "@/./public/change/three.png";
+import studentOne from "@/./public/change/studentone.png";
+import studentTwo from "@/./public/change/studenttwo.png";
+import studentThree from "@/./public/change/studentthree.png";
+
+// Learning Modes
+import classroomImg from "@/./public/home/classroomone.png";
+import onlineImg from "@/./public/home/online.png";
+
+// Courses
+import videoEditingImg from "@/./public/courses/videoediting.png";
+import codingImg from "@/./public/courses/coding.png";
+import dataAnalysisImg from "@/./public/courses/one.png";
+import graphicDesignImg from "@/./public/courses/graphic.png";
+import uiUxImg from "@/./public/courses/ui.png";
+import modelingImg from "@/./public/courses/3d.png";
+
+
+// ==========================================
+// 2. EXPORT YOUR DATA USING THE IMPORTED VARIABLES
+// ==========================================
+
+export const jobs =[
   {
     id: 1,
     title: "Web Developer",
@@ -7,7 +48,7 @@ export const jobs = [
     amount: "₦250,000",
     email: "imac@gmail.com",
     contact: "09064583473",
-    requirement: ["Next.js", "Vue.js", "Angular", "GitHub"],
+    requirement:["Next.js", "Vue.js", "Angular", "GitHub"],
   },
   {
     id: 2,
@@ -27,7 +68,7 @@ export const jobs = [
     amount: "₦350,000",
     email: "careers@codewave.io",
     contact: "07099887766",
-    requirement: ["Django", "Node.js", "PostgreSQL", "API Development"],
+    requirement:["Django", "Node.js", "PostgreSQL", "API Development"],
   },
   {
     id: 4,
@@ -37,7 +78,7 @@ export const jobs = [
     amount: "₦280,000",
     email: "jobs@appify.africa",
     contact: "08033445566",
-    requirement: ["React Native", "Flutter", "Firebase", "Play Store Deployment"],
+    requirement:["React Native", "Flutter", "Firebase", "Play Store Deployment"],
   },
   {
     id: 5,
@@ -47,7 +88,7 @@ export const jobs = [
     amount: "₦220,000",
     email: "design@pixelcraft.com",
     contact: "09011223344",
-    requirement: ["Figma", "Adobe XD", "User Research", "Prototyping"],
+    requirement:["Figma", "Adobe XD", "User Research", "Prototyping"],
   },
   {
     id: 6,
@@ -81,113 +122,112 @@ export const jobs = [
   },
 ];
 
-
-export const instructor = [
-    {
-        id: 1,
-        name: "Lugard wisdom",
-        role: "Excutive Director",
-        company: "Scippra Academy",
-        image: "/instructors/ceo.png",
-        experience: "4-5",
-        location: "Port Harcourt, Nigeria",
-    },
-    {
-        id: 2,
-        name: "Jane Amaka",
-        role: "Word Press Instructor",
-        company: "Scippra Academy",
-        image: "/instructors/jane.png",
-        experience: "2-3",
-        location: "Port Harcourt, Nigeria",
-    },
-    {
-        id: 3,
-        name: "Peter John",
-        role: "Frontend Developer",
-        company: "Scippra Academy",
-        image: "/instructors/john.png",
-        experience: "1-2",
-        location: "Port Harcourt, Nigeria",
-    },
-    {
-        id: 4,
-        name: "Mary Smith",
-        role: "Data Science Instructor",
-        company: "Scippra Academy",
-        image: "/instructors/mary.png",
-        experience: "3-4",
-        location: "Port Harcourt, Nigeria",
-    },
-    {
-        id: 5,
-        name: "David Brown",
-        role: "Backend Instructor",
-        company: "Scippra Academy",
-        image: "/instructors/david.png",
-        experience: "2-3",
-        location: "Port Harcourt, Nigeria",
-    },
-    {
-        id: 6,
-        name: "Susan Lee",
-        role: "Full Stack Developer",
-        company: "Scippra Academy",
-        image: "/instructors/susan.png",
-        experience: "2-3",
-        location: "Port Harcourt, Nigeria",
-    },
-    {
-        id: 7,
-        name: "Michael Johnson",
-        role: "Graphic Design Instructor",
-        company: "Scippra Academy",
-        image: "/instructors/michael.png",
-        experience: "3-4",
-        location: "Port Harcourt, Nigeria",
-    },
-    {
-        id: 8,
-        name: "Danto Emmanuel",
-        role: "3d modeling Instructor",
-        company: "Scippra Academy",
-        image: "/instructors/danto.png",
-        experience: "3-4",
-        location: "Port Harcourt, Nigeria",
-    }
-]
-
-export const images = [
-  "/change/three.png",
+export const instructor =[
+  {
+    id: 1,
+    name: "Lugard wisdom",
+    role: "Excutive Director",
+    company: "Scippra Academy",
+    image: ceoImg,
+    experience: "4-5",
+    location: "Port Harcourt, Nigeria",
+  },
+  {
+    id: 2,
+    name: "Jane Amaka",
+    role: "Word Press Instructor",
+    company: "Scippra Academy",
+    image: janeImg,
+    experience: "2-3",
+    location: "Port Harcourt, Nigeria",
+  },
+  {
+    id: 3,
+    name: "Peter John",
+    role: "Frontend Developer",
+    company: "Scippra Academy",
+    image: johnImg,
+    experience: "1-2",
+    location: "Port Harcourt, Nigeria",
+  },
+  {
+    id: 4,
+    name: "Mary Smith",
+    role: "Data Science Instructor",
+    company: "Scippra Academy",
+    image: maryImg,
+    experience: "3-4",
+    location: "Port Harcourt, Nigeria",
+  },
+  {
+    id: 5,
+    name: "David Brown",
+    role: "Backend Instructor",
+    company: "Scippra Academy",
+    image: davidImg,
+    experience: "2-3",
+    location: "Port Harcourt, Nigeria",
+  },
+  {
+    id: 6,
+    name: "Susan Lee",
+    role: "Full Stack Developer",
+    company: "Scippra Academy",
+    image: susanImg,
+    experience: "2-3",
+    location: "Port Harcourt, Nigeria",
+  },
+  {
+    id: 7,
+    name: "Michael Johnson",
+    role: "Graphic Design Instructor",
+    company: "Scippra Academy",
+    image: michaelImg,
+    experience: "3-4",
+    location: "Port Harcourt, Nigeria",
+  },
+  {
+    id: 8,
+    name: "Danto Emmanuel",
+    role: "3d modeling Instructor",
+    company: "Scippra Academy",
+    image: dantoImg,
+    experience: "3-4",
+    location: "Port Harcourt, Nigeria",
+  }
 ];
 
-export const studentimages = [
-  "/change/studentone.png",
-  "/change/studentthree.png",
-  "/change/studenttwo.png",
+export const images =[
+  slideThree,
 ];
 
-export const learningmode = [
+export const studentimages =[
+  studentOne,
+  studentThree,
+  studentTwo,
+];
+
+export const learningmode =[
   {
     mode: "Classroom Learning",
-    img: "/home/classroomone.png",
+    img: classroomImg,
     desc: "Immerse yourself in our expert led, interactive classes for a hands-on learning experience that goes beyond traditional methods."
   },
   {
     mode: "Online Learning",
-    img: "/home/online.png",
+    img: onlineImg,
     desc: "Discover the convenience of online learning with our courses, featuring interactive sessions and instant access to valuable resources."
   }
 ];
 
-export const courses = [
+export const courses =[
   {
     id: 1,
     title: "Professional Video Editing",
     desc: "Learn professional video editing techniques using industry-standard tools to create high-quality videos.",
-    img: "/courses/videoediting.png",
+    img: videoEditingImg,
     content: "This course teaches video editing from beginner to advanced level using tools like Adobe Premiere Pro and After Effects. You will learn cutting, transitions, color grading, sound design, and motion graphics.",
-    syllabus: [
+    syllabus:[
       "Introduction to Video Editing",
       "Adobe Premiere Pro Basics",
       "Cutting & Transitions",
@@ -201,14 +241,13 @@ export const courses = [
     tutor: "James Carter",
     weeks: 8
   },
-
   {
     id: 2,
     title: "Full-Stack Web Development",
     desc: "Design, build, and deploy modern websites and web applications using frontend and backend technologies.",
-    img: "/courses/coding.png",
-    content: "This hands-on course covers frontend development with HTML, CSS, JavaScript, React, and backend development with Django. You’ll build   projects and deploy them online.",
-    syllabus: [
+    img: codingImg,
+    content: "This hands-on course covers frontend development with HTML, CSS, JavaScript, React, and backend development with Django. You’ll build projects and deploy them online.",
+    syllabus:[
       "HTML, CSS & JavaScript Fundamentals",
       "Responsive Web Design",
       "React & Component-Based UI",
@@ -222,14 +261,13 @@ export const courses = [
     tutor: "Michael Rodriguez",
     weeks: 8
   },
-
   {
     id: 3,
     title: "Data Analysis with Excel",
     desc: "Master Excel from basic formulas to advanced data analysis, automation, and business reporting.",
-    img: "/courses/one.png",
+    img: dataAnalysisImg,
     content: "Learn how to analyze data, automate tasks, and create dashboards using Excel. This course is ideal for business professionals and data beginners.",
-    syllabus: [
+    syllabus:[
       "Excel Interface & Basics",
       "Formulas & Functions",
       "Data Cleaning & Analysis",
@@ -243,14 +281,13 @@ export const courses = [
     tutor: "Robert Klein",
     weeks: 6
   },
-
   {
     id: 4,
     title: "Graphic Design",
     desc: "Create stunning visual designs using professional graphic design tools for marketing, and digital media.",
-    img: "/courses/graphic.png",
+    img: graphicDesignImg,
     content: "This course covers design principles and practical skills using Adobe Photoshop, Illustrator, and Canva to produce professional graphics.",
-    syllabus: [
+    syllabus:[
       "Design Principles & Color Theory",
       "Adobe Photoshop Essentials",
       "Logo & Brand Design",
@@ -264,14 +301,13 @@ export const courses = [
     tutor: "Sophia Martinez",
     weeks: 8
   },
-
   {
     id: 5,
     title: "UI/UX Design",
     desc: "Design intuitive and user-friendly digital products through research, wireframing, prototyping, and testing.",
-    img: "/courses/ui.png",
+    img: uiUxImg,
     content: "Learn the complete UI/UX design workflow using Figma. You’ll conduct user research, create wireframes, prototypes, and design modern interfaces.",
-    syllabus: [
+    syllabus:[
       "Introduction to UI/UX",
       "User Research & Personas",
       "Wireframing",
@@ -285,14 +321,13 @@ export const courses = [
     tutor: "Daniel Lee",
     weeks: 9
   },
-
   {
     id: 6,
     title: "3D Modeling & Animation",
     desc: "Learn 3D modeling, texturing, and animation to create realistic 3D for games, films and product visualization.",
-    img: "/courses/3d.png",
+    img: modelingImg,
     content: "This course introduces 3D modeling using Blender. You’ll learn modeling, texturing, lighting, rendering, and basic animation techniques.",
-    syllabus: [
+    syllabus:[
       "Introduction to 3D Design",
       "Blender Interface & Tools",
       "3D Modeling Techniques",
