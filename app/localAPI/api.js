@@ -158,7 +158,6 @@ export const instructor = [
 ]
 
 export const images = [
-  "/change/two.png",
   "/change/three.png",
 ];
 
