@@ -103,7 +103,7 @@ export default function InstructorPage() {
                 <div className="group relative bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/40 hover:shadow-2xl transition-all duration-500">
                   
                   {/* Image Container */}
-                  <div className="relative aspect-[4/5] overflow-hidden bg-slate-100">
+                  <div className="relative aspect-4/5 overflow-hidden bg-slate-100">
                     
                     {/* 2. THE FIX: Replaced standard <img> with Next.js <Image> */}
                     <Image

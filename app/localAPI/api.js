@@ -17,6 +17,7 @@ import michaelImg from "@/./public/instructors/michael.png";
 import dantoImg from "@/./public/instructors/danto.png";
 
 // Hero & Student Images
+import slideTwo from "@/./public/change/two.png"
 import slideThree from "@/./public/change/three.png";
 import studentOne from "@/./public/change/studentone.png";
 import studentTwo from "@/./public/change/studenttwo.png";
@@ -199,6 +200,7 @@ export const instructor =[
 
 export const images =[
   slideThree,
+  slideTwo,
 ];
 
 export const studentimages =[

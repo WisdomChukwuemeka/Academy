@@ -38,6 +38,7 @@ function HeroSection() {
         {/* IMAGE SLIDER */}
         <div className="relative rounded-xs w-full overflow-hidden shadow-2xl h-150 bg-slate-900">
           {images.map((src, index) => (
+            <div key={index}>
             <Image
               key={src}
               src={src}
@@ -47,10 +48,12 @@ function HeroSection() {
               referrerPolicy="no-referrer"
               priority={index === 0} // Preloads the first image instantly to prevent lag
               quality={80}
+              placeholder="blur"
               className={`object-cover bg-slate-800 transition-opacity duration-1000 ease-in-out ${
                 index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
               }`}
             />
+            </div>
           ))}
 
           <div className="absolute inset-0 bg-black/60 z-10"></div>
