@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import DOMPurify from "isomorphic-dompurify";
 
 import FAQSection from "./faq";
-import CodePlayground from "../editor/page";
+import dynamic from "next/dynamic";
 import Instructorpage from "./instructors";
 import { courses, learningmode } from "../localAPI/api"; // Adjust path as needed
 import HeroSection from "./hero"
@@ -15,6 +15,11 @@ import {
   Award
 } from "lucide-react";
 
+
+const CodePlayground = dynamic(() => import("../editor/page"), {
+  ssr: false,
+  loading: () => <p>Loading editor...</p>,
+});
 
 
 // ── ABOUT SECTION ──────────────────────────────────────────────────
@@ -120,13 +125,9 @@ export function LearningModeSection() {
 // ── FEATURED COURSES SECTION ───────────────────────────────────────
 export function FeaturedCoursesSection() {
   return (
-    <motion.section
+    <section
       id="courses"
       className="px-6 py-12 max-w-7xl mx-auto"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
     >
       <h2 className="text-3xl font-bold text-center mb-2 text-black">
         Featured Courses
@@ -135,15 +136,9 @@ export function FeaturedCoursesSection() {
         Start your learning journey with our most popular courses
       </p>
 
-      <motion.div
+      <div
         className="grid gap-6 grid-cols-1 md:grid-cols-3 xl:grid-cols-3"
-        variants={{
-          hidden: { opacity: 0 },
-          visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
-        }}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
+       
       >
         {courses.map((course) => (
           <Link key={course.id} href={`/courses/${course.id}`}>
@@ -208,8 +203,8 @@ export function FeaturedCoursesSection() {
             </motion.div>
           </Link>
         ))}
-      </motion.div>
-    </motion.section>
+      </div>
+    </section>
   );
 }
 

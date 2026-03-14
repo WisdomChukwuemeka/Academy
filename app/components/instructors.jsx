@@ -1,10 +1,9 @@
 "use client";
 import React, { useEffect, useState, useRef } from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image'; // 1. IMPORT NEXT.JS IMAGE
 import { ChevronLeft, ChevronRight, Star, MapPin, Briefcase, Award } from 'lucide-react';
 import { instructor } from '../localAPI/api';
-
+import { motion } from 'framer-motion';
 export default function InstructorPage() {
   const [instructors, setInstructors] = useState([]);
   const scrollRef = useRef(null);
@@ -31,17 +30,15 @@ export default function InstructorPage() {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-8">
           <div className="max-w-3xl">
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+            <div 
+            
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-red-50 border border-red-100 mb-6"
             >
               <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
               <span className="text-xs font-bold text-gray-700 uppercase tracking-wider">
                 Distinguished Instructors
               </span>
-            </motion.div>
+            </div>
 
             <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
               Learn from the <span className="text-red-700">Best</span>
@@ -93,11 +90,7 @@ export default function InstructorPage() {
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {instructors.map((inst) => (
-              <motion.div
-                key={inst.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+              <div
                 className="w-[320px] shrink-0 snap-start"
               >
                 <div className="group relative bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/40 hover:shadow-2xl transition-all duration-500">
@@ -147,7 +140,7 @@ export default function InstructorPage() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
