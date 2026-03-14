@@ -1,9 +1,9 @@
-import HomePage from "./components/home";
+import HomeSectionPage from "./components/homepage";
 
-export default function Homepage() {
+export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans">
-      <HomePage />
+      <HomeSectionPage />
     </div>
   );
 }

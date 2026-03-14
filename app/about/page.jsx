@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
+import AboutImage from "../../public/about/one.png";
+import AboutImageTwo from "../../public/about/two.png";
 
 export const metadata = {
   title: "About Scippra | Learn Data Analytics, AI & Software Development",
@@ -74,8 +76,8 @@ export default function About() {
       <section className="max-w-7xl mx-auto grid md:grid-cols-1 gap-12 lg:gap-20 pt-5 pb-20 px-6 items-center">
         <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-indigo-900/10 w-full h-full min-h-75">
           <Image
-            src="/about/one.png"
-            alt="Students learning at Scippra"
+            src={AboutImage}
+            alt={"Students collaborating at Scippra"}
             width={600}
             height={400}
             className="w-full h-full object-cover rounded-2xl"
@@ -209,8 +211,8 @@ export default function About() {
           {/* Image Content */}
           <div className="relative w-full min-h-100 lg:min-h-125">
             <Image
-              src="/about/two.png"
-              alt="Instructor Erik Odinaka"
+              src={AboutImageTwo}
+              alt={"Instructor Mike Johnson"}
               fill
               className="object-cover object-top"
               priority
