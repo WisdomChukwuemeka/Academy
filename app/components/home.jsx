@@ -25,21 +25,23 @@ const CodePlayground = dynamic(() => import("../editor/page"), {
 // ── ABOUT SECTION ──────────────────────────────────────────────────
 export function AboutSection() {
   return (
-    <section id="about" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div>
+    <section id="about" className="py-16 md:py-24 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+ 
+          {/* Text Column */}
+          <div className="order-2 md:order-1">
             <h2 className="text-sm font-bold text-red-600 uppercase tracking-[0.2em] mb-4">
               Our Mission
             </h2>
-            <h3 className="text-4xl md:text-4xl font-bold text-slate-900 mb-8 leading-tight">
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
               Empowering the Next Generation of Tech Leaders
             </h3>
-            <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
+            <div className="space-y-4 text-base md:text-lg text-slate-600 leading-relaxed">
               <p>
                 At Scippra, we make tech skills accessible to everyone. Our
-                hands on on-site, online courses and expert mentorship prepare
-                learners for real world success in an ever evolving digital
+                hands-on on-site, online courses and expert mentorship prepare
+                learners for real-world success in an ever-evolving digital
                 landscape.
               </p>
               <p>
@@ -49,35 +51,38 @@ export function AboutSection() {
               </p>
             </div>
           </div>
-          <div className="relative">
-            <div className="absolute -top-6 -left-6 w-24 h-24 bg-emerald-100 rounded-3xl -z-10" />
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-slate-100 rounded-full -z-10" />
+ 
+          {/* Image Column */}
+          <div className="relative order-2 md:order-2">
+            {/* Decorative blobs — constrained so they don't bleed on mobile */}
+            <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 w-16 h-16 md:w-24 md:h-24 bg-emerald-100 rounded-3xl -z-10" />
+            <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-20 h-20 md:w-32 md:h-32 bg-slate-100 rounded-full -z-10" />
+ 
             <Image
               src="/home/four.png"
               alt="Collaborative Learning"
               width={600}
               height={400}
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="rounded-[2.5rem] shadow-2xl border-8 border-white bg-slate-100" // Prevents white flash
+              className="rounded-[2rem] md:rounded-[2.5rem] shadow-2xl border-4 md:border-8 border-white bg-slate-100 w-full h-auto"
               referrerPolicy="no-referrer"
               quality={85}
             />
-            <div className="absolute bottom-12 -right-6 bg-white p-6 rounded-3xl shadow-xl border border-slate-100 hidden md:block">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-red-700 rounded-2xl flex items-center justify-center text-white">
-                  <Award className="w-6 h-6" />
+ 
+            {/* Badge — only on md+ */}
+            <div className="absolute bottom-10 -right-4 md:-right-6 bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-xl border border-slate-100 hidden md:block">
+              <div className="flex items-center gap-3 md:gap-4">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-red-700 rounded-2xl flex items-center justify-center text-white shrink-0">
+                  <Award className="w-5 h-5 md:w-6 md:h-6" />
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-slate-900">
-                    Certified Excellence
-                  </p>
-                  <p className="text-xs text-slate-500">
-                    Industry recognized programs
-                  </p>
+                  <p className="text-sm font-bold text-slate-900">Certified Excellence</p>
+                  <p className="text-xs text-slate-500">Industry recognized programs</p>
                 </div>
               </div>
             </div>
           </div>
+ 
         </div>
       </div>
     </section>
