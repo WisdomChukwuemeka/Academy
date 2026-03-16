@@ -308,17 +308,17 @@ export default function Header() {
                   ))}
                 </ul>
 
-                {/* <div className="mt-auto space-y-4">
+                <div className="mt-auto space-y-4">
                   {!isLoaded ? null : isSignedIn ? (
                     <>
-                      <Link
+                      {/* <Link
                         href="#"
                         onClick={closeMenu}
                         className="w-full flex items-center justify-center gap-2 px-6 py-4 border-2 border-red-600 text-red-600 font-bold rounded-2xl hover:bg-red-50 transition-colors"
                       >
                         <LayoutDashboard size={20} />
                         Dashboard
-                      </Link>
+                      </Link> */}
                       <SignOutButton redirectUrl="/">
                         <button
                           onClick={closeMenu}
@@ -351,7 +351,7 @@ export default function Header() {
                       </SignUpButton>
                     </>
                   )}
-                </div> */}
+                </div>
               </motion.div>
             </>
           )}

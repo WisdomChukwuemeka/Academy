@@ -118,11 +118,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+      <ClerkProvider>
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        <ClerkProvider>
         {/* <PageLoaderWrapper> */}
         <Header />
             <main className="grow w-full bg-zinc-50">
@@ -131,10 +131,11 @@ export default function RootLayout({ children }) {
             </div>
           </main>
         <Footer />
-        </ClerkProvider>
         {/* </PageLoaderWrapper> */}
    
       </body>
     </html>
+      </ClerkProvider>
+
   );
 }
