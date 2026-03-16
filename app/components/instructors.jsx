@@ -92,6 +92,7 @@ export default function InstructorPage() {
             {instructors.map((inst) => (
               <div
                 className="w-[320px] shrink-0 snap-start"
+                key={inst.id}
               >
                 <div className="group relative bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/40 hover:shadow-2xl transition-all duration-500">
                   

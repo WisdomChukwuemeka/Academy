@@ -3,6 +3,7 @@ import "./globals.css";
 import  Header  from "./components/header";
 import Footer from "./components/footer";
 // import PageLoaderWrapper from "./components/pageloaderwrapper";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -121,6 +122,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
+        <ClerkProvider>
         {/* <PageLoaderWrapper> */}
         <Header />
             <main className="grow w-full bg-zinc-50">
@@ -129,6 +131,7 @@ export default function RootLayout({ children }) {
             </div>
           </main>
         <Footer />
+        </ClerkProvider>
         {/* </PageLoaderWrapper> */}
    
       </body>
