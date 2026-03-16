@@ -118,12 +118,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-      <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         {/* <PageLoaderWrapper> */}
+        <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
         <Header />
             <main className="grow w-full bg-zinc-50">
             <div className="max-w-7xl mx-auto">
@@ -132,10 +132,8 @@ export default function RootLayout({ children }) {
           </main>
         <Footer />
         {/* </PageLoaderWrapper> */}
-   
+        </ClerkProvider>
       </body>
     </html>
-      </ClerkProvider>
-
   );
 }
