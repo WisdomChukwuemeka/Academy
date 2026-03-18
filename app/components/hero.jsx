@@ -93,9 +93,11 @@ export default function HeroSection() {
               </p>
 
               <div className="flex gap-4 mt-6 justify-center md:justify-start">
-                <Link href="/register">
+                <Link href="https://t.me/Scippra"
+                target="_blank"
+                rel="noopener noreferrer">
                   <button className="border border-white text-white p-2 rounded-md hover:bg-white hover:text-red-600">
-                    Get Started
+                    Join Community
                   </button>
                 </Link>
 
