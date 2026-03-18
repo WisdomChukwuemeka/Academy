@@ -194,9 +194,9 @@ export default function Header() {
               </div>
             </Link>
 
-            <div className="text-xs text-red-500">
+            {/* <div className="text-xs text-red-500">
     loaded: {String(isLoaded)} | signedIn: {String(isSignedIn)}
-  </div>
+  </div> */}
 
             {/* Desktop Nav */}
             <div className="flex items-center gap-6">
