@@ -1,14 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 // import { motion } from "framer-motion";
-import DOMPurify from "isomorphic-dompurify";
 
 import FAQSection from "./faq";
 import CodePlayground from "../editor/page"
 import Instructorpage from "./instructors";
-import { courses, learningmode } from "../localAPI/api"; // Adjust path as needed
+import {learningmode } from "../localAPI/api"; // Adjust path as needed
 import HeroSection from "./hero"
-import FeaturedCoursesSection from "./hero";
+import FeaturedCoursesSection from "./featuredcourses";
 
 import { 
   CheckCircle2, 
