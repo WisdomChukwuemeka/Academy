@@ -11,6 +11,7 @@ import {
   useUser,
   UserButton,
 } from "@clerk/nextjs";
+import Image from "next/image";
 
 // ── MENU BUTTON ─────────────────────────────────────────────────────
 function MenuButton({ isOpen, toggle }) {
@@ -185,9 +186,20 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
               <div className="flex flex-col leading-tight">
+                <div className="flex items-center group focus:outline-none">
+                  <div className="relative overflow-hidden rounded-full">
+                  <Image 
+                    src="/logo/logo.png"
+                    alt="Scippra Logo"
+                  width={50}
+                  height={50}
+                  className="object-contain transition-transform duration-300 group-hover:scale-110"
+                  />
+                  </div>
                 <h1 className="text-xl font-bold text-red-600">
                   Scip<span className="text-indigo-950">pra</span>
                 </h1>
+                </div>
                 <span className="text-[10px] uppercase tracking-widest font-bold text-gray-400 hover:text-red-500 transition-colors">
                   learn • create • build
                 </span>

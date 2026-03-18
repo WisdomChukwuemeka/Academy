@@ -38,7 +38,7 @@ export default function SignInPage() {
           <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5">
             <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse" />
             <span className="text-white/90 text-sm font-medium">
-              10,000+ learners already enrolled
+              1,000+ learners already enrolled
             </span>
           </div>
           <h2 className="text-5xl font-black text-white leading-[1.1]">
