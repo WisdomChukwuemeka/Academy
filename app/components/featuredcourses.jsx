@@ -1,93 +1,114 @@
 "use client";
+
 import { motion } from "framer-motion";
-import { courses } from "../localAPI/api"; // Adjust path as needed
+import { courses } from "../localAPI/api";
 import Link from "next/link";
 import Image from "next/image";
-import DOMPurify from "isomorphic-dompurify";
 
+// Animation Variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1, // Staggers the appearance of cards
+    },
+  },
+};
 
-// ── FEATURED COURSES SECTION ───────────────────────────────────────
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.5, ease: "easeOut" } 
+  },
+};
+
 export default function FeaturedCoursesSection() {
   return (
-    <section
-      id="courses"
-      className="px-6 py-12 max-w-7xl mx-auto"
-    >
-      <h2 className="text-3xl font-bold text-center mb-2 text-black">
-        Featured Courses
-      </h2>
-      <p className="text-center text-gray-600 mb-10">
-        Start your learning journey with our most popular courses
-      </p>
+    <section id="courses" className="px-6 py-16 max-w-7xl mx-auto overflow-hidden">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Featured Courses
+        </h2>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Start your learning journey with our most popular industry-led courses, 
+          designed to take you from beginner to professional.
+        </p>
+      </div>
 
-      <div
-        className="grid gap-6 grid-cols-1 md:grid-cols-3 xl:grid-cols-3"
-       
+      <motion.div
+        className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
       >
         {courses.map((course) => (
-          <Link key={course.id} href={`/courses/${course.id}`}>
+          <Link key={course.id} href={`/courses/${course.id}`} className="group">
             <motion.div
-              className="bg-white rounded-xl shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden"
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
+              variants={cardVariants}
+              whileHover={{ y: -8 }}
+              className="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 h-full flex flex-col overflow-hidden"
             >
               {/* Image Section */}
-              <div className="relative">
+              <div className="relative aspect-video overflow-hidden">
                 <Image
                   src={course.img}
                   alt={course.title}
-                  width={400}
-                  height={240}
-                  className="w-full h-44 object-cover bg-slate-100" // Prevents white flash
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
                 />
-
-                {/* Classroom badge */}
-                <span className="absolute top-3 left-3 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
-                  Classroom
-                </span>
+                <div className="absolute top-4 left-4">
+                  <span className="bg-red-600/90 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-lg shadow-lg">
+                    Classroom
+                  </span>
+                </div>
               </div>
 
               {/* Content */}
-              <div className="p-5">
-                {/* Category */}
-                <p className="text-sm text-red-500 font-medium mb-1">
+              <div className="p-6 flex flex-col flex-grow">
+                <span className="text-xs font-bold text-red-600 uppercase tracking-wider mb-2">
                   {course.category}
+                </span>
+
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors line-clamp-2">
+                  {course.title}
+                </h3>
+
+                <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-6">
+                  {course.desc}
                 </p>
 
-                {/* Title */}
-                <h3 
-                  className="font-semibold text-gray-900 leading-snug mb-2" 
-                  dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(course.title) }} 
-                />
+                {/* Footer Info */}
+                <div className="mt-auto pt-6 border-t border-gray-50 flex items-center justify-between">
+                  <div className="flex flex-col">
+                    <span className="text-[10px] text-gray-400 uppercase font-bold">Duration</span>
+                    <span className="text-sm font-semibold text-gray-900">
+                      {course.weeks} Weeks
+                    </span>
+                  </div>
+                  
+                  <div className="flex flex-col text-right">
+                    <span className="text-[10px] text-gray-400 uppercase font-bold">Tuition</span>
+                    <span className="text-sm font-bold text-gray-900">
+                      ₦{course.price.toLocaleString("en-NG")}
+                    </span>
+                  </div>
+                </div>
 
-                {/* Description */}
-                <p 
-                  className="text-sm text-gray-600 line-clamp-3 mb-4" 
-                  dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(course.desc) }} 
-                />
-
-                {/* Prices */}
-                <div className="flex justify-between items-center text-sm">
-                  <span className="flex items-center gap-1 bg-gray-100 p-1.5 rounded-lg text-black">
-                    ⏱ {course.weeks} weeks
-                  </span>
-                  <span className="font-semibold text-black bg-gray-100 p-1.5 rounded-lg">
-                    ₦{course.price.toLocaleString("en-NG")}
-                  </span>
-
-                  <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-1.5 rounded-full text-xs">
-                    View →
-                  </button>
+                <div className="mt-4 w-full bg-gray-50 group-hover:bg-red-600 text-gray-900 group-hover:text-white text-center py-3 rounded-xl font-bold text-sm transition-all">
+                  View Course Details
                 </div>
               </div>
             </motion.div>
           </Link>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
