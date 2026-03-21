@@ -35,8 +35,8 @@ export function AboutSection() {
             <div className="space-y-4 text-base md:text-lg text-slate-600 leading-relaxed">
               <p>
                 At Scippra, we make tech skills accessible to everyone. Our
-                hands-on on-site, online courses and expert mentorship prepare
-                learners for real-world success in an ever-evolving digital
+                hands on practical on-site, online courses and expert mentorship prepare
+                learners for real world success in an ever evolving digital
                 landscape.
               </p>
               <p>

@@ -4,6 +4,7 @@ import {images, studentimages} from "../localAPI/api"
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { MessageCircle } from "lucide-react";
 // ── HERO SECTION ───────────────────────────────────────────────────
 export default function HeroSection() {
   const[currentIndex, setCurrentIndex] = useState(0);
@@ -93,21 +94,24 @@ export default function HeroSection() {
               </p>
 
               <div className="flex gap-4 mt-6 justify-center md:justify-start">
-                <Link href="https://t.me/+-l80b8JpFPwyZDJK"
-                target="_blank"
-                rel="noopener noreferrer">
-                  <button className="border border-white text-white p-2 rounded-md hover:bg-white hover:text-red-600">
-                    Join Community
-                  </button>
-                </Link>
+  {/* WHATSAPP CHANNEL LINK */}
+  <Link 
+    href="https://whatsapp.com/channel/0029Vb6Ogg21noyzgp0dwg2q" // Replace with your actual WhatsApp Channel link
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <button className="flex items-center gap-2 border border-white text-white p-2 px-4 rounded-md hover:bg-white hover:text-red-600 transition-all font-semibold">
+      Join Community
+    </button>
+  </Link>
 
-                <Link href="/#courses">
-                  <div className="bg-red-500 text-white p-2 rounded-md hover:bg-red-600">
-                    Explore Courses
-                  </div>
-                </Link>
-              </div>
-
+  {/* EXPLORE COURSES LINK */}
+  <Link href="/#courses">
+    <div className="bg-red-500 text-white p-2 px-4 rounded-md hover:bg-red-600 transition-all font-semibold cursor-pointer">
+      Explore Courses
+    </div>
+  </Link>
+</div>
               <div className="hidden md:flex items-center gap-3 mt-2">
                 <div className="hidden md:flex items-center gap-4 pt-2">
                   <div className="flex items-center gap-6 pt-2 border-t border-white/10">
