@@ -172,7 +172,7 @@ export default function Header() {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/#courses", label: "Courses" },
+    { href: "/courses", label: "Courses" },
     { href: "/about", label: "About" },
     { href: "/jobs", label: "Jobs" },
     { href: "/contact", label: "Contact Us" },
@@ -184,27 +184,32 @@ export default function Header() {
         <header>
           <nav className="flex items-center justify-between px-8 py-4 shadow-sm">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex flex-col leading-tight">
-                <div className="flex items-center group focus:outline-none">
-                  <div className="relative overflow-hidden rounded-full">
-                  <Image 
-                    src="/logo/logo.png"
-                    alt="Scippra Logo"
-                  width={50}
-                  height={50}
-                  className="object-contain transition-transform duration-300 group-hover:scale-110"
-                  />
-                  </div>
-                <h1 className="text-xl font-bold text-red-600">
-                  Scip<span className="text-indigo-950">pra</span>
-                </h1>
-                </div>
-                <span className="text-[10px] uppercase tracking-widest font-bold text-gray-400 hover:text-red-500 transition-colors">
-                  learn • create • build
-                </span>
-              </div>
-            </Link>
+           <Link href="/" className="flex items-center focus:outline-none group">
+  <div className="flex items-center">
+    {/* Logo — compact, no extra padding */}
+    <div className="relative overflow-hidden rounded-full flex shrink-0">
+      <Image 
+        src="/logo/logo.png"
+        alt="Scippra Logo"
+        width={42}
+        height={42}
+        className="object-contain transition-transform duration-300 group-hover:scale-110"
+      />
+    </div>
+
+    {/* Text — flush close to logo */}
+    <div className="flex flex-col leading-none gap-0.75">
+      <h1 className="text-xl font-bold leading-none tracking-tight">
+        <span className="text-red-600">Scip</span>
+        <span className="text-indigo-950">pra</span>
+      </h1>
+      <span className="text-[5px] uppercase tracking-[0.18em] font-semibold text-gray-400 group-hover:text-red-500 transition-colors leading-none">
+        learn • create • build
+      </span>
+    </div>
+
+  </div>
+</Link>
 
             {/* <div className="text-xs text-red-500">
     loaded: {String(isLoaded)} | signedIn: {String(isSignedIn)}

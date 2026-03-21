@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import  Header  from "./components/header";
 import Footer from "./components/footer";
+
 // import PageLoaderWrapper from "./components/pageloaderwrapper";
 import { ClerkProvider } from "@clerk/nextjs";
 
@@ -125,7 +126,8 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         {/* <PageLoaderWrapper> */}
-        
+
+
         <Header />
             <main className="grow w-full bg-zinc-50">
             <div className="max-w-7xl mx-auto">
@@ -134,6 +136,7 @@ export default function RootLayout({ children }) {
           </main>
         <Footer />
         {/* </PageLoaderWrapper> */}
+ 
       </body>
     </html>
     </ClerkProvider>

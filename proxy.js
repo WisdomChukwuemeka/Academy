@@ -2,10 +2,11 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
 // Only protect the specific actions, let the catalog be public for SEO
 const isProtectedRoute = createRouteMatcher([
-  "/dashboard(.*)",
-  "/profile(.*)",
-  "/courses/(.*)/enroll", // Protect the enrollment step
-  "/courses/(.*)/lessons(.*)", // Protect the actual content
+  "/courses(.*)",
+  "/jobs(.*)",
+  "/apply(.*)",
+  // "/courses/(.*)/enroll", // Protect the enrollment step
+  // "/courses/(.*)/lessons(.*)", // Protect the actual content
 ]);
 
 export default clerkMiddleware(async (auth, req) => {

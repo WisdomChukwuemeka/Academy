@@ -2,7 +2,7 @@
 const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
-    // minimumCacheTTL: 31536000, // 1 year aggressive caching
+    minimumCacheTTL: 31536000, // 1 year aggressive caching
   },
   async rewrites() {
     return [
