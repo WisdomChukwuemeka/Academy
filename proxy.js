@@ -5,6 +5,7 @@ const isProtectedRoute = createRouteMatcher([
   "/courses(.*)",
   "/jobs(.*)",
   "/apply(.*)",
+  "/videocall(.*)", // Protect the video call page and its subroutes
   // "/courses/(.*)/enroll", // Protect the enrollment step
   // "/courses/(.*)/lessons(.*)", // Protect the actual content
 ]);
