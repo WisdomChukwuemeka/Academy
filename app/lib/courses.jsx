@@ -1,9 +1,17 @@
+import videoEditingImg from "@/./public/courses/videoediting.png";
+import codingImg from "@/./public/courses/coding.png";
+import dataAnalysisImg from "@/./public/courses/one.png";
+import graphicDesignImg from "@/./public/courses/graphic.png";
+import uiUxImg from "@/./public/courses/ui.png";
+import modelingImg from "@/./public/courses/3d.png";
+
+
 export const courses = [
   {
     id: 1,
     title: "Professional Video Editing",
     desc: "This Video Editing Certification Course is designed to take you from beginner to professional level in video editing. You will learn how to edit high-quality videos for social media, YouTube, film, and marketing using industry-standard tools. By the end of this course, you will confidently create engaging video content that meets professional standards.",
-    img: "/courses/coding.png",
+    img: videoEditingImg,
     content:
       "Learn video editing workflows including cutting, transitions, color grading, sound design, and motion graphics using professional editing software.",
     syllabus: [
@@ -38,7 +46,7 @@ export const courses = [
     id: 2,
     title: "Full-Stack Web Development",
     desc: "This Full-Stack Web Development course is a complete guide to building modern websites and web applications. You will learn how to design responsive interfaces, develop secure backends, and deploy real-world applications. By the end of the course, you will be job-ready as a professional web developer.",
-    img: "/courses/coding.png",
+    img: codingImg,
     content:
       "Build responsive websites and scalable web applications using HTML, CSS, JavaScript, React, and Django.",
     syllabus: [
@@ -73,7 +81,7 @@ export const courses = [
     id: 3,
     title: "Microsoft Excel Mastery",
     desc: "This Excel Mastery course teaches you how to analyze data, automate tasks, and create professional reports using Microsoft Excel. Whether for business, finance, or administration, this course equips you with essential Excel skills.",
-    img: "/courses/one.png",
+    img: dataAnalysisImg,
     content:
       "Learn Excel formulas, data analysis, pivot tables, and automation techniques for real-world business use.",
     syllabus: [
@@ -108,7 +116,7 @@ export const courses = [
     id: 4,
     title: "Graphic Design",
     desc: "This Graphic Design course teaches you how to create professional visual designs for branding, marketing, and digital media. You will learn design principles and hands-on skills using industry-standard tools.",
-    img: "/courses/graphic.png",
+    img: graphicDesignImg,
     content:
       "Design logos, flyers, banners, and social media graphics using Photoshop, Illustrator, and Canva.",
     syllabus: [
@@ -143,7 +151,7 @@ export const courses = [
     id: 5,
     title: "UI/UX Design",
     desc: "This UI/UX Design course teaches you how to design intuitive and user-friendly digital products. You will learn the complete design process from research to prototyping and usability testing.",
-    img: "/courses/ui.png",
+    img: uiUxImg,
     content:
       "Learn user research, wireframing, prototyping, and design systems using Figma.",
     syllabus: [
@@ -178,7 +186,7 @@ export const courses = [
     id: 6,
     title: "3D Modeling & Animation",
     desc: "This 3D Modeling course introduces you to creating realistic 3D models and animations for games, movies, and product visualization using modern 3D tools.",
-    img: "/courses/3d.png",
+    img: modelingImg,
     content:
       "Learn 3D modeling, texturing, lighting, rendering, and basic animation using Blender.",
     syllabus: [
