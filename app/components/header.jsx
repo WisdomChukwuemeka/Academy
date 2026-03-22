@@ -176,7 +176,6 @@ export default function Header() {
     { href: "/about", label: "About" },
     { href: "/jobs", label: "Jobs" },
     { href: "/contact", label: "Contact Us" },
-    { href: "/videocall", label: "Live" },
   ];
 
   return (
