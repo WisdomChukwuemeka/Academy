@@ -41,9 +41,9 @@ export default function CourseDetails() {
         <h1 className="text-4xl font-bold text-black mb-2">{course.title}</h1>
         {/* <p className="text-xl text-gray-600 mb-4">{course.desc}</p> */}
         <div className="flex items-center text-sm text-gray-500 mb-6">
-          <span>{course.ratings} ({course.ratingsCount} ratings)</span>
-          <span className="mx-2">•</span>
-          <span>{course.enrolled} students</span>
+          <span>({course.ratings} ratings)</span>
+          {/* <span className="mx-2">•</span>
+          <span>{course.enrolled} students</span> */}
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">

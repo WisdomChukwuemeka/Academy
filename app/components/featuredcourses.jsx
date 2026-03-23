@@ -101,7 +101,7 @@ export default function FeaturedCoursesSection() {
                   </div>
                 </div>
 
-                <div className="mt-4 w-full bg-gray-50 group-hover:bg-red-600 text-gray-900 group-hover:text-white text-center py-3 rounded-xl font-bold text-sm transition-all">
+                <div className="mt-4 w-full bg-red-600 group-hover:bg-red-700 text-white  group-hover:text-white text-center py-3 rounded-xl font-bold text-sm transition-all">
                   View Course Details
                 </div>
               </div>

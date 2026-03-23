@@ -34,6 +34,7 @@ import dataAnalysisImg from "@/./public/courses/one.png";
 import graphicDesignImg from "@/./public/courses/graphic.png";
 import uiUxImg from "@/./public/courses/ui.png";
 import modelingImg from "@/./public/courses/3d.png";
+import aiPromptImg from "@/./public/courses/ai.png";
 
 
 // ==========================================
@@ -258,10 +259,10 @@ export const courses =[
       "Authentication & Security",
       "Final Project: Full-Stack Web App"
     ],
-    price: 300000,
+    price: 400000,
     enrolled: 300,
     tutor: "Michael Rodriguez",
-    weeks: 8
+    weeks: 16
   },
   {
     id: 3,
@@ -281,7 +282,7 @@ export const courses =[
     price: 100000,
     enrolled: 400,
     tutor: "Robert Klein",
-    weeks: 6
+    weeks: 4
   },
   {
     id: 4,
@@ -318,29 +319,29 @@ export const courses =[
       "Design Systems",
       "Final Project: App UI/UX Design"
     ],
-    price: 220000,
+    price: 250000,
     enrolled: 280,
     tutor: "Daniel Lee",
-    weeks: 9
+    weeks: 8
   },
   {
     id: 6,
-    title: "3D Modeling & Animation",
-    desc: "Learn 3D modeling, texturing, and animation to create realistic 3D for games, films and product visualization.",
-    img: modelingImg,
-    content: "This course introduces 3D modeling using Blender. You’ll learn modeling, texturing, lighting, rendering, and basic animation techniques.",
+    title: "AI Prompt Engineering",
+    desc: "Learn how to effectively communicate with AI tools to generate high-quality content, automate tasks, and boost productivity.",
+    img: aiPromptImg,
+    content: "This course teaches how to craft powerful prompts for AI tools like ChatGPT and other generative AI platforms. You will learn prompt structures, optimization techniques, and real-world use cases.",
     syllabus:[
-      "Introduction to 3D Design",
-      "Blender Interface & Tools",
-      "3D Modeling Techniques",
-      "Texturing & Materials",
-      "Lighting & Rendering",
-      "Basic Animation",
-      "Final Project: 3D Model Showcase"
+      "Introduction to AI & Prompting",
+      "Understanding How AI Responds",
+      "Prompt Structures & Frameworks",
+      "Advanced Prompt Techniques",
+      "AI for Content Creation",
+      "Automation & Productivity Workflows",
+      "Final Project: AI-Powered Solution"
     ],
-    price: 300000,
-    enrolled: 150,
-    tutor: "Ethan Brooks",
-    weeks: 12
+    price: 50000,
+    enrolled: 0,
+    tutor: "Alex Morgan",
+    weeks: 4
   }
 ];

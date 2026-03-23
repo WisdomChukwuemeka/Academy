@@ -3,8 +3,8 @@ import codingImg from "@/./public/courses/coding.png";
 import dataAnalysisImg from "@/./public/courses/one.png";
 import graphicDesignImg from "@/./public/courses/graphic.png";
 import uiUxImg from "@/./public/courses/ui.png";
-import modelingImg from "@/./public/courses/3d.png";
-
+// import modelingImg from "@/./public/courses/3d.png";
+import aiPromptImg from "@/./public/courses/ai.png";
 
 export const courses = [
   {
@@ -45,7 +45,7 @@ export const courses = [
   {
     id: 2,
     title: "Full-Stack Web Development",
-    desc: "This Full-Stack Web Development course is a complete guide to building modern websites and web applications. You will learn how to design responsive interfaces, develop secure backends, and deploy real-world applications. By the end of the course, you will be job-ready as a professional web developer.",
+    desc: "This Full-Stack Web Development course is a complete guide to building modern websites and web applications. You will learn how to design responsive interfaces, develop secure backends, and deploy real-world applications. By the end of the course, you will be job ready as a professional web developer.",
     img: codingImg,
     content:
       "Build responsive websites and scalable web applications using HTML, CSS, JavaScript, React, and Django.",
@@ -58,7 +58,7 @@ export const courses = [
       "Authentication & Security",
       "Final Project: Full-Stack Web App"
     ],
-    duration: "2 months",
+    duration: "4 months",
     enrolled: 310,
     tutor: "Michael Peterson",
     weeks: 10,
@@ -74,7 +74,7 @@ export const courses = [
     ],
     profilepic: "/teachers/teachersix.png",
     instructorBio:
-      "Michael Peterson is a senior full-stack developer with years of experience building production-grade web applications."
+      "Michael Peterson is a senior full-stack developer with years of experience building production grade web applications."
   },
 
   {
@@ -93,7 +93,7 @@ export const courses = [
       "Business Reporting",
       "Final Project: Excel Dashboard"
     ],
-    duration: "1.5 months",
+    duration: "1 months",
     enrolled: 420,
     tutor: "Robert King",
     weeks: 6,
@@ -163,7 +163,7 @@ export const courses = [
       "Design Systems",
       "Final Project: App UI Design"
     ],
-    duration: "2.5 months",
+    duration: "2 months",
     enrolled: 300,
     tutor: "Sarah Lee",
     weeks: 9,
@@ -181,39 +181,39 @@ export const courses = [
     instructorBio:
       "Sarah Lee is a UI/UX designer with experience designing products used by thousands of users worldwide."
   },
-
   {
-    id: 6,
-    title: "3D Modeling & Animation",
-    desc: "This 3D Modeling course introduces you to creating realistic 3D models and animations for games, movies, and product visualization using modern 3D tools.",
-    img: modelingImg,
-    content:
-      "Learn 3D modeling, texturing, lighting, rendering, and basic animation using Blender.",
-    syllabus: [
-      "Introduction to 3D Design",
-      "Blender Interface & Tools",
-      "3D Modeling Techniques",
-      "Texturing & Materials",
-      "Lighting & Rendering",
-      "Basic Animation",
-      "Final Project: 3D Model Showcase"
-    ],
-    duration: "3 months",
-    enrolled: 160,
-    tutor: "Ethan Brooks",
-    weeks: 12,
-    ratings: 4.6,
-    ratingsCount: 720,
-    lastUpdated: "12/2025",
-    totalLectures: 48,
-    totalDuration: "11h",
-    requirements: [
-      "A computer with good graphics performance",
-      "No prior 3D experience required",
-      "Passion for 3D design"
-    ],
-    profilepic: "/teachers/teacherone.png",
-    instructorBio:
-      "Ethan Brooks is a 3D artist and animator with experience in games, film, and product visualization."
-  }
+  id: 6,
+  title: "AI Prompt Engineering",
+  desc: "This AI Prompt Engineering course teaches you how to effectively communicate with AI systems to get accurate, creative, and powerful results. You will learn how to structure prompts, refine outputs, and apply AI tools across different industries.",
+  img: aiPromptImg,
+  content:
+    "Master the art of writing effective prompts for AI tools like ChatGPT. Learn prompt structures, optimization, and real-world applications for business, content creation, and automation.",
+  syllabus: [
+    "Introduction to AI & Prompt Engineering",
+    "How AI Understands Prompts",
+    "Prompt Structures",
+    "Advanced Prompt Techniques",
+    "AI for Content Creation",
+    "Automation & Productivity",
+    "Final Project: AI Prompt System"
+  ],
+  duration: "1 month",
+  enrolled: 0,
+  tutor: "Lugard Wisdom",
+  weeks: 4,
+  ratings: 4.8,
+  ratingsCount: 97,
+  lastUpdated: "03/2026",
+  totalLectures: 25,
+  totalDuration: "5h",
+  requirements: [
+    "Basic computer knowledge",
+    "Interest in AI tools",
+    "No prior experience required"
+  ],
+  profilepic: "/teachers/ceo.png",
+  instructorBio:
+    "Lugard Wisdom is an AI specialist focused on prompt engineering, automation, and helping businesses leverage AI for productivity.",
+  price: 50000
+}
 ];
