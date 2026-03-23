@@ -30,8 +30,8 @@ export default function JobsPage() {
 
   try {
     const res = await fetch(
-      `/api/jobs?keywords=${titleQuery}&location=${locationQuery}`
-    );
+  `https://public.api.careerjet.net/search?affid=${API_KEY}&keywords=${encodeURIComponent(keywords)}&location=${encodeURIComponent(location)}&page=1`
+);
 
     if (!res.ok) {
       throw new Error("Failed to fetch jobs");

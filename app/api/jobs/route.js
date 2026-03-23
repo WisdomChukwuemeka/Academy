@@ -5,7 +5,7 @@ export async function GET(req) {
     const keywords =
       searchParams.get("keywords") || "software developer";
     const location =
-      searchParams.get("location") || "Nigeria";
+      searchParams.get("location") || "Lagos";
 
     const API_KEY = process.env.NEXT_PUBLIC_CAREERJET_API_KEY;
 
