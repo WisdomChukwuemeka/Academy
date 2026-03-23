@@ -106,6 +106,8 @@ export default function CoursesPage() {
                           alt={course.title}
                           fill
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          placeholder="blur"
+                          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="  
                           className="object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                         <div className="absolute top-4 left-4">
