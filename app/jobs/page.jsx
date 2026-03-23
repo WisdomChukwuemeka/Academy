@@ -33,6 +33,7 @@ export default function JobsPage() {
         `https://public.api.careerjet.net/search?affid=${API_KEY}&keywords=${titleQuery}&location=${locationQuery}&page=1`
       );
       const data = await res.json();
+      console.log("FULL DATA:", data);
       setJobs(data.jobs ||[]);
     } catch (error) {
       console.error("Error fetching jobs:", error);
