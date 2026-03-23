@@ -23,23 +23,32 @@ export default function JobsPage() {
   // Note: Ensure your environment variable is prefixed correctly for Next.js
   const API_KEY = process.env.NEXT_PUBLIC_CAREERJET_API_KEY; 
 
-  const fetchJobs = async (e) => {
-    if (e) e.preventDefault();
-    setLoading(true);
-    setHasSearched(true);
+ const fetchJobs = async (e) => {
+  if (e) e.preventDefault();
+  setLoading(true);
+  setHasSearched(true);
 
-    try {
-      const res = await fetch(
-        `https://public.api.careerjet.net/search?affid=${API_KEY}&keywords=${titleQuery}&location=${locationQuery}&page=1`
-      );
-      const data = await res.json();
-      console.log("FULL DATA:", data);
-      setJobs(data.jobs ||[]);
-    } catch (error) {
-      console.error("Error fetching jobs:", error);
+  try {
+    const res = await fetch(
+      `/api/jobs?keywords=${titleQuery}&location=${locationQuery}`
+    );
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch jobs");
     }
-    setLoading(false);
-  };
+
+    const data = await res.json();
+
+    console.log("API RESPONSE:", data);
+
+    setJobs(data.jobs || []);
+  } catch (error) {
+    console.error("Error fetching jobs:", error);
+    setJobs([]);
+  }
+
+  setLoading(false);
+};
 
   useEffect(() => {
     fetchJobs();
