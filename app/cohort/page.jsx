@@ -200,11 +200,11 @@ const CohortLandingPage = () => {
             <p className="text-xl md:text-2xl mb-6 max-w-2xl mx-auto">
               Master HTML, CSS, and JavaScript in 5 weeks.
             </p>
-            <div className="bg-indigo-945 text-white inline-block px-6 py-3 rounded-full mb-4">
+            <div className="bg-indigo-950 text-white inline-block px-6 py-3 rounded-full mb-4">
               <p className="font-bold text-lg">Cohort Starts: <span className="text-xl">{startDate}</span></p>
             </div>
-            <p className="text-lg mb-4 bg-red-450 inline-block px-6 py-2 rounded-full">
-               Special Launch Price: <span className="font-bold text-xl">₦45,000 only!</span>
+            <p className="text-lg mb-4 bg-white text-gray-800 inline-block px-6 py-2 rounded-full">
+               Special Launch Price: <span className="font-bold text-xl"> ₦45,000 only!</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -247,7 +247,7 @@ const CohortLandingPage = () => {
                 <div key={idx} className="bg-gray-45 p-6 rounded-xl border border-gray-200 hover:shadow-lg transition">
                   <div className="text-red-600 font-bold text-sm mb-2">{item.week}</div>
                   <h3 className="text-xl text-gray-700 font-semibold mb-2">{item.title}</h3>
-                  <p className="text-gray-450 text-sm"> {item.output}</p>
+                  <p className="text-gray-600 text-sm"> {item.output}</p>
                 </div>
               ))}
             </div>
