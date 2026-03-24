@@ -203,8 +203,8 @@ const CohortLandingPage = () => {
             <div className="bg-indigo-950 text-white inline-block px-6 py-3 rounded-full mb-4">
               <p className="font-bold text-lg">Cohort Starts: <span className="text-xl">{startDate}</span></p>
             </div>
-            <p className="text-lg mb-4 bg-white text-gray-800 inline-block px-6 py-2 rounded-full">
-               Special Launch Price: <span className="font-bold text-xl"> ₦45,000 only!</span>
+            <p className="text-lg mb-4 text-white inline-block px-6 py-2 rounded-full">
+               Special Launch Price: <span className="font-bold text-xl"> ₦45,000</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
