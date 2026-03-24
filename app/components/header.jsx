@@ -173,9 +173,9 @@ export default function Header() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/courses", label: "Courses" },
+    {href: "/cohort", label: "Cohort"},
     { href: "/about", label: "About" },
-    // { href: "/jobs", label: "Jobs" },
-      {href: "/cohort", label: "Cohort"},
+    { href: "/jobs", label: "Jobs" },
     { href: "/contact", label: "Contact Us" },
   ];
 
