@@ -174,7 +174,8 @@ export default function Header() {
     { href: "/", label: "Home" },
     { href: "/courses", label: "Courses" },
     { href: "/about", label: "About" },
-    { href: "/jobs", label: "Jobs" },
+    // { href: "/jobs", label: "Jobs" },
+      {href: "/cohort", label: "Cohort"},
     { href: "/contact", label: "Contact Us" },
   ];
 
