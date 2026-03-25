@@ -377,7 +377,7 @@ const CohortLandingPage = () => {
 
                 <div className="bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10">
                   <div className="flex items-center gap-2 mb-6">
-                    <div className="flex -space-x-2">
+                    <div className=" hidden md:flex -space-x-2">
                       {[1,2,3,4].map(i => (
                         <div key={i} className="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-700 overflow-hidden">
                            <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="student" />
@@ -402,8 +402,7 @@ const CohortLandingPage = () => {
                     href={whatsappLink}
                     className="flex items-center justify-center gap-3 w-full bg-red-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-red-700 transition shadow-lg shadow-red-600/20"
                   >
-                    Secure My Slot Now
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    Secure My Slot
                   </a>
                 </div>
               </div>
@@ -416,9 +415,9 @@ const CohortLandingPage = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-red-600 font-bold tracking-widest uppercase text-sm mb-4 flex items-center justify-center gap-2">
-                <span className="w-8 h-[2px] bg-red-600"></span>
+                <span className="w-8 h-0.5 bg-red-600"></span>
                 The Scippra Impact
-                <span className="w-8 h-[2px] bg-red-600"></span>
+                <span className="w-8 h-0.5 bg-red-600"></span>
               </h2>
               <h3 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
                 From <span className="text-red-700 italic">"I can't do this"</span> to <br /> 
