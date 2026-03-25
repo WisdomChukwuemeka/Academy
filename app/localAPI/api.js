@@ -359,15 +359,6 @@ export const cohortinstructor =[
   },
   {
     id: 2,
-    name: "Jane Amaka",
-    role: "Word Press Instructor",
-    company: "Scippra Academy",
-    image: janeImg,
-    experience: "2-3",
-    location: "Port Harcourt, Nigeria",
-  },
-  {
-    id: 3,
     name: "Peter John",
     role: "Frontend Developer",
     company: "Scippra Academy",

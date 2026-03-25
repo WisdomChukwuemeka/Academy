@@ -3,7 +3,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { cohortinstructor } from "../localAPI/api"
-import { Briefcase } from 'lucide-react';
+import { Briefcase, Quote, Star, CheckCircle, TrendingUp } from 'lucide-react';
 // app/page.js or app/cohort/page.js
 import React, { useState, useEffect } from 'react';
 
@@ -46,13 +46,13 @@ const CohortLandingPage = () => {
   // WhatsApp number (format: country code + number, no plus sign or spaces)
   const whatsappNumber = "2349059987650"; // Replace with your actual Nigerian WhatsApp number
   const whatsappMessage = encodeURIComponent(
-`Hello! I'm interested in the Web Development Cohort 1 starting ${startDate} (₦45,000). Please guide me on how to register.`  );
+`Hello! I'm interested in the Web Development Cohort 2 starting ${startDate} (₦45,000). Please guide me on how to register.`  );
   const whatsappLink = `https://wa.me/2349059987650?text=I%20am%20interested%20in%20enrolling%20in%20the%20course%20Web%20Development%20Training%20Cohort%201%20(₦45,000).%20Please%20guide%20me%20on%20how%20to%20register.`;
 
   // Nigerian pricing
   const pricingTiers = [
     {
-      name: 'Cohort 1 Admission',
+      name: 'Cohort 2 Admission',
       price: '₦45,000',
       note: 'One-time payment',
       features: [
@@ -76,8 +76,8 @@ const CohortLandingPage = () => {
 
   const faqs = [
     {
-      q: 'When does Cohort 1 start?',
-      a: `Cohort 1 kicks off on ${startDate}. Registration closes one week before start date.`,
+      q: 'When does Cohort 2 start?',
+      a: `Cohort 2 kicks off on ${startDate}. Registration closes one week before start date.`,
     },
     {
       q: 'How do I pay?',
@@ -101,7 +101,7 @@ const CohortLandingPage = () => {
     <>
 
 <Head>
-      <title>Web Development Training Nigeria | Cohort 1 (₦45,000) | Scippra</title>
+      <title>Web Development Training Nigeria | Cohort 2 (₦45,000) | Scippra</title>
 
       <meta
         name="description"
@@ -120,8 +120,8 @@ const CohortLandingPage = () => {
       <link rel="canonical" href="https://scippra.com/cohort" />
 
       {/* Open Graph (Facebook, LinkedIn) */}
-      <meta property="og:title" content="Web Development Training Nigeria | Cohort 1 (₦45,000)" />
-      <meta property="og:description" content="Master HTML, CSS, JavaScript & React in 5 weeks. Join Cohort 1 starting May 1st, 2026." />
+      <meta property="og:title" content="Web Development Training Nigeria | Cohort 2 (₦45,000)" />
+      <meta property="og:description" content="Master HTML, CSS, JavaScript & React in 5 weeks. Join Cohort 2 starting May 1st, 2026." />
       <meta property="og:url" content="https://scippra.com/cohort" />
       <meta property="og:type" content="website" />
       <meta property="og:image" content="https://scippra.com/og-image.png" />
@@ -129,7 +129,7 @@ const CohortLandingPage = () => {
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Web Development Training Nigeria (₦45,000)" />
-      <meta name="twitter:description" content="Become a job ready web developer in 5 weeks. Join Cohort 1 now." />
+      <meta name="twitter:description" content="Become a job ready web developer in 5 weeks. Join Cohort 2 now." />
       <meta name="twitter:image" content="https://scippra.com/og-image.png" />
 
       {/* Geo (Local SEO boost) */}
@@ -195,7 +195,7 @@ const CohortLandingPage = () => {
         <section className="bg-linear-to-r from-red-700 to-red-600 text-white py-16 md:py-20">
           <div className="container mx-auto px-4 text-center">
             <span className="bg-red-450 text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4">
-               Cohort 1: Nigerian Edition
+               Cohort 2
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Web Development Training
@@ -245,7 +245,7 @@ const CohortLandingPage = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-1 lg:grid-cols-4 gap-6">
               {scheduleHighlights.map((item, idx) => (
                 <div key={idx} className="bg-gray-45 p-6 rounded-xl border border-gray-200 hover:shadow-lg transition">
                   <div className="text-red-600 font-bold text-sm mb-2">{item.week}</div>
@@ -280,7 +280,7 @@ const CohortLandingPage = () => {
                 <h2 className="text-sm font-black uppercase tracking-[0.2em] text-red-600 mb-4 flex items-center gap-2">
                    Expert Led Instruction
                 </h2>
-                <h3 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+                <h3 className="text-3xl md:text-4xl xl:text-5xl font-bold text-slate-900 leading-tight">
                   Learn from Mentors who <span className="text-red-700 underline decoration-red-200 underline-offset-8">build for a living.</span>
                 </h3>
               </div>
@@ -290,7 +290,7 @@ const CohortLandingPage = () => {
             </div>
 
             {/* Unique Mentor Cards Grid */}
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Mentor 1 - Replace with actual data from your API */}
               {cohortinstructor.map((instructor) => (
                 <div key={instructor.id} className="group relative">
@@ -343,7 +343,7 @@ const CohortLandingPage = () => {
 
               <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
                 <div>
-                  <h2 className="text-3xl md:text-5xl font-bold mb-8">Why 100+ students chose Scippra in 2026</h2>
+                  <h2 className="text-3xl md:text-5xl font-bold mb-8">Why students chose Scippra in 2026</h2>
                   <div className="space-y-6">
                     <div className="flex gap-4">
                       <div className="w-12 h-12 shrink-0 bg-red-600/20 border border-red-600/30 rounded-2xl flex items-center justify-center">
@@ -395,7 +395,7 @@ const CohortLandingPage = () => {
                      <div className="w-full h-3 bg-white/10 rounded-full overflow-hidden">
                         <div className="h-full bg-red-600 w-[82%] shadow-[0_0_15px_rgba(220,38,38,0.5)]"></div>
                      </div>
-                     <p className="text-xs text-slate-400 italic">Only 9 slots remaining for Cohort 1</p>
+                     <p className="text-xs text-slate-400 italic">Only 9 slots remaining for Cohort 2</p>
                   </div>
 
                   <a
@@ -411,6 +411,108 @@ const CohortLandingPage = () => {
           </div>
         </section>
 
+
+         <section className="py-24 bg-gray-50 overflow-hidden">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-red-600 font-bold tracking-widest uppercase text-sm mb-4 flex items-center justify-center gap-2">
+                <span className="w-8 h-[2px] bg-red-600"></span>
+                The Scippra Impact
+                <span className="w-8 h-[2px] bg-red-600"></span>
+              </h2>
+              <h3 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
+                From <span className="text-red-700 italic">"I can't do this"</span> to <br /> 
+                "I just got hired."
+              </h3>
+              <p className="text-slate-600 text-lg">
+                We don't just teach code; we build confidence. See how 5 weeks changed everything for these Nigerians.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+              {/* Decorative Element */}
+              <div className="absolute -top-10 -left-10 w-64 h-64 bg-red-100 rounded-full blur-3xl opacity-50 -z-10"></div>
+              
+              {/* Testimonial 1 - The Career Changer */}
+              <div className="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
+                <div>
+                  <div className="flex gap-1 mb-4">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <Star key={s} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <Quote className="w-10 h-10 text-red-100 mb-4" />
+                  <p className="text-slate-700 text-lg leading-relaxed italic mb-6">
+                    "I was a secondary school teacher earning ₦35k monthly. I thought coding was only for 'math geniuses'. 
+                    <span className="bg-red-50 font-bold px-1 ml-1 text-slate-900">Scippra broke it down so simply</span> that I built my first portfolio in week 3. Today, I'm a remote junior dev earning 4x my old salary."
+                  </p>
+                </div>
+                <div className="flex items-center gap-4 pt-6 border-t border-slate-50">
+                  <div>
+                    <h4 className="font-bold text-slate-900 flex items-center gap-1">
+                      Chioma A. <CheckCircle className="w-4 h-4 text-blue-500" />
+                    </h4>
+                    <p className="text-sm text-slate-500">Ex-Teacher → Frontend Dev</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 2 - The Skeptic (Center/Featured) */}
+              <div className="bg-slate-900 p-8 rounded-[2.5rem] shadow-2xl shadow-red-900/20 flex flex-col justify-between text-white relative md:-translate-y-4 hover:scale-[1.02] transition-transform duration-300">
+                <div>
+                  <div className="flex gap-1 mb-4 text-yellow-400">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <Star key={s} className="w-4 h-4 fill-current" />
+                    ))}
+                  </div>
+                  <Quote className="w-10 h-10 text-white/10 mb-4" />
+                  <p className="text-slate-200 text-xl font-medium leading-relaxed mb-6">
+                    "I almost didn't register. But the 
+                    <span className="text-red-400 font-bold mx-1">24/7 WhatsApp support</span> here is real. 
+                    When I got stuck on JavaScript loops at 9PM, a mentor was there to debug it with me. It’s the best ₦45,000 I’ve ever spent."
+                  </p>
+                </div>
+                <div className="flex items-center gap-4 pt-6 border-t border-white/10">
+                  <div>
+                    <h4 className="font-bold text-white flex items-center gap-1">
+                      Tunde W. <CheckCircle className="w-4 h-4 text-red-500" />
+                    </h4>
+                    <p className="text-sm text-slate-400">Freelance Web Designer</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 3 - The High Achiever */}
+              <div className="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
+                <div>
+                  <div className="flex gap-1 mb-4">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <Star key={s} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <Quote className="w-10 h-10 text-red-100 mb-4" />
+                  <p className="text-slate-700 text-lg leading-relaxed italic mb-6">
+                    "The Next.js bonus week was the game-changer. I used the project we built in class to 
+                    <span className="bg-green-50 font-bold px-1 ml-1 text-slate-900">land a gig on Upwork</span> 
+                   before the cohort even ended. Scippra doesn't just teach coding, they teach you how to make money."
+                  </p>
+                </div>
+                <div className="flex items-center gap-4 pt-6 border-t border-slate-50">
+                  <div>
+                    <h4 className="font-bold text-slate-900 flex items-center gap-1">
+                      Emeka O. <CheckCircle className="w-4 h-4 text-blue-500" />
+                    </h4>
+                    <p className="text-sm text-slate-500">Frontend Developer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+           
+          </div>
+        </section>
+
+
         {/* 3. FLOATING TRUST BADGE (Mobile Conversion Booster) */}
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-md md:hidden">
             <a 
@@ -424,7 +526,7 @@ const CohortLandingPage = () => {
                 </div>
                 <div className="text-left">
                   <p className="text-[10px] uppercase font-bold opacity-80 leading-none">Limited Slots</p>
-                  <p className="text-sm font-bold">Join Cohort 1 (₦45,000)</p>
+                  <p className="text-sm font-bold">Join Cohort 2 (₦45,000)</p>
                 </div>
               </div>
               <span className="bg-white/20 px-3 py-1 rounded-lg text-xs font-bold uppercase">Pay Now</span>
@@ -464,7 +566,7 @@ const CohortLandingPage = () => {
                   className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-red-450"
                 >
                   <div className="bg-red-700 text-white text-center text-sm font-semibold py-2">
-                    COHORT 1 • LIMITED SEATS
+                    Cohort 2 • LIMITED SEATS
                   </div>
                   <div className="p-4 text-center">
                     <h3 className="text-2xl font-bold text-gray-700">{tier.name}</h3>
@@ -529,7 +631,7 @@ const CohortLandingPage = () => {
               Ready to Become a Web Developmenteloper?
             </h2>
             <p className="text-red-100 mb-4 max-w-2xl mx-auto text-lg">
-              Join Cohort 1 and go from beginner to job ready in 5 weeks.
+              Join Cohort 2 and go from beginner to job ready in 5 weeks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

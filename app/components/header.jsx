@@ -176,7 +176,7 @@ export default function Header() {
     {href: "/cohort", label: "Cohort"},
     { href: "/about", label: "About" },
     { href: "/jobs", label: "Jobs" },
-    { href: "/contact", label: "Contact Us" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (
