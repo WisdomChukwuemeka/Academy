@@ -345,3 +345,34 @@ export const courses =[
     weeks: 4
   }
 ];
+
+
+export const cohortinstructor =[
+  {
+    id: 1,
+    name: "Lugard wisdom",
+    role: "Excutive Director",
+    company: "Scippra Academy",
+    image: ceoImg,
+    experience: "4-5",
+    location: "Port Harcourt, Nigeria",
+  },
+  {
+    id: 2,
+    name: "Jane Amaka",
+    role: "Word Press Instructor",
+    company: "Scippra Academy",
+    image: janeImg,
+    experience: "2-3",
+    location: "Port Harcourt, Nigeria",
+  },
+  {
+    id: 3,
+    name: "Peter John",
+    role: "Frontend Developer",
+    company: "Scippra Academy",
+    image: johnImg,
+    experience: "1-2",
+    location: "Port Harcourt, Nigeria",
+  }
+]
