@@ -428,7 +428,7 @@ const CohortLandingPage = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 relative">
               {/* Decorative Element */}
               <div className="absolute -top-10 -left-10 w-64 h-64 bg-red-100 rounded-full blur-3xl opacity-50 -z-10"></div>
               
