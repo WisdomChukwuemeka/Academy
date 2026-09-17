@@ -21,7 +21,7 @@ export default function ContactMap() {
   // Contact information
   const contactInfo = {
     address:
-      "#2 Salvation Close off Wamadi Asonye Elder Benjamin Street, Rumpokwu, Eneka Road, Port Harcourt, Rivers State, Nigeria",
+      "#2 Salvation Close off Wamadi Asonye Elder Benjamin Street, Rumpokwu, Eneka Road, Port Harcourt, Rivers State, Nigeria.",
     phone: "+234 905 998 7650",
     email: "scippra@gmail.com",
     whatsapp: "+234 905 998 7650",
