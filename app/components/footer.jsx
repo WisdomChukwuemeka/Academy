@@ -46,7 +46,7 @@ export default function Footer() {
 
   <div className="flex flex-col gap-4 mt-2">
     {[
-      { icon: "bi-envelope", info: "info@scippra.com", link: "mailto:info@scippra.com" },
+      { icon: "bi-envelope", info: "scippra@gmail.com", link: "mailto:scippra@gmail.com" },
       { 
         icon: "bi-telephone", 
         info: "+234 905 998 7650",
