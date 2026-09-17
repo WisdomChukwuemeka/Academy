@@ -110,9 +110,11 @@ export function LearningModeSection() {
               <div className="p-4">
                 <h3 className="font-semibold mb-2 text-black">{mode.mode}</h3>
                 <p className="text-sm text-gray-600 mb-4">{mode.desc}</p>
+                <Link href={mode.href}>
                 <button className="w-full bg-red-600 text-white py-2.5 rounded">
                   Explore our courses →
                 </button>
+                </Link>
               </div>
             </div>
           </div>

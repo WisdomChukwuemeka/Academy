@@ -223,12 +223,14 @@ export const learningmode =[
   {
     mode: "Classroom Learning",
     img: classroomImg,
-    desc: "Immerse yourself in our expert led, interactive classes for a hands-on learning experience that goes beyond traditional methods."
+    desc: "Immerse yourself in our expert led, interactive classes for a hands-on learning experience that goes beyond traditional methods.",
+    href: "/courses",
   },
   {
     mode: "Online Learning",
     img: onlineImg,
-    desc: "Discover the convenience of online learning with our courses, featuring interactive sessions and instant access to valuable resources."
+    desc: "Discover the convenience of online learning with our courses, featuring interactive sessions and instant access to valuable resources.",
+    href: "/courses",
   }
 ];
 
