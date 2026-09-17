@@ -5,6 +5,7 @@ import Footer from "./components/footer";
 import CookiesBanner from "./components/CookiesBanner";
 // import PageLoaderWrapper from "./components/pageloaderwrapper";
 import { ClerkProvider } from "@clerk/nextjs";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -36,7 +36,7 @@ export default function ApplicationForm() {
       } else {
         setStatus({
           type: "error",
-          message: "Submission failed. Please try again or email info@scippra.com directly.",
+          message: "Submission failed. Please try again or email scippra@gmail.com directly.",
         });
       }
     } catch (error) {
