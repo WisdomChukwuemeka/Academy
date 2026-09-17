@@ -19,6 +19,11 @@ import dantoImg from "@/./public/instructors/danto.png";
 // Hero & Student Images
 import slideTwo from "@/./public/change/two.png"
 import slideThree from "@/./public/change/three.png";
+import slideSeven from "@/./public/change/classone.png"
+import slideFour from "@/./public/change/classtwo.png";
+import slideFive from "@/./public/change/classthree.png"
+import slideSix from "@/./public/change/classfour.png"
+
 import studentOne from "@/./public/change/studentone.png";
 import studentTwo from "@/./public/change/studenttwo.png";
 import studentThree from "@/./public/change/studentthree.png";
@@ -202,6 +207,10 @@ export const instructor =[
 export const images =[
   slideThree,
   slideTwo,
+  slideSeven,
+  slideFour,
+  slideFive,
+  slideSix
 ];
 
 export const studentimages =[
