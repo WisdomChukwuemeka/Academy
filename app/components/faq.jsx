@@ -10,7 +10,12 @@ const faqs = [
   {
     question: "How long do Scippra courses last?",
     answer:
-      "Course duration varies depending on the program, but all Scippra courses are self-paced. This allows you to learn at your convenience while completing hands-on projects and real-world tasks designed to help you master practical, job-ready skills efficiently.",
+      "Course duration varies depending on the program, but all Scippra courses are self-paced and also physical.",
+  },
+  {
+    question: "Do you accept installment payments?",
+    answer:
+      "Yes! We offer flexible payment plans to make our courses accessible. You can split your tuition into 2 or 3 payments across the duration of the cohort. Contact our admissions team via WhatsApp or email to set up your plan.",
   },
   {
     question: "Do I need prior experience to enroll at Scippra?",
@@ -20,7 +25,7 @@ const faqs = [
   {
     question: "What platform is used for Scippra classes?",
     answer:
-      "All Scippra classes are delivered 100% online through interactive learning platforms and on-site. You get 24/7 access to video lessons, hands-on projects, expert mentorship, and a supportive learning community—so you can learn anytime, anywhere.",
+      "All Scippra classes are conducted both online and on-site.",
   },
 ];
 

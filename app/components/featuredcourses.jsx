@@ -93,10 +93,14 @@ export default function FeaturedCoursesSection() {
                     </span>
                   </div>
                   
-                  <div className="flex flex-col text-right">
+                  <div className="flex flex-col text-right items-end">
                     <span className="text-[10px] text-gray-400 uppercase font-bold">Tuition</span>
                     <span className="text-sm font-bold text-gray-900">
                       ₦{course.price.toLocaleString("en-NG")}
+                    </span>
+                    {/* NEW: Installment Option Tag */}
+                    <span className="text-[9px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-1.5 py-0.5 rounded-md mt-1 tracking-wide uppercase">
+                      Installments Available
                     </span>
                   </div>
                 </div>

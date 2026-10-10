@@ -29,21 +29,21 @@ export default function CourseDetails() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // handle form submission, e.g., send to API
-    // console.log("Enrollment data:", { ...formData, courseId: course.id });
     alert("Enrollment submitted successfully!");
     setShowForm(false);
   };
+
+  // Dynamic preset message encoded for WhatsApp
+  const whatsappMessage = encodeURIComponent(
+    `Hello Scippra, I am interested in enrolling in the course "${course.title}". I would also like to request an installment payment plan.`
+  );
 
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold text-black mb-2">{course.title}</h1>
-        {/* <p className="text-xl text-gray-600 mb-4">{course.desc}</p> */}
         <div className="flex items-center text-sm text-gray-500 mb-6">
           <span>({course.ratings} ratings)</span>
-          {/* <span className="mx-2">•</span>
-          <span>{course.enrolled} students</span> */}
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
@@ -75,9 +75,6 @@ export default function CourseDetails() {
 
             <section className="mb-12">
               <h2 className="text-2xl font-bold text-black">Course content</h2>
-              {/* <div className="flex justify-between mb-2 text-gray-600">
-                <span>{course.syllabus.length} sections • {course.duration}</span>
-              </div> */}
               <div className=" rounded-lg overflow-hidden">
                 {course.syllabus.map((item, index) => (
                   <div key={index} className=" last:border-b-0 p-4 text-gray-600">
@@ -106,16 +103,16 @@ export default function CourseDetails() {
             <section className="mb-12">
               <div className="flex flex-col md:flex-row gap-2 items-center">
                 <div className="flex flex-col items-center">
-                <div className="bg-gray-300 rounded-full flex items-center justify-center mr-3">
+                  <div className="bg-gray-300 rounded-full flex items-center justify-center mr-3">
                     <Image 
-                    src={course.profilepic || "/teachers/default.png"}
-                    alt="Instructor Avatar"
-                    width={254}
-                    height={254}
-                    className="w-50 h-50 rounded-full object-cover"
+                      src={course.profilepic || "/teachers/default.png"}
+                      alt="Instructor Avatar"
+                      width={254}
+                      height={254}
+                      className="w-50 h-50 rounded-full object-cover"
                     />   
-                </div> {/* Placeholder avatar */}
-                <h2 className="text-2xl font-bold text-black mb-3 md:mb-4 text-center md:text-start">Instructor</h2>
+                  </div>
+                  <h2 className="text-2xl font-bold text-black mb-3 md:mb-4 text-center md:text-start">Instructor</h2>
                 </div>
                 <div className="text-center md:text-start">
                   <h3 className="text-xl font-semibold text-black">{course.tutor}</h3>
@@ -125,73 +122,87 @@ export default function CourseDetails() {
             </section>
           </div>
 
-<div className="lg:col-span-1">
-  <div className="sticky top-4 border rounded-lg overflow-hidden shadow-lg bg-white">
-    <Image
-      src={course.img}
-      alt={course.title}
-      width={400}
-      height={225}
-      className="w-full object-cover"
-    />
+          {/* SIDEBAR BOX */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-4 border rounded-lg overflow-hidden shadow-lg bg-white">
+              <Image
+                src={course.img}
+                alt={course.title}
+                width={400}
+                height={225}
+                className="w-full object-cover"
+              />
 
-    <div className="p-6">
-      <h3 className="text-lg font-semibold text-black mb-4">
-        This course includes:
-      </h3>
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-black mb-4">
+                  This course includes:
+                </h3>
 
-      <ul className="space-y-4 text-gray-600 text-sm">
-        <li className="flex items-center gap-3">
-          <i className="bi bi-clock text-red-500 text-lg"></i>
-          <div>
-            <p className="font-medium">Duration</p>
-            <p className="text-gray-500">{course.duration}</p>
+                <ul className="space-y-4 text-gray-600 text-sm border-b pb-6">
+                  <li className="flex items-center gap-3">
+                    <i className="bi bi-clock text-red-500 text-lg"></i>
+                    <div>
+                      <p className="font-medium">Duration</p>
+                      <p className="text-gray-500">{course.duration}</p>
+                    </div>
+                  </li>
+
+                  <li className="flex items-center gap-3">
+                    <i className="bi bi-book text-red-500 text-lg"></i>
+                    <div>
+                      <p className="font-medium">Subject</p>
+                      <p className="text-gray-500">{course.title}</p>
+                    </div>
+                  </li>
+
+                  <li className="flex items-center gap-3">
+                    <i className="bi bi-award text-red-500 text-lg"></i>
+                    <div>
+                      <p className="font-medium">Certificate</p>
+                      <p className="text-gray-500">Yes</p>
+                    </div>
+                  </li>
+
+                  <li className="flex items-center gap-3">
+                    <i className="bi bi-globe text-red-500 text-lg"></i>
+                    <div>
+                      <p className="font-medium">Language</p>
+                      <p className="text-gray-500">English</p>
+                    </div>
+                  </li>
+
+                  <li className="flex items-center gap-3">
+                    <i className="bi bi-easel text-red-500 text-lg"></i>
+                    <div>
+                      <p className="font-medium">Mode of Learning</p>
+                      <p className="text-gray-500">Online/On-site</p>
+                    </div>
+                  </li>
+                </ul>
+
+                {/* NEW: Installment Option Callout Info Card */}
+                <div className="mt-5 p-3.5 bg-gray-50 rounded-xl border border-emerald-100 flex items-start gap-2.5">
+                  <span className="text-base mt-0.5">💳</span>
+                  <div>
+                    <h4 className="text-xs font-bold text-emerald-950 uppercase tracking-wide">
+                      Flexible Installments Available
+                    </h4>
+                    <p className="text-xs text-gray-700 mt-1 leading-relaxed">
+                      Don't let tuition hold you back. You can split payments structured across your program duration.
+                    </p>
+                  </div>
+                </div>
+
+                <Link href={`https://wa.me{whatsappMessage}`}>
+                  <button
+                    className="w-full bg-red-500 text-white py-3 px-6 rounded-md hover:bg-red-600 transition mt-4 font-semibold text-center tracking-wide"
+                  >
+                    Enroll Now
+                  </button>
+                </Link>
+              </div>
+            </div>
           </div>
-        </li>
-
-        <li className="flex items-center gap-3">
-          <i className="bi bi-book text-red-500 text-lg"></i>
-          <div>
-            <p className="font-medium">Subject</p>
-            <p className="text-gray-500">{course.title}</p>
-          </div>
-        </li>
-
-        <li className="flex  items-center gap-3">
-          <i className="bi bi-award text-red-500 text-lg"></i>
-          <div>
-            <p className="font-medium">Certificate</p>
-            <p className="text-gray-500">Yes</p>
-          </div>
-        </li>
-
-        <li className="flex items-center gap-3">
-          <i className="bi bi-globe text-red-500 text-lg"></i>
-          <div>
-            <p className="font-medium">Language</p>
-            <p className="text-gray-500">English</p>
-          </div>
-        </li>
-
-        <li className="flex items-center gap-3">
-          <i className="bi bi-easel text-red-500 text-lg"></i>
-          <div>
-            <p className="font-medium">Mode of Learning</p>
-            <p className="text-gray-500">Online/On-site</p>
-          </div>
-        </li>
-      </ul>
-
-    <Link href={`https://wa.me/2349059987650?text=I%20am%20interested%20in%20enrolling%20in%20the%20course%20${course.title}`}>
-      <button
-        className="w-full bg-red-500 text-white py-3 px-6 rounded-md hover:bg-red-600 transition mt-6"
-      >
-        Enroll Now
-      </button>
-      </Link>
-    </div>
-  </div>
-</div>
 
         </div>
       </div>
