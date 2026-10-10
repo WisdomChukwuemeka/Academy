@@ -229,27 +229,24 @@ export default function Header() {
               </ul>
 
               {/* Desktop Auth */}
-              <div className="hidden md:flex items-center gap-3">
-                {!isLoaded ? (
-                  // Skeleton while Clerk loads
-                  <div className="w-24 h-9 rounded-full bg-gray-100 animate-pulse" />
+              <div className="flex items-center min-w-[100px] justify-end">                {!isLoaded ? (
+                  /* SKELETON PLACEHOLDER BAR: Eliminates waiting lag spikes */
+                  <div className="h-8 w-24 bg-gray-100 rounded-full animate-pulse border border-gray-200/40" />
                 ) : isSignedIn ? (
                   <ProfileDropdown user={user} />
                 ) : (
-                  <>
+                  <div className="hidden md:flex items-center gap-4">
                     <SignInButton mode="modal">
-                      <button className="flex items-center gap-2 px-6 py-2 border-2 border-red-600 text-red-600 text-sm font-bold rounded-full hover:bg-red-600 hover:text-white transition-all active:scale-95">
-                        <LogIn size={16} />
-                        Log In
+                      <button className="text-sm font-semibold text-gray-700 hover:text-red-600 transition-colors">
+                        Sign In
                       </button>
                     </SignInButton>
                     <SignUpButton mode="modal">
-                      <button className="flex items-center gap-2 px-5 py-2 bg-red-600 text-white text-sm font-bold rounded-full hover:bg-red-700 hover:shadow-lg hover:shadow-red-500/30 transition-all active:scale-95">
-                        <UserPlus size={16} />
-                        Sign Up
+                      <button className="bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-sm">
+                        Get Started
                       </button>
                     </SignUpButton>
-                  </>
+                  </div>
                 )}
               </div>
 
@@ -382,3 +379,257 @@ export default function Header() {
     </>
   );
 }
+
+
+
+
+
+
+
+
+// "use client";
+
+// import { useState, useRef, useEffect } from "react";
+// import Link from "next/link";
+// import { motion, AnimatePresence } from "framer-motion";
+// import { LogIn, LogOut, UserPlus, ChevronDown } from "lucide-react";
+// import {
+//   SignInButton,
+//   SignUpButton,
+//   SignOutButton,
+//   useUser,
+//   UserButton,
+// } from "@clerk/nextjs";
+// import Image from "next/image";
+
+// // ── MENU BUTTON ─────────────────────────────────────────────────────
+// function MenuButton({ isOpen, toggle }) {
+//   return (
+//     <button
+//       onClick={toggle}
+//       className="relative md:hidden h-10 w-10 flex items-center justify-center rounded-full bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500/20"
+//       aria-label="Toggle menu"
+//     >
+//       <div className="flex flex-col items-center justify-center w-6 h-6 gap-1.5">
+//         <motion.span
+//           animate={isOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+//           transition={{ duration: 0.3, ease: "easeInOut" }}
+//           className="w-full h-0.5 bg-gray-800 rounded-full block origin-center"
+//         />
+//         <motion.span
+//           animate={isOpen ? { opacity: 0, x: -10 } : { opacity: 1, x: 0 }}
+//           transition={{ duration: 0.2 }}
+//           className="w-full h-0.5 bg-gray-800 rounded-full block"
+//         />
+//         <motion.span
+//           animate={isOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+//           transition={{ duration: 0.3, ease: "easeInOut" }}
+//           className="w-full h-0.5 bg-gray-800 rounded-full block origin-center"
+//         />
+//       </div>
+//     </button>
+//   );
+// }
+
+// // ── DESKTOP PROFILE DROPDOWN ────────────────────────────────────────
+// function ProfileDropdown({ user }) {
+//   const [open, setOpen] = useState(false);
+//   const dropdownRef = useRef(null);
+
+//   useEffect(() => {
+//     const handleOutside = (e) => {
+//       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+//         setOpen(false);
+//       }
+//     };
+//     document.addEventListener("mousedown", handleOutside);
+//     return () => document.removeEventListener("mousedown", handleOutside);
+//   }, []);
+
+//   const firstName = user?.firstName || "";
+//   const lastName = user?.lastName || "";
+//   const email = user?.primaryEmailAddress?.emailAddress || "";
+//   const imageUrl = user?.imageUrl;
+
+//   return (
+//     <div ref={dropdownRef} className="relative">
+//       <button
+//         onClick={() => setOpen((v) => !v)}
+//         className="flex items-center gap-2 px-3 py-1.5 rounded-full border-2 border-gray-100 hover:border-red-200 transition-all group"
+//       >
+//         {/* Optimized Next.js Avatar */}
+//         {imageUrl ? (
+//           <div className="relative w-8 h-8 rounded-full overflow-hidden">
+//             <Image
+//               src={imageUrl}
+//               alt="Profile"
+//               fill
+//               sizes="32px"
+//               className="object-cover"
+//               priority
+//             />
+//           </div>
+//         ) : (
+//           <div className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center text-white text-sm font-bold">
+//             {firstName?.[0] || email?.[0]?.toUpperCase() || "U"}
+//           </div>
+//         )}
+//         <span className="text-sm font-semibold text-gray-800 hidden lg:block">
+//           {firstName || email.split("@")[0]}
+//         </span>
+//         <ChevronDown
+//           size={14}
+//           className={`text-gray-400 transition-transform ${open ? "rotate-180" : ""}`}
+//         />
+//       </button>
+
+//       <AnimatePresence>
+//         {open && (
+//           <motion.div
+//             initial={{ opacity: 0, y: 8, scale: 0.95 }}
+//             animate={{ opacity: 1, y: 0, scale: 1 }}
+//             exit={{ opacity: 0, y: 8, scale: 0.95 }}
+//             transition={{ duration: 0.15 }}
+//             className="absolute right-0 mt-2 w-60 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden z-50"
+//           >
+//             <div className="px-4 py-3 border-b border-gray-100 bg-gray-50">
+//               <p className="text-sm font-bold text-gray-900">
+//                 {firstName} {lastName}
+//               </p>
+//               <p className="text-xs text-gray-500 truncate">{email}</p>
+//             </div>
+
+//             <div className="px-4 py-2 border-b border-gray-100 flex items-center gap-2">
+//               <UserButton
+//                 afterSignOutUrl="/"
+//                 appearance={{
+//                   elements: {
+//                     userButtonBox: "gap-2",
+//                     userButtonOuterIdentifier: "text-sm text-gray-700 font-medium",
+//                   },
+//                 }}
+//                 showName
+//               />
+//             </div>
+
+//             <SignOutButton redirectUrl="/">
+//               <button className="w-full flex items-center gap-3 px-4 py-3 text-sm text-red-600 hover:bg-red-50 transition-colors border-t border-gray-100">
+//                 <LogOut size={16} />
+//                 Sign Out
+//               </button>
+//             </SignOutButton>
+//           </motion.div>
+//         )}
+//       </AnimatePresence>
+//     </div>
+//   );
+// }
+
+// // ── MAIN HEADER ─────────────────────────────────────────────────────
+// export default function Header() {
+//   const { isLoaded, isSignedIn, user } = useUser();
+//   const [isOpen, setIsOpen] = useState(false);
+//   const menuRef = useRef(null);
+
+//   const toggleMenu = () => setIsOpen((v) => !v);
+
+//   useEffect(() => {
+//     const handleClickOutside = (e) => {
+//       if (
+//         menuRef.current &&
+//         !menuRef.current.contains(e.target) &&
+//         !e.target.closest('button[aria-label="Toggle menu"]')
+//       ) {
+//         setIsOpen(false);
+//       }
+//     };
+//     if (isOpen) {
+//       setTimeout(() => document.addEventListener("mousedown", handleClickOutside), 0);
+//     }
+//     return () => document.removeEventListener("mousedown", handleClickOutside);
+//   }, [isOpen]);
+
+//   const navLinks = [
+//     { href: "/", label: "Home" },
+//     { href: "/courses", label: "Courses" },
+//     { href: "/cohort", label: "Cohort" },
+//     { href: "/about", label: "About" },
+//     { href: "/jobs", label: "Jobs" },
+//     { href: "/contact", label: "Contact" },
+//   ];
+
+//   return (
+//     <>
+//       <div className="relative bg-white shadow-sm z-50">
+//         <header>
+//           <nav className="flex items-center justify-between px-8 py-4 shadow-sm">
+//             {/* Logo */}
+//             <Link href="/" className="flex items-center focus:outline-none group">
+//               <div className="flex items-center">
+//                 <div className="relative overflow-hidden rounded-full flex shrink-0">
+//                   <Image 
+//                     src="/logo/logo.png"
+//                     alt="Scippra Logo"
+//                     width={42}
+//                     height={42}
+//                     className="object-contain transition-transform duration-300 group-hover:scale-110"
+//                     priority
+//                   />
+//                 </div>
+
+//                 <div className="flex flex-col leading-none gap-0.75 ml-2">
+//                   <h1 className="text-xl font-bold leading-none tracking-tight">
+//                     <span className="text-red-600">Scip</span>
+//                     <span className="text-indigo-950">pra</span>
+//                   </h1>
+//                   <span className="text-[5px] uppercase tracking-[0.18em] font-semibold text-gray-400 group-hover:text-red-500 transition-colors leading-none">
+//                     learn • create • build
+//                   </span>
+//                 </div>
+//               </div>
+//             </Link>
+
+//             {/* Navigation Layout Content wrapper */}
+//             <div className="flex items-center gap-6">
+//               <ul className="hidden md:flex gap-6 text-gray-600 font-medium">
+//                 {navLinks.map((link) => (
+//                   <li key={link.href} className="hover:text-red-600 transition-colors">
+//                     <Link href={link.href} className="block">
+//                       {link.label}
+//                     </Link>
+//                   </li>
+//                 ))}
+//               </ul>
+
+//               {/* AUTH PANEL: Prevent layout shift using an explicit fixed layout boundary */}
+//               <div className="flex items-center min-w-[100px] justify-end">
+//                 {!isLoaded ? (
+//                   /* SKELETON PLACEHOLDER BAR: Eliminates waiting lag spikes */
+//                   <div className="h-8 w-24 bg-gray-100 rounded-full animate-pulse border border-gray-200/40" />
+//                 ) : isSignedIn ? (
+//                   <ProfileDropdown user={user} />
+//                 ) : (
+//                   <div className="hidden md:flex items-center gap-4">
+//                     <SignInButton mode="modal">
+//                       <button className="text-sm font-semibold text-gray-700 hover:text-red-600 transition-colors">
+//                         Sign In
+//                       </button>
+//                     </SignInButton>
+//                     <SignUpButton mode="modal">
+//                       <button className="bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-sm">
+//                         Get Started
+//                       </button>
+//                     </SignUpButton>
+//                   </div>
+//                 )}
+//               </div>
+
+//               {/* Mobile Trigger */}
+//               <MenuButton isOpen={isOpen} toggle={toggleMenu} />
+//             </div>
+//           </nav>
+//         </header>
+//       </div>
+//     </>
+//   );
+// }

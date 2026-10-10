@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'img.clerk.com',
+      },
+    ],
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000, // 1 year aggressive caching
   },

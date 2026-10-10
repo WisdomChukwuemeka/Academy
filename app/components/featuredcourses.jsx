@@ -99,7 +99,7 @@ export default function FeaturedCoursesSection() {
                       ₦{course.price.toLocaleString("en-NG")}
                     </span>
                     {/* NEW: Installment Option Tag */}
-                    <span className="text-[9px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-1.5 py-0.5 rounded-md mt-1 tracking-wide uppercase">
+                    <span className="text-[9px] font-bold text-blue-950 bg-blue-100 border border-blue-200/60 px-1.5 py-0.5 rounded-md mt-1 tracking-wide uppercase">
                       Installments Available
                     </span>
                   </div>

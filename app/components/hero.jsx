@@ -87,11 +87,11 @@ export default function HeroSection() {
           {/* TEXT CONTENT LAYER */}
           <div className="absolute inset-0 z-20 flex items-center justify-center md:justify-start text-center md:text-left">
             <div className="px-6 md:px-16 max-w-3xl">
-              <span className="inline-block text-xs font-semibold text-white bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-sm">
+              <span className="inline-block text-sm text-white bg-black/70 px-5 py-3 rounded-xl">
                 ⭐ Trusted by 1000+ learners worldwide
               </span>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mt-6 text-white tracking-tight leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mt-4 text-white">
                 <motion.span
                   initial={{ opacity: 0, x: -20 }}
                   animate={{
@@ -99,7 +99,7 @@ export default function HeroSection() {
                     x: 0,
                     textShadow:[
                       "0px 0px 0px rgba(255,255,255,0)",
-                      "0px 0px 12px rgba(255,180,180,0.4)",
+                      "0px 0px 12px rgba(255,180,180,0.8)",
                       "0px 0px 0px rgba(255,255,255,0)",
                     ],
                   }}
@@ -112,22 +112,26 @@ export default function HeroSection() {
                       repeatType: "loop",
                     },
                   }}
-                  className="inline-block"
+                  className="inline-block text-[1.8rem] md:text-[2.5rem] xl:text-[3rem]"
                 >
                   Start Your Tech Journey
                 </motion.span>
                 <br />
-                <span className="font-medium text-gray-300 text-2xl sm:text-3xl md:text-4xl">and </span>
-                <span className="text-red-400">Shape Your Future</span>
+                <span className="text-[1.8rem] md:text-[2.5rem] xl:text-[3rem]">
+                  and
+                </span>{" "}
+                <span className="text-red-300 text-[1.8rem] md:text-[2.5rem] xl:text-[3rem]">
+                  Shape Your Future
+                </span>
               </h1>
 
-              <p className="text-gray-300 mt-4 text-base md:text-lg max-w-lg leading-relaxed">
-                Industry-led IT courses crafted to help both beginners and
-                professionals develop in-demand technology skills.
+              <p className="text-gray-200 mt-4 max-w-lg">
+                Industry led IT courses crafted to help both beginners and
+                professionals develop in demand technology skills.
               </p>
 
-              {/* ACTION BUTTONS */}
-              <div className="flex flex-wrap gap-4 mt-8 justify-center md:justify-start">
+              <div className="flex gap-4 mt-6 justify-center md:justify-start">
+  {/* WHATSAPP CHANNEL LINK */}
                 <Link 
                   href="https://whatsapp.com/channel/0029Vb6Ogg21noyzgp0dwg2q"
                   target="_blank"
@@ -138,41 +142,46 @@ export default function HeroSection() {
                   </button>
                 </Link>
 
-                <Link href="/#courses">
-                  <button className="bg-red-500 text-white py-2.5 px-5 rounded-lg hover:bg-red-600 transition-all font-semibold shadow-md cursor-pointer">
-                    Explore Courses
-                  </button>
-                </Link>
-              </div>
-
-              {/* SOCIAL PROOF SECTION */}
-              <div className="hidden md:flex items-center gap-6 mt-12 pt-6 border-t border-white/10">
-                <div className="flex -space-x-3">
-                  {studentimages.map((url, i) => (
-                    <div
-                      key={i}
-                      className="relative w-10 h-10 rounded-full border-2 border-slate-900 overflow-hidden bg-slate-800 shadow-md"
-                    >
-                      <Image
-                        src={url}
-                        alt={`Student ${i}`}
-                        fill
-                        sizes="40px"
-                        className="object-cover"
-                      />
+  {/* EXPLORE COURSES LINK */}
+  <Link href="/Courses"
+  target="_blank"
+  rel="noopener noreferrer"
+  >
+    <div className="bg-red-500 text-white p-2 px-4 rounded-md hover:bg-red-600 transition-all font-semibold cursor-pointer">
+      Explore Courses
+    </div>
+  </Link>
+</div>
+              <div className="hidden md:flex items-center gap-3 mt-2">
+                <div className="hidden md:flex items-center gap-4 pt-2">
+                  <div className="flex items-center gap-6 pt-2 border-t border-white/10">
+                    <div className="flex -space-x-3">
+                      {studentimages.map((url, i) => (
+                        <div
+                          key={i}
+                          className="relative w-12 h-12 rounded-full border-4 border-slate-950 overflow-hidden bg-slate-300"
+                        >
+                          <Image
+                            src={url}
+                            alt={`Student ${i}`}
+                            fill
+                            sizes="48px"
+                            className="object-cover bg-slate-300" // Acts as a placeholder if scroll is too fast
+                          />
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-                <div className="text-left">
-                  <p className="text-white font-bold text-base leading-tight">
-                    Join 1,000+ students
-                  </p>
-                  <p className="text-gray-400 text-xs tracking-wide uppercase mt-0.5">
-                    from 40+ countries worldwide
-                  </p>
+                    <div>
+                      <p className="text-white font-bold text-lg">
+                        Join 1,000+ students
+                      </p>
+                      <p className="text-slate-400 text-sm">
+                        from 40+ countries worldwide
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
