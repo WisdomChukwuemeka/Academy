@@ -626,7 +626,7 @@ const CohortLandingPage = () => {
         <section className="bg-linear-to-r from-red-700 to-red-600 text-white py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Become a Web Developmenteloper?
+              Ready to Become a Web Developer?
             </h2>
             <p className="text-red-100 mb-4 max-w-2xl mx-auto text-lg">
               Join Cohort 4 and go from beginner to job ready in 6 weeks.
