@@ -8,7 +8,7 @@ import React, { useState, useEffect } from 'react';
 
 const CohortLandingPage = () => {
   // Cohort start date
-  const startDate = "May 1st, 2026";
+  const startDate = "Feb 8th, 2027";
   
   // Countdown timer state
   const [timeLeft, setTimeLeft] = useState({
@@ -20,7 +20,7 @@ const CohortLandingPage = () => {
 
   // Calculate time remaining until May 1st, 2026
   useEffect(() => {
-    const targetDate = new Date('May 1, 2026 00:00:00').getTime();
+    const targetDate = new Date('Feb 8, 2027 00:00:00').getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -45,14 +45,14 @@ const CohortLandingPage = () => {
   // WhatsApp number (format: country code + number, no plus sign or spaces)
   const whatsappNumber = "2349059987650"; // Replace with your actual Nigerian WhatsApp number
   const whatsappMessage = encodeURIComponent(
-`Hello! I'm interested in the Web Development Cohort 2 starting ${startDate} (₦45,000). Please guide me on how to register.`  );
-  const whatsappLink = `https://wa.me/2349059987650?text=I%20am%20interested%20in%20enrolling%20in%20the%20course%20Web%20Development%20Training%20Cohort%201%20(₦45,000).%20Please%20guide%20me%20on%20how%20to%20register.`;
+`Hello! I'm interested in the Web Development Cohort 4 starting ${startDate} (₦100,000). Please guide me on how to register.`  );
+  const whatsappLink = `https://wa.me/2349059987650?text=I%20am%20interested%20in%20enrolling%20in%20the%20course%20Web%20Development%20Training%20Cohort%201%20(₦100,000).%20Please%20guide%20me%20on%20how%20to%20register.`;
 
   // Nigerian pricing
   const pricingTiers = [
     {
-      name: 'Cohort 2 Admission',
-      price: '₦45,000',
+      name: 'Cohort 4 Admission',
+      price: '₦100,000',
       note: 'One-time payment',
       features: [
         'Full 5 week live training',
@@ -75,8 +75,8 @@ const CohortLandingPage = () => {
 
   const faqs = [
     {
-      q: 'When does Cohort 2 start?',
-      a: `Cohort 2 kicks off on ${startDate}. Registration closes one week before start date.`,
+      q: 'When does Cohort 4 start?',
+      a: `Cohort 4 kicks off on ${startDate}. Registration closes one week before start date.`,
     },
     {
       q: 'How do I pay?',
@@ -100,11 +100,11 @@ const CohortLandingPage = () => {
     <>
 
 <Head>
-      <title>Web Development Training Nigeria | Cohort 2 (₦45,000) | Scippra</title>
+      <title>Web Development Training Nigeria | Cohort 4 (₦100,000) | Scippra</title>
 
       <meta
         name="description"
-        content="Join our Web Development Training in Nigeria. Learn HTML, CSS, JavaScript, React & Next.js in 5 weeks. Cohort starts May 1st, 2026. Limited slots available."
+        content="Join our Web Development Training in Nigeria. Learn HTML, CSS, JavaScript, React & Next.js in 6 weeks. Cohort starts May 1st, 2026. Limited slots available."
       />
 
       <meta
@@ -119,16 +119,16 @@ const CohortLandingPage = () => {
       <link rel="canonical" href="https://scippra.com/cohort" />
 
       {/* Open Graph (Facebook, LinkedIn) */}
-      <meta property="og:title" content="Web Development Training Nigeria | Cohort 2 (₦45,000)" />
-      <meta property="og:description" content="Master HTML, CSS, JavaScript & React in 5 weeks. Join Cohort 2 starting May 1st, 2026." />
+      <meta property="og:title" content="Web Development Training Nigeria | Cohort 4 (₦100,000)" />
+      <meta property="og:description" content="Master HTML, CSS, JavaScript & React in 6 weeks. Join Cohort 4 starting May 1st, 2026." />
       <meta property="og:url" content="https://scippra.com/cohort" />
       <meta property="og:type" content="website" />
       <meta property="og:image" content="https://scippra.com/og-image.png" />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Web Development Training Nigeria (₦45,000)" />
-      <meta name="twitter:description" content="Become a job ready web developer in 5 weeks. Join Cohort 2 now." />
+      <meta name="twitter:title" content="Web Development Training Nigeria (₦100,000)" />
+      <meta name="twitter:description" content="Become a job ready web developer in 6 weeks. Join Cohort 4 now." />
       <meta name="twitter:image" content="https://scippra.com/og-image.png" />
 
       {/* Geo (Local SEO boost) */}
@@ -182,7 +182,7 @@ const CohortLandingPage = () => {
               </div>
             </div>
             <p className="text-[10px] text-gray-450 mt-2 hidden md:block">
-              Until May 1st, 2026
+              Until Feb 8th, 2027
             </p>
           </div>
         </div>
@@ -194,19 +194,19 @@ const CohortLandingPage = () => {
         <section className="bg-linear-to-r from-red-700 to-red-600 text-white py-16 md:py-20">
           <div className="container mx-auto px-4 text-center">
             <span className="bg-red-450 text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4">
-               Cohort 2
+               Cohort 4
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Web Development Training
             </h1>
             <p className="text-xl md:text-2xl mb-6 max-w-2xl mx-auto">
-              Master HTML, CSS, and JavaScript in 5 weeks.
+              Master HTML, CSS, and JavaScript in 6 weeks.
             </p>
             <div className="bg-indigo-950 text-white inline-block px-6 py-3 rounded-full mb-4">
               <p className="font-bold text-lg">Cohort Starts: <span className="text-xl">{startDate}</span></p>
             </div>
             <p className="text-lg mb-4 text-white inline-block px-6 py-2 rounded-full">
-               Special Launch Price: <span className="font-bold text-xl"> ₦45,000</span>
+               Special Launch Price: <span className="font-bold text-xl"> ₦100,000</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -237,7 +237,7 @@ const CohortLandingPage = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-700 mb-4">
-                5-Week Learning Path
+                6-Week Learning Path
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Project based curriculum designed to build your portfolio while you learn.
@@ -394,7 +394,7 @@ const CohortLandingPage = () => {
                      <div className="w-full h-3 bg-white/10 rounded-full overflow-hidden">
                         <div className="h-full bg-red-600 w-[82%] shadow-[0_0_15px_rgba(220,38,38,0.5)]"></div>
                      </div>
-                     <p className="text-xs text-slate-400 italic">Only 9 slots remaining for Cohort 2</p>
+                     <p className="text-xs text-slate-400 italic">Only 10 slots remaining for Cohort 4</p>
                   </div>
 
                   <a
@@ -410,7 +410,7 @@ const CohortLandingPage = () => {
         </section>
 
 
-         <section className="py-24 bg-gray-50 overflow-hidden">
+         <section className="pt-10 pb-24 bg-gray-50 overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-red-600 font-bold tracking-widest uppercase text-sm mb-4 flex items-center justify-center gap-2">
@@ -423,7 +423,7 @@ const CohortLandingPage = () => {
                 "I just got hired."
               </h3>
               <p className="text-slate-600 text-lg">
-                We don't just teach code; we build confidence. See how 5 weeks changed everything for these Nigerians.
+                We don't just teach code; we build confidence. See how 6 weeks changed everything for these Nigerians.
               </p>
             </div>
 
@@ -467,7 +467,7 @@ const CohortLandingPage = () => {
                   <p className="text-slate-200 text-xl font-medium leading-relaxed mb-6">
                     "I almost didn't register. But the 
                     <span className="text-red-400 font-bold mx-1">24/7 WhatsApp support</span> here is real. 
-                    When I got stuck on JavaScript loops at 9PM, a mentor was there to debug it with me. It’s the best ₦45,000 I’ve ever spent."
+                    When I got stuck on JavaScript loops at 9PM, a mentor was there to debug it with me. It’s the best ₦100,000 I’ve ever spent."
                   </p>
                 </div>
                 <div className="flex items-center gap-4 pt-6 border-t border-white/10">
@@ -524,7 +524,7 @@ const CohortLandingPage = () => {
                 </div>
                 <div className="text-left">
                   <p className="text-[10px] uppercase font-bold opacity-80 leading-none">Limited Slots</p>
-                  <p className="text-sm font-bold">Join Cohort 2 (₦45,000)</p>
+                  <p className="text-sm font-bold">Join Cohort 4 (₦100,000)</p>
                 </div>
               </div>
               <span className="bg-white/20 px-3 py-1 rounded-lg text-xs font-bold uppercase">Pay Now</span>
@@ -564,7 +564,7 @@ const CohortLandingPage = () => {
                   className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-red-450"
                 >
                   <div className="bg-red-700 text-white text-center text-sm font-semibold py-2">
-                    Cohort 2 • LIMITED SEATS
+                    Cohort 4 • LIMITED SEATS
                   </div>
                   <div className="p-4 text-center">
                     <h3 className="text-2xl font-bold text-gray-700">{tier.name}</h3>
@@ -629,7 +629,7 @@ const CohortLandingPage = () => {
               Ready to Become a Web Developmenteloper?
             </h2>
             <p className="text-red-100 mb-4 max-w-2xl mx-auto text-lg">
-              Join Cohort 2 and go from beginner to job ready in 5 weeks.
+              Join Cohort 4 and go from beginner to job ready in 6 weeks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

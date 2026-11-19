@@ -46,7 +46,7 @@ export default function CookiesBanner() {
               <div className="flex-1">
                 <h3 className="text-slate-900 font-bold text-lg mb-2">Cookies & Privacy</h3>
                 <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                  At Scippra, we use cookies to enhance your experience. Your data is 
+                  We use cookies to enhance your experience. Your data is 
                   <span className="text-red-600 font-semibold"> 100% protected </span> 
                   under our secure privacy policy.
                 </p>
@@ -62,7 +62,7 @@ export default function CookiesBanner() {
                     onClick={() => setIsVisible(false)}
                     className="flex-1 bg-white/50 hover:bg-white text-slate-700 text-sm font-bold py-3 px-6 rounded-xl border border-slate-200 transition-all"
                   >
-                    Customize
+                    Cancel
                   </button>
                 </div>
               </div>
