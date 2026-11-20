@@ -143,7 +143,7 @@ export default function HeroSection() {
                 </Link>
 
   {/* EXPLORE COURSES LINK */}
-  <Link href="/Courses"
+  <Link href="/courses"
   target="_blank"
   rel="noopener noreferrer"
   >
