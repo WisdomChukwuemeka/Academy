@@ -67,7 +67,7 @@ export default function FlierModal() {
         {/* Flier Image */}
         <div className="rounded-2xl overflow-hidden shadow-2xl bg-white">
           <Image
-            src="/flier.jpg"
+            src="/flier.png"
             alt="Scippra Tech Academy Cohort 4 - Learn Frontend & Build Real Websites"
             width={600}
             height={800}
