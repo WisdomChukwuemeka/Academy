@@ -6,6 +6,7 @@ import CookiesBanner from "./components/CookiesBanner";
 // import PageLoaderWrapper from "./components/pageloaderwrapper";
 import { ClerkProvider } from "@clerk/nextjs";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import FlierModal from "./components/FlierModel";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -130,6 +131,7 @@ export default function RootLayout({ children }) {
 
 
         <Header />
+        <FlierModal />
             <main className="grow w-full bg-zinc-50">
             <div className="max-w-7xl mx-auto">
               {children}
